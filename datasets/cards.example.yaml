@@ -1,0 +1,8 @@
+# Copy to datasets/local/cards/data.yaml; paths below are relative to that YAML.
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: cards
+  1: suggestions
+  2: useless

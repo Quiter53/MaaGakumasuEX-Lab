@@ -1,0 +1,3 @@
+[submodule "source"]
+	url = https://github.com/Quiter53/MaaGakumasuEX.git
+	path = source

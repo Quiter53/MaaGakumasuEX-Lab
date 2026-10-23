@@ -1,0 +1,86 @@
+{
+  "purpose": "Private regression replay only; not a labelled YOLO training dataset",
+  "sourceCommit": "5eef68e731d85287cf30c00a6d486f86a89543ff",
+  "files": [
+    {
+      "path": "card_rules/stuck-game.png",
+      "bytes": 995590,
+      "sha256": "5ef258d73bcce957db8bca822cf1745abf5f36f9fd27c2a0a2f633d4de74d06a"
+    },
+    {
+      "path": "customization/menu-10.png",
+      "bytes": 63504,
+      "sha256": "d6e5f871de995e793bc9a6714c9eba25a6e4f81762977e34db6ad7fe48c8be35"
+    },
+    {
+      "path": "customization/menu-6.png",
+      "bytes": 55998,
+      "sha256": "f4481fb84c7bcb10cb8ebb57f87d62f39f6ce7a3a47d5e7f4d1f34da8707fdcd"
+    },
+    {
+      "path": "customization/menu-7.png",
+      "bytes": 62066,
+      "sha256": "52dbcc7e243bb0b5357148bc428ca7e1c98e235b21ee22a794cd574df41113bd"
+    },
+    {
+      "path": "customization/menu-8.png",
+      "bytes": 67073,
+      "sha256": "a629172d54b6fe03fa548d144ce385e3b43a954d8784b9a67c57e9d34b572a4e"
+    },
+    {
+      "path": "deck/bottom-selected-desktop.png",
+      "bytes": 1327910,
+      "sha256": "1fb8f02ba33839a5abfee664316d0781a64f5d7df9cd2b34171eeea9cb60e131"
+    },
+    {
+      "path": "deck/bottom-window.png",
+      "bytes": 665213,
+      "sha256": "612c32f44bf4ad98fe73c32f822b4153f598b8385879e59ae06667a12fb5ea10"
+    },
+    {
+      "path": "deck/change-disabled-sleep.png",
+      "bytes": 729931,
+      "sha256": "49ad6954984037370a017d252b870af8e6763acfca29fba3b5366dd632e9dede"
+    },
+    {
+      "path": "deck/change-enabled-page.png",
+      "bytes": 768091,
+      "sha256": "b41ea382f27d914f68bc49e6f188f676b394dd1fef586bad5cac0a7937129a22"
+    },
+    {
+      "path": "deck/change-middle-page.png",
+      "bytes": 757507,
+      "sha256": "21d5144ab27d2991e7f44d62396d0e2fc6184650d6ded18d32f9bc86db4b4fc4"
+    },
+    {
+      "path": "deck/live-bottom-selected.png",
+      "bytes": 97907,
+      "sha256": "3fe3c69a0a83c2edf0a2ee612322b1a699e265e8f38df8f6c5000704a5e0e4af"
+    },
+    {
+      "path": "deck/live-bottom.png",
+      "bytes": 96273,
+      "sha256": "6a6d762f2e7d6eec0b04616104aaa8611595f87e775055139f5b67bfe84f25ea"
+    },
+    {
+      "path": "deck/owned-drawer-24.png",
+      "bytes": 698294,
+      "sha256": "f67e78fac533e4d53263f33f36532fb441bc73f822a26a0022b886fb1d81d652"
+    },
+    {
+      "path": "deck/selected-window.png",
+      "bytes": 837240,
+      "sha256": "3cdf0c1685ef0977ed8a32461c01640dabf135a4e18ee8bf13c5d3fd6addfaf4"
+    },
+    {
+      "path": "deck/shop-delete-18-desktop.png",
+      "bytes": 1378962,
+      "sha256": "b4cba1b0cfe5c54f741dc08a93dc1154081582a4d69c91eda3a4a9d7f1fac13d"
+    },
+    {
+      "path": "deck/shop-delete-18-scroll-desktop.png",
+      "bytes": 1670061,
+      "sha256": "b47bcd6bfaaca45015cec47fe3774f727eb0974012545f4483b3d0bda203c99a"
+    }
+  ]
+}
