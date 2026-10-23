@@ -81,6 +81,56 @@
       "path": "deck/shop-delete-18-scroll-desktop.png",
       "bytes": 1670061,
       "sha256": "b47bcd6bfaaca45015cec47fe3774f727eb0974012545f4483b3d0bda203c99a"
+    },
+    {
+      "path": "hand/20260813-000157-503-battle.png",
+      "bytes": 899035,
+      "sha256": "26a81fc7fbf19e86ecc9312b317b9e41b2bce0591e4e026935ab97cf2e811070"
+    },
+    {
+      "path": "hand/20260813-012653-613-battle.png",
+      "bytes": 1035741,
+      "sha256": "c83082b366b411b70193a78631cdf686547d4035f49c77c3dbb438dd993b7e66"
+    },
+    {
+      "path": "hand/20260813-013931-780-battle.png",
+      "bytes": 1058412,
+      "sha256": "fff5084b095615886a6350a8af1f3acb7435fd8acffff919b0b126cc80e09ff1"
+    },
+    {
+      "path": "hand/20260813-013939-039-battle.png",
+      "bytes": 996798,
+      "sha256": "a21604268b0e73e6a68a376b041ade2c3ee3399d802b08140c8f7ddce196f781"
+    },
+    {
+      "path": "hand/20260813-013947-919-battle.png",
+      "bytes": 1083529,
+      "sha256": "ad7c16ebb5598dada2edd2d2c38c51d1df4d88f5d8cb5d7967477437ab49a47b"
+    },
+    {
+      "path": "hand/20260813-013953-592-battle.png",
+      "bytes": 1015017,
+      "sha256": "62792d24338da893b04db8a72e108897040ba081ba878c27aa80dce63fbba2ba"
+    },
+    {
+      "path": "hand/20260813-014012-152-battle.png",
+      "bytes": 1023180,
+      "sha256": "724d27f3744e83ad33a18b2946105c95f521fa91f3768b156f1e99cc456c46f5"
+    },
+    {
+      "path": "hand/20260813-015059-717-battle.png",
+      "bytes": 840476,
+      "sha256": "975b35f8a3415ee20e294624f763970d02dd242b255a64f3ddd48246bb7e025f"
+    },
+    {
+      "path": "hand/20260813-020212-150-battle.png",
+      "bytes": 1066890,
+      "sha256": "1464c331eb2a8c0b181b078c2b6536ba654240be14fc84ac036b96019838aa58"
+    },
+    {
+      "path": "hand/20260813-215954-231-battle.png",
+      "bytes": 868092,
+      "sha256": "38ff9e3a6e492028ebad27ed30f89ba7db13b850d9cd78c7cb23087cfc10ef19"
     }
   ]
 }

@@ -66,6 +66,8 @@ def main():
     calibrate = sub.add_parser("calibrate", help="Synthetic metric threshold fitting, not YOLO training")
     calibrate.add_argument("--per-mode", type=int, default=400)
     calibrate.add_argument("--output", type=Path, default=ROOT / "outputs/calibration")
+    evaluate = sub.add_parser("evaluate-hand", help="Evaluate historical labelled frames with manual card boxes")
+    evaluate.add_argument("--output", type=Path, default=ROOT / "outputs/hand-evaluation")
     ui = sub.add_parser("ui", help="Run a native .NET 10 regression harness")
     ui.add_argument("suite", choices=["CardRulesUi", "CardListUi", "DrinkUi", "FocusImages", "native_task_watchdog"])
     ui.add_argument("--dotnet", default="dotnet", help=".NET 10 SDK dotnet executable")
@@ -95,6 +97,11 @@ def main():
         provenance(output)
         run([sys.executable, SOURCE / "tools/train_hand_identity.py", "--per-mode", args.per_mode,
              "--output", output / "calibration.json", "--report", output / "report.json"])
+    elif args.command == "evaluate-hand":
+        output = args.output.resolve()
+        provenance(output)
+        run([sys.executable, SOURCE / "tools/evaluate_hand_identity.py", ROOT / "fixtures/hand",
+             "--output", output / "report.json"])
     elif args.command == "ui":
         if args.combo_only and args.suite != "CardRulesUi":
             parser.error("--combo-only is only supported by CardRulesUi")

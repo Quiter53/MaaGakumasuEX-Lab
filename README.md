@@ -32,6 +32,9 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1
 # 真实 MaaFramework 5.13.0 检测器，读取保存的游戏画面，控制器禁止输入。
 .\.venv\Scripts\python.exe lab.py model-check --image fixtures/card_rules/stuck-game.png
 
+# 10 张历史手牌评估截图，使用人工给定牌框，不等同于完整检测精度。
+.\.venv\Scripts\python.exe lab.py evaluate-hand --output outputs/hand-evaluation
+
 # 原生 UI 测试，只使用 outputs 下从公共默认配置生成的副本。
 .\.venv\Scripts\python.exe lab.py ui CardRulesUi --output outputs/ui-rules
 .\.venv\Scripts\python.exe lab.py ui DrinkUi --output outputs/ui-drinks
@@ -57,21 +60,21 @@ SDK 不在 PATH 时，UI 命令可加 `--dotnet 'C:\dotnet\dotnet.exe'`。首次
 
 结果为候选阈值及合成样本训练/留出集报告，**这不是 YOLO 训练，也不表示真实游戏识别准确率**。不会修改正式校准文件。
 
-YOLO11 的标注格式、GPU 环境、训练与导出命令见 [训练说明](docs/training.md)。仓库目前没有完整 YOLO 原始标注集和原 `.pt` 权重，不能从现有 `cards.onnx` 恢复原训练状态；补齐数据与权重后才能重新训练。已迁移的 16 张截图用于回归，不自动转成训练样本。
+YOLO11 的标注格式、GPU 环境、训练与导出命令见 [训练说明](docs/training.md)。仓库目前没有完整 YOLO 原始标注集和原 `.pt` 权重，不能从现有 `cards.onnx` 恢复原训练状态；补齐数据与权重后才能重新训练。已迁移的 26 张截图用于回归或评估，不自动转成训练样本。早期识别修复的具体方法见 [历史识别方案](docs/recognition-history.md)。
 
 ## 内容与迁移边界
 
 | 目录或文件 | 用途 |
 | --- | --- |
 | `source/` | 固定提交的主仓库，包含测试、脚本、资源、原生 UI 源码 |
-| `fixtures/` | 16 张本机回放截图及 SHA-256 清单，约 10 MB |
+| `fixtures/` | 26 张本机回放与手牌评估截图及 SHA-256 清单，约 20 MB |
 | `lab.py`、`setup.ps1` | 恢复环境、测试、回放与校准入口 |
 | `train.py`、`datasets/cards.example.yaml` | 标注校验、YOLO 训练及候选 ONNX 导出 |
 | `requirements-lock.txt` | 本次实际验证的 Windows Python 测试依赖 |
 | `outputs/` | 本机结果、依赖版本、源码状态与报告，默认不提交 |
 | `datasets/local/`、`weights/` | 本机标注集和训练权重，默认不提交 |
 
-本机运行包、个人 config、连接信息、日志、历史临时构建与发布凭据没有迁移。旧 `hand_identity_labels.json` 对应的 10 张历史战斗原图未在本机找到，该独立评估集尚不完整，不宣称已经备份。
+本机运行包、个人 config、连接信息、日志、历史临时构建与发布凭据没有迁移。旧 `hand_identity_labels.json` 对应的 10 张战斗原图后来在历史诊断目录中找到，原扩展名是 `.png.bmp`。现已无损转为 PNG 并纳入 `fixtures/hand`，像素逐字节核对一致；此前“原图未找到”的判断已更正。这些是历史开发评估样本，不用于宣称独立泛化精度，也不自动加入训练集。
 
 新增训练集放 `datasets/local`；大文件应通过**本私有仓库的私有 Release 附件或 Git LFS**备份，另附 SHA-256。默认忽略大权重是为了防止误提交，不代表它们会自动同步。账号密钥不要写进数据、脚本或文档。
 
