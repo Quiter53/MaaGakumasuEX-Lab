@@ -1,12 +1,12 @@
 # MaaGakumasuEX Lab
 
-Quiter53 的私有训练、回归测试与截图回放环境。主程序继续在 [MaaGakumasuEX](https://github.com/Quiter53/MaaGakumasuEX) 维护；这里通过 `source` 子模块固定对应源码，不另存一套程序逻辑。
+Quiter53 的训练、回归测试与截图回放环境。仓库当前公开，本次游戏原图已由用户确认公开上传。主程序继续在 [MaaGakumasuEX](https://github.com/Quiter53/MaaGakumasuEX) 维护；这里通过 `source` 子模块固定对应源码，不另存一套程序逻辑。
 
 目前固定源码提交为 `5eef68e731d85287cf30c00a6d486f86a89543ff`（v2.1.2 发布后的 README 维护提交）。版本号一致仍可能有不同的代码，以子模块提交为准。
 
 ## 换电脑使用
 
-需要 Windows x64、Git、完整安装的 Python 3.12。原生界面测试另需 .NET 10 SDK；YOLO 训练另需适合显卡的 PyTorch。先在 Git 中登录能访问本私有仓库的 GitHub 账号。
+需要 Windows x64、Git、完整安装的 Python 3.12。原生界面测试另需 .NET 10 SDK；YOLO 训练另需适合显卡的 PyTorch。克隆公开仓库无需登录，推送修改时需登录有写入权限的 GitHub 账号。
 
 ```powershell
 git clone --recurse-submodules https://github.com/Quiter53/MaaGakumasuEX-Lab.git
@@ -77,7 +77,7 @@ YOLO11 的标注格式、GPU 环境、训练与导出命令见 [训练说明](do
 
 本机运行包、个人 config、连接信息、日志、历史临时构建与发布凭据没有迁移。旧 `hand_identity_labels.json` 对应的 10 张战斗原图后来在历史诊断目录中找到，原扩展名是 `.png.bmp`。现已无损转为 PNG 并纳入 `fixtures/hand`，像素逐字节核对一致；此前“原图未找到”的判断已更正。这些是历史开发评估样本，不用于宣称独立泛化精度，也不自动加入训练集。
 
-新增训练集放 `datasets/local`；大文件应通过**本私有仓库的私有 Release 附件或 Git LFS**备份，另附 SHA-256。默认忽略大权重是为了防止误提交，不代表它们会自动同步。账号密钥不要写进数据、脚本或文档。
+新增训练集放 `datasets/local`；允许公开的大文件可通过本仓库 Release 或 Git LFS 备份，另附 SHA-256。个人数据应另用私有存储，公开仓库的 Release 附件也会公开。默认忽略大权重不代表它们会自动同步，账号密钥不要写进数据、脚本或文档。
 
 游戏原图已直接纳入 Git；可打开 `game-assets/index.html` 搜索和浏览，也可运行 `python tools/verify_game_assets.py` 核对所有图像。它们用于参考图库和模板研究，与真实回放截图、YOLO 标注集分别保存。
 
@@ -95,4 +95,4 @@ git push
 
 切换主仓库提交前检查 `git -C source status`；不要覆盖源码改动。主仓库原有测试继续保留。实验模型不会自动复制进主仓库、运行包或正式版。
 
-许可证沿用 [AGPL-3.0](LICENSE)。游戏截图和素材仅用于本私有测试工作区，不随许可证转授游戏素材权利。
+代码许可证沿用 [AGPL-3.0](LICENSE)。游戏素材权利归原权利人，不随代码许可证转授素材权利。
