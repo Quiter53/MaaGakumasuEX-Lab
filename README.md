@@ -68,6 +68,7 @@ YOLO11 的标注格式、GPU 环境、训练与导出命令见 [训练说明](do
 | --- | --- |
 | `source/` | 固定提交的主仓库，包含测试、脚本、资源、原生 UI 源码 |
 | `fixtures/` | 26 张本机回放与手牌评估截图及 SHA-256 清单，约 20 MB |
+| [`game-assets/`](game-assets/README.md) | 3191 张原尺寸卡图、饮料、按钮和 UI 素材，约 185 MiB，附离线预览及来源清单 |
 | `lab.py`、`setup.ps1` | 恢复环境、测试、回放与校准入口 |
 | `train.py`、`datasets/cards.example.yaml` | 标注校验、YOLO 训练及候选 ONNX 导出 |
 | `requirements-lock.txt` | 本次实际验证的 Windows Python 测试依赖 |
@@ -77,6 +78,8 @@ YOLO11 的标注格式、GPU 环境、训练与导出命令见 [训练说明](do
 本机运行包、个人 config、连接信息、日志、历史临时构建与发布凭据没有迁移。旧 `hand_identity_labels.json` 对应的 10 张战斗原图后来在历史诊断目录中找到，原扩展名是 `.png.bmp`。现已无损转为 PNG 并纳入 `fixtures/hand`，像素逐字节核对一致；此前“原图未找到”的判断已更正。这些是历史开发评估样本，不用于宣称独立泛化精度，也不自动加入训练集。
 
 新增训练集放 `datasets/local`；大文件应通过**本私有仓库的私有 Release 附件或 Git LFS**备份，另附 SHA-256。默认忽略大权重是为了防止误提交，不代表它们会自动同步。账号密钥不要写进数据、脚本或文档。
+
+游戏原图已直接纳入 Git；可打开 `game-assets/index.html` 搜索和浏览，也可运行 `python tools/verify_game_assets.py` 核对所有图像。它们用于参考图库和模板研究，与真实回放截图、YOLO 标注集分别保存。
 
 ## 更新对应的主程序代码
 
