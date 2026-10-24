@@ -1,0 +1,56 @@
+{
+  "description": "Agent visually reviewed public-video card identity examples. Labels are not an independent human audit. Boxes were reviewed detector proposals; this is not full detector ground truth.",
+  "sourceBaseline": "v2.1.3",
+  "sources": [
+    {
+      "videoId": "VRT-g5GMTyk",
+      "url": "https://www.youtube.com/watch?v=VRT-g5GMTyk",
+      "title": "【HIF】紙吹雪入り好印象ループでS4+のスコアを取る解説【学マス/HIF本戦/スパラ美鈴】",
+      "uploader": "MILA@咲季担微課金P",
+      "split": "development",
+      "labelsFile": "first_labels.json",
+      "cropXYWH": [
+        350,
+        0,
+        608,
+        1080
+      ],
+      "sourceSize": [
+        1920,
+        1080
+      ],
+      "outputSize": [
+        720,
+        1280
+      ],
+      "frames": 38,
+      "cardObservations": 83
+    },
+    {
+      "videoId": "bu8kLS9cMVg",
+      "url": "https://www.youtube.com/watch?v=bu8kLS9cMVg",
+      "title": "学マス　HIF　本戦1　アノマリー全力型　Pレベル51",
+      "uploader": "木苺",
+      "split": "test",
+      "labelsFile": "second_labels.json",
+      "cropXYWH": [
+        0,
+        384,
+        864,
+        1536
+      ],
+      "sourceSize": [
+        864,
+        1920
+      ],
+      "outputSize": [
+        720,
+        1280
+      ],
+      "frames": 21,
+      "cardObservations": 53
+    }
+  ],
+  "frameCount": 59,
+  "cardObservations": 136
+}

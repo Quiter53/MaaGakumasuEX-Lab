@@ -2,7 +2,7 @@
 
 Quiter53 的训练、回归测试与截图回放环境。仓库当前公开，本次游戏原图已由用户确认公开上传。主程序继续在 [MaaGakumasuEX](https://github.com/Quiter53/MaaGakumasuEX) 维护；这里通过 `source` 子模块固定对应源码，不另存一套程序逻辑。
 
-目前固定源码提交为 `5eef68e731d85287cf30c00a6d486f86a89543ff`（v2.1.2 发布后的 README 维护提交）。版本号一致仍可能有不同的代码，以子模块提交为准。
+目前固定源码提交为 `b06e998e76a35e8c5b801bba8d15f652aee34954`（v2.1.3 后的角标身份匹配修复）。版本号一致仍可能有不同的代码，以子模块提交为准。
 
 ## 换电脑使用
 
@@ -68,6 +68,7 @@ YOLO11 的标注格式、GPU 环境、训练与导出命令见 [训练说明](do
 | --- | --- |
 | `source/` | 固定提交的主仓库，包含测试、脚本、资源、原生 UI 源码 |
 | `fixtures/` | 26 张本机回放与手牌评估截图及 SHA-256 清单，约 20 MB |
+| [`datasets/video-eval-20261025/`](datasets/video-eval-20261025/README.md) | 两段公开视频的 59 张目视核对截图、136 次身份及来源；去重后 58 帧、135 次身份 |
 | [`game-assets/`](game-assets/README.md) | 3191 张原尺寸卡图、饮料、按钮和 UI 素材，约 185 MiB，附离线预览及来源清单 |
 | `lab.py`、`setup.ps1` | 恢复环境、测试、回放与校准入口 |
 | `train.py`、`datasets/cards.example.yaml` | 标注校验、YOLO 训练及候选 ONNX 导出 |
@@ -80,6 +81,8 @@ YOLO11 的标注格式、GPU 环境、训练与导出命令见 [训练说明](do
 新增训练集放 `datasets/local`；允许公开的大文件可通过本仓库 Release 或 Git LFS 备份，另附 SHA-256。个人数据应另用私有存储，公开仓库的 Release 附件也会公开。默认忽略大权重不代表它们会自动同步，账号密钥不要写进数据、脚本或文档。
 
 游戏原图已直接纳入 Git；可打开 `game-assets/index.html` 搜索和浏览，也可运行 `python tools/verify_game_assets.py` 核对所有图像。它们用于参考图库和模板研究，与真实回放截图、YOLO 标注集分别保存。
+
+角标恢复的配对评估、公开视频下载、精确时间抽帧、手牌去重及已核对标签评分见 [视频采集与角标验证](docs/video-recognition.md)。本轮录像帧用于身份评估，不能自动转作 YOLO 训练集。
 
 ## 更新对应的主程序代码
 

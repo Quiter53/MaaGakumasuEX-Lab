@@ -1,0 +1,1143 @@
+{
+  "sourceUrl": "https://www.youtube.com/watch?v=VRT-g5GMTyk",
+  "recordingGroup": "youtube-VRT-g5GMTyk",
+  "split": "development",
+  "scope": "Card identity given reviewed detector boxes; not full-hand detection recall",
+  "labels": [
+    {
+      "index": 2,
+      "sha256": "e4aa86d890dbd33882ce2248c46428e0ea0e6198e244265ebd129215ca746f5e",
+      "file": "VRT-g5GMTyk/002.png",
+      "state": "resting",
+      "names": [
+        "虹色ドリーマー",
+        "びしっとキメ顔",
+        "幸せのおまじない",
+        "輝くキミへ"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          12,
+          887,
+          190,
+          251
+        ],
+        [
+          178,
+          886,
+          189,
+          252
+        ],
+        [
+          343,
+          886,
+          191,
+          252
+        ],
+        [
+          509,
+          886,
+          191,
+          252
+        ]
+      ],
+      "timestampSeconds": 251,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 3,
+      "sha256": "52d42050c20bc8f37f5c3b54cbf4c97da4631ebfe84edd5a9f1ec6cc5b3be149",
+      "file": "VRT-g5GMTyk/003.png",
+      "state": "resting",
+      "names": [
+        "虹色ドリーマー",
+        "びしっとキメ顔",
+        "幸せのおまじない"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          42,
+          886,
+          190,
+          251
+        ],
+        [
+          260,
+          885,
+          190,
+          253
+        ],
+        [
+          457,
+          886,
+          192,
+          251
+        ]
+      ],
+      "timestampSeconds": 261,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 4,
+      "sha256": "e246f6284c6f77c8ec3e9ca5afe8878154301acdc559402aca6bd88213d78a17",
+      "file": "VRT-g5GMTyk/004.png",
+      "state": "resting",
+      "names": [
+        "びしっとキメ顔"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          260,
+          885,
+          190,
+          253
+        ]
+      ],
+      "timestampSeconds": 271,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 5,
+      "sha256": "8fd91e22672c4f9410859d4704b262f73ab8cbe103ca407648441e2d1ab37794",
+      "file": "VRT-g5GMTyk/005.png",
+      "state": "selected",
+      "names": [
+        "夢色リップ",
+        "止められない想い",
+        "幸せのおまじない"
+      ],
+      "visibleBadgeSlots": [
+        1
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          40,
+          885,
+          192,
+          253
+        ],
+        [
+          260,
+          858,
+          190,
+          252
+        ],
+        [
+          479,
+          887,
+          191,
+          252
+        ]
+      ],
+      "timestampSeconds": 281,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 6,
+      "sha256": "c41b329f1f7b5a0442bf891defae451bda8e02a2042dc5f4de8234bbd03ff69f",
+      "file": "VRT-g5GMTyk/006.png",
+      "state": "selected",
+      "names": [
+        "夢色リップ",
+        "幸せのおまじない"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          151,
+          886,
+          191,
+          251
+        ],
+        [
+          370,
+          860,
+          190,
+          250
+        ]
+      ],
+      "timestampSeconds": 291,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 7,
+      "sha256": "64a982207fc1f3372250c609992ff58c05244f87d5ffbfc7ad1645dddcc2a63c",
+      "file": "VRT-g5GMTyk/007.png",
+      "state": "resting",
+      "names": [
+        "夢色リップ"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          260,
+          885,
+          190,
+          252
+        ]
+      ],
+      "timestampSeconds": 301,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 8,
+      "sha256": "4c3f2accf99eccac37f992de56fc2814da8a2ab8e559557f12c60ff13aa031e2",
+      "file": "VRT-g5GMTyk/008.png",
+      "state": "resting",
+      "names": [
+        "夢と現の境界線",
+        "ノートの端の決意"
+      ],
+      "visibleBadgeSlots": [
+        0,
+        1
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          151,
+          886,
+          191,
+          252
+        ],
+        [
+          369,
+          885,
+          191,
+          252
+        ]
+      ],
+      "timestampSeconds": 311,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 10,
+      "sha256": "ba3d199abf8ff912f068f05eb745bbe923ed30e9c12f6044828caee32d409321",
+      "file": "VRT-g5GMTyk/010.png",
+      "state": "transition",
+      "names": [
+        "ファンシーチャーム",
+        "きらきら紙吹雪"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          58,
+          886,
+          189,
+          251
+        ],
+        [
+          261,
+          929,
+          189,
+          209
+        ]
+      ],
+      "timestampSeconds": 331,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 11,
+      "sha256": "455414f03b8ae975643c3b6b05ac06c313e4044b8706035360ab044b2b2f2719",
+      "file": "VRT-g5GMTyk/011.png",
+      "state": "resting",
+      "names": [
+        "ファンシーチャーム",
+        "きらきら紙吹雪"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          151,
+          886,
+          190,
+          252
+        ],
+        [
+          369,
+          886,
+          189,
+          251
+        ]
+      ],
+      "timestampSeconds": 341,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 13,
+      "sha256": "a7b2553fa5093c717c3d4ebce4623af666e4d20d35abe4324e01c250b33e87ad",
+      "file": "VRT-g5GMTyk/013.png",
+      "state": "resting",
+      "names": [
+        "トキメキ",
+        "みんな大好き",
+        "夢と現の境界線",
+        "ゆめみごこち",
+        "びしっとキメ顔"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          12,
+          887,
+          188,
+          250
+        ],
+        [
+          136,
+          887,
+          187,
+          251
+        ],
+        [
+          259,
+          887,
+          189,
+          251
+        ],
+        [
+          384,
+          887,
+          195,
+          251
+        ],
+        [
+          509,
+          887,
+          191,
+          251
+        ]
+      ],
+      "timestampSeconds": 361,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 14,
+      "sha256": "eacafdc11f6d3b748a079cc9eec5bd27d3b837d0b4552cbf817a73fb252ea224",
+      "file": "VRT-g5GMTyk/014.png",
+      "state": "resting",
+      "names": [
+        "トキメキ",
+        "夢と現の境界線",
+        "びしっとキメ顔"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          40,
+          886,
+          192,
+          252
+        ],
+        [
+          260,
+          886,
+          190,
+          251
+        ],
+        [
+          479,
+          886,
+          191,
+          251
+        ]
+      ],
+      "timestampSeconds": 371,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 15,
+      "sha256": "87af504516e7d232e160a58cc0db5fcc00a957ffc5cee54c3caaa65dfbbe77dd",
+      "file": "VRT-g5GMTyk/015.png",
+      "state": "resting",
+      "names": [
+        "トキメキ"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          260,
+          885,
+          190,
+          253
+        ]
+      ],
+      "timestampSeconds": 381,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 16,
+      "sha256": "b9bab14bd3a455df64dfaeddbea12aa250b103b85550bd935c4fc913a379087d",
+      "file": "VRT-g5GMTyk/016.png",
+      "state": "resting",
+      "names": [
+        "きらきら紙吹雪",
+        "夢色リップ",
+        "トキメキ"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          40,
+          885,
+          192,
+          253
+        ],
+        [
+          260,
+          883,
+          190,
+          255
+        ],
+        [
+          479,
+          886,
+          190,
+          252
+        ]
+      ],
+      "timestampSeconds": 391,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 19,
+      "sha256": "e75f62917b678ffd03df341e9392af9c0d67a746cfa816fb00f383a67b7bfdb2",
+      "file": "VRT-g5GMTyk/019.png",
+      "state": "resting",
+      "names": [
+        "きらきら紙吹雪"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          261,
+          887,
+          189,
+          251
+        ]
+      ],
+      "timestampSeconds": 421,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 21,
+      "sha256": "3a142b0707de088447b6268987681a1a109a53bc6329a55f2aad5d97af555cbe",
+      "file": "VRT-g5GMTyk/021.png",
+      "state": "resting",
+      "names": [
+        "トキメキ",
+        "夢と現の境界線",
+        "みんな大好き"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          41,
+          886,
+          191,
+          251
+        ],
+        [
+          260,
+          888,
+          190,
+          251
+        ],
+        [
+          479,
+          886,
+          190,
+          252
+        ]
+      ],
+      "timestampSeconds": 441,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 22,
+      "sha256": "e24fd87404074fa8226654bf7025145127db45eb0fe182b8911ae44be02d1d0d",
+      "file": "VRT-g5GMTyk/022.png",
+      "state": "resting",
+      "names": [
+        "トキメキ",
+        "夢と現の境界線"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          151,
+          886,
+          190,
+          253
+        ],
+        [
+          369,
+          888,
+          191,
+          250
+        ]
+      ],
+      "timestampSeconds": 451,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 24,
+      "sha256": "6b8a83fda1f10d3ebf8341c8d4fb3525cb1570b0aecd0d1d3683b0ece8c05916",
+      "file": "VRT-g5GMTyk/024.png",
+      "state": "selected",
+      "names": [
+        "きらきら紙吹雪",
+        "みんな大好き",
+        "夢と現の境界線",
+        "ゆめみごこち"
+      ],
+      "visibleBadgeSlots": [
+        0,
+        1
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          11,
+          887,
+          191,
+          251
+        ],
+        [
+          177,
+          886,
+          191,
+          251
+        ],
+        [
+          344,
+          887,
+          193,
+          251
+        ],
+        [
+          510,
+          859,
+          189,
+          254
+        ]
+      ],
+      "timestampSeconds": 471,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 25,
+      "sha256": "b599c5dc88c5fd61f55c2ed5a32b5bf2c5a4f3329949fe46a6b290b00da27ebf",
+      "file": "VRT-g5GMTyk/025.png",
+      "state": "resting",
+      "names": [
+        "きらきら紙吹雪",
+        "夢と現の境界線"
+      ],
+      "visibleBadgeSlots": [
+        0
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          151,
+          887,
+          189,
+          252
+        ],
+        [
+          368,
+          886,
+          191,
+          251
+        ]
+      ],
+      "timestampSeconds": 481,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 26,
+      "sha256": "18a43ec5aa1c9788ebfede98cc0ab536f8197cfce53b151dbd66a6e5179ad04d",
+      "file": "VRT-g5GMTyk/026.png",
+      "state": "resting",
+      "names": [
+        "きらきら紙吹雪"
+      ],
+      "visibleBadgeSlots": [
+        0
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          260,
+          886,
+          190,
+          252
+        ]
+      ],
+      "timestampSeconds": 491,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 32,
+      "sha256": "7c4823250363491b502d5e4ad105f296f11032f5ab0628abbe85eaabc9876551",
+      "file": "VRT-g5GMTyk/032.png",
+      "state": "moving",
+      "names": [
+        "トキメキ"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          325,
+          890,
+          192,
+          253
+        ]
+      ],
+      "timestampSeconds": 617,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 34,
+      "sha256": "59dc55c72edfa14706a0e611e16a76fce5029a566c0d30e1df6405e1273345ca",
+      "file": "VRT-g5GMTyk/034.png",
+      "state": "resting",
+      "names": [
+        "夢色リップ"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          270,
+          888,
+          192,
+          255
+        ]
+      ],
+      "timestampSeconds": 637,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 36,
+      "sha256": "eccd4a7e5fcc50862ffa7784f633b01e173fb1efb6a13d03b9828fda95a35c42",
+      "file": "VRT-g5GMTyk/036.png",
+      "state": "resting",
+      "names": [
+        "きらきら紙吹雪"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          270,
+          888,
+          192,
+          255
+        ]
+      ],
+      "timestampSeconds": 657,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 38,
+      "sha256": "503ea1ad1492237ea82f24b81ac8e47806088e39c63afe14ee45ee80c64712c5",
+      "file": "VRT-g5GMTyk/038.png",
+      "state": "resting",
+      "names": [
+        "ファンシーチャーム",
+        "幸せのおまじない",
+        "幸せのおまじない"
+      ],
+      "visibleBadgeSlots": [
+        0
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          49,
+          888,
+          191,
+          254
+        ],
+        [
+          270,
+          889,
+          192,
+          254
+        ],
+        [
+          490,
+          888,
+          192,
+          255
+        ]
+      ],
+      "timestampSeconds": 677,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 39,
+      "sha256": "af29dc569d05a0e1b256fee695e6f249770cb2cf060f85437bc3416113e986c6",
+      "file": "VRT-g5GMTyk/039.png",
+      "state": "resting",
+      "names": [
+        "私がスター",
+        "ノートの端の決意",
+        "ファンシーチャーム"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          50,
+          888,
+          193,
+          255
+        ],
+        [
+          269,
+          888,
+          192,
+          255
+        ],
+        [
+          490,
+          889,
+          192,
+          254
+        ]
+      ],
+      "timestampSeconds": 687,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 40,
+      "sha256": "a39c5b2bec0bc5ccfe9a1b41cd1b209f7eb3920a39ae7e17e2a14d2051192894",
+      "file": "VRT-g5GMTyk/040.png",
+      "state": "resting",
+      "names": [
+        "ノートの端の決意",
+        "きらきら紙吹雪"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          160,
+          889,
+          192,
+          254
+        ],
+        [
+          379,
+          889,
+          193,
+          254
+        ]
+      ],
+      "timestampSeconds": 697,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 41,
+      "sha256": "3144715104cd45df5589f9b862a82507ba7a2a39234ff067587a4b86cdc89ab7",
+      "file": "VRT-g5GMTyk/041.png",
+      "state": "selected",
+      "names": [
+        "みんな大好き",
+        "幸せのおまじない"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          160,
+          861,
+          192,
+          255
+        ],
+        [
+          380,
+          889,
+          193,
+          254
+        ]
+      ],
+      "timestampSeconds": 707,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 43,
+      "sha256": "b82954d4b9b60f22739c16d706797641188c29048134d68297873cddf855a079",
+      "file": "VRT-g5GMTyk/043.png",
+      "state": "resting",
+      "names": [
+        "幸せのおまじない"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          270,
+          889,
+          192,
+          254
+        ]
+      ],
+      "timestampSeconds": 727,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 44,
+      "sha256": "2edfc0683b8b03f07124da8cdef4a854aca75f4990b0d90ebec981231b2df676",
+      "file": "VRT-g5GMTyk/044.png",
+      "state": "resting",
+      "names": [
+        "びしっとキメ顔",
+        "夢と現の境界線"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          161,
+          889,
+          191,
+          254
+        ],
+        [
+          381,
+          890,
+          192,
+          252
+        ]
+      ],
+      "timestampSeconds": 737,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 45,
+      "sha256": "8050aa9d87b7c66ab53e8ba8cccb42fd254e5ac809aa63a776a313f55f98a368",
+      "file": "VRT-g5GMTyk/045.png",
+      "state": "resting",
+      "names": [
+        "びしっとキメ顔"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          270,
+          888,
+          192,
+          255
+        ]
+      ],
+      "timestampSeconds": 747,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 46,
+      "sha256": "bdc947fda9da43bf8011b8e59023657fc471c8e0a79e3b578d29a49028a5d72e",
+      "file": "VRT-g5GMTyk/046.png",
+      "state": "resting",
+      "names": [
+        "幸せのおまじない",
+        "ゆめみごこち",
+        "ノートの端の決意"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          50,
+          890,
+          191,
+          252
+        ],
+        [
+          270,
+          889,
+          192,
+          254
+        ],
+        [
+          490,
+          889,
+          192,
+          254
+        ]
+      ],
+      "timestampSeconds": 757,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 47,
+      "sha256": "577f7d95813bd76313afa153366588f9a0c6a63a872bfda0e342fb8277e476c0",
+      "file": "VRT-g5GMTyk/047.png",
+      "state": "resting",
+      "names": [
+        "ノートの端の決意"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          270,
+          888,
+          192,
+          255
+        ]
+      ],
+      "timestampSeconds": 767,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 48,
+      "sha256": "4df3a17feb9437920f8d129180f8e70bff2295ae6ad38fbcf1e34615907601e2",
+      "file": "VRT-g5GMTyk/048.png",
+      "state": "resting",
+      "names": [
+        "みんな大好き",
+        "きらきら紙吹雪"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          161,
+          889,
+          191,
+          254
+        ],
+        [
+          379,
+          888,
+          194,
+          255
+        ]
+      ],
+      "timestampSeconds": 777,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 49,
+      "sha256": "457e342fdd51a0e0c6e73f5dd58b108543615927b203d4434af421086cf07508",
+      "file": "VRT-g5GMTyk/049.png",
+      "state": "resting",
+      "names": [
+        "きらきら紙吹雪"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          270,
+          888,
+          193,
+          256
+        ]
+      ],
+      "timestampSeconds": 787,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 50,
+      "sha256": "112db1dafca94bf75453735238a7d99010f03d931d079cbcd274bb7651a10de6",
+      "file": "VRT-g5GMTyk/050.png",
+      "state": "resting",
+      "names": [
+        "夢と現の境界線",
+        "ノートの端の決意",
+        "ゆめみごこち"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          49,
+          888,
+          192,
+          255
+        ],
+        [
+          270,
+          888,
+          192,
+          255
+        ],
+        [
+          490,
+          889,
+          192,
+          254
+        ]
+      ],
+      "timestampSeconds": 797,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 51,
+      "sha256": "ae140c665512d53bf1ceda69b9fdcdc44821b03f78b41f2d97d9da8ec8206c6d",
+      "file": "VRT-g5GMTyk/051.png",
+      "state": "resting",
+      "names": [
+        "夢と現の境界線",
+        "ノートの端の決意",
+        "ゆめみごこち",
+        "きらきら紙吹雪"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          19,
+          888,
+          191,
+          254
+        ],
+        [
+          186,
+          890,
+          195,
+          253
+        ],
+        [
+          355,
+          889,
+          191,
+          254
+        ],
+        [
+          521,
+          889,
+          190,
+          253
+        ]
+      ],
+      "timestampSeconds": 807,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 52,
+      "sha256": "9b1f2ee2b3946fd644d6b650048ae2943d9aea38d06d81b902b534e307993617",
+      "file": "VRT-g5GMTyk/052.png",
+      "state": "resting",
+      "names": [
+        "ノートの端の決意",
+        "きらきら紙吹雪"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          161,
+          889,
+          191,
+          253
+        ],
+        [
+          379,
+          889,
+          192,
+          254
+        ]
+      ],
+      "timestampSeconds": 817,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 54,
+      "sha256": "023639c0283534438c5c0f2d5e9981d5474fbbf1bdcd748cbf5f89222e640d8b",
+      "file": "VRT-g5GMTyk/054.png",
+      "state": "flash",
+      "names": [
+        "みんな大好き",
+        "きらきら紙吹雪",
+        "夢と現の境界線"
+      ],
+      "visibleBadgeSlots": [
+        2
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          51,
+          890,
+          189,
+          253
+        ],
+        [
+          265,
+          889,
+          182,
+          254
+        ],
+        [
+          422,
+          889,
+          192,
+          253
+        ]
+      ],
+      "timestampSeconds": 837,
+      "timestampUncertaintySeconds": 1
+    },
+    {
+      "index": 55,
+      "sha256": "1fecad1474111a08c69be9da5b5d87b25b91af5992a7af0cebb964b2f4219b90",
+      "file": "VRT-g5GMTyk/055.png",
+      "state": "flash",
+      "names": [
+        "きらきら紙吹雪",
+        "夢と現の境界線"
+      ],
+      "visibleBadgeSlots": [
+        1
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          160,
+          888,
+          190,
+          255
+        ],
+        [
+          380,
+          889,
+          193,
+          253
+        ]
+      ],
+      "timestampSeconds": 847,
+      "timestampUncertaintySeconds": 1
+    }
+  ],
+  "excludedFrames": {
+    "12": "Dealing; last title not fully visible in contact sheet",
+    "18": "Flash/transition; ambiguous middle title"
+  }
+}

@@ -1,0 +1,665 @@
+{
+  "sourceUrl": "https://www.youtube.com/watch?v=bu8kLS9cMVg",
+  "recordingGroup": "youtube-bu8kLS9cMVg",
+  "split": "test",
+  "scope": "Identity given reviewed detector boxes. Tall-phone hand viewport cropped before uniform scaling; not full-scene recognition accuracy.",
+  "labels": [
+    {
+      "index": 0,
+      "sha256": "72b4f9eb3fa3e97e09cece36671c8346462a9c42691030c448605820ff2e407c",
+      "file": "bu8kLS9cMVg/000.png",
+      "state": "resting",
+      "names": [
+        "翔び立て！",
+        "全身全霊",
+        "紅葉ランニング"
+      ],
+      "visibleBadgeSlots": [
+        1
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          49,
+          884,
+          188,
+          249
+        ],
+        [
+          265,
+          884,
+          189,
+          249
+        ],
+        [
+          482,
+          883,
+          189,
+          250
+        ]
+      ],
+      "timestampSeconds": 10.01
+    },
+    {
+      "index": 1,
+      "sha256": "d47009897bd4773f9bb8fbcbfcc520ff0749f9309720289f1e2b2ebda609fca4",
+      "file": "bu8kLS9cMVg/001.png",
+      "state": "resting",
+      "names": [
+        "翔び立て！",
+        "トレンドリーダー"
+      ],
+      "visibleBadgeSlots": [
+        1
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          156,
+          884,
+          190,
+          249
+        ],
+        [
+          373,
+          883,
+          190,
+          250
+        ]
+      ],
+      "timestampSeconds": 20.02
+    },
+    {
+      "index": 2,
+      "sha256": "1be7ba43ccca4780300e40af212c588fc9303e7244e46fc3ed790266f8b73b09",
+      "file": "bu8kLS9cMVg/002.png",
+      "state": "resting",
+      "names": [
+        "トレンドリーダー",
+        "仕切り直し",
+        "アイドル宣言"
+      ],
+      "visibleBadgeSlots": [
+        0
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          49,
+          884,
+          187,
+          249
+        ],
+        [
+          265,
+          884,
+          188,
+          249
+        ],
+        [
+          482,
+          884,
+          189,
+          249
+        ]
+      ],
+      "timestampSeconds": 30.03
+    },
+    {
+      "index": 3,
+      "sha256": "caea0091d4844fce94cfff75e27eee91a62c4e2c52656227a87269d801319272",
+      "file": "bu8kLS9cMVg/003.png",
+      "state": "resting",
+      "names": [
+        "嬉しい誤算",
+        "積み重ね",
+        "セッティング"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          48,
+          884,
+          189,
+          249
+        ],
+        [
+          265,
+          885,
+          188,
+          248
+        ],
+        [
+          481,
+          883,
+          189,
+          249
+        ]
+      ],
+      "timestampSeconds": 40.04
+    },
+    {
+      "index": 5,
+      "sha256": "3437e831e110015d84e95735c0e6f41af40122b715ed45812c552c7f5bbc80c7",
+      "file": "bu8kLS9cMVg/005.png",
+      "state": "selected",
+      "names": [
+        "積み重ね",
+        "セッティング",
+        "心・技・体",
+        "盛り上げ上手"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          19,
+          885,
+          187,
+          248
+        ],
+        [
+          183,
+          885,
+          190,
+          248
+        ],
+        [
+          347,
+          857,
+          189,
+          250
+        ],
+        [
+          511,
+          884,
+          190,
+          248
+        ]
+      ],
+      "timestampSeconds": 60.06
+    },
+    {
+      "index": 7,
+      "sha256": "4520a7fd321c7b408089bdd7ef22fd5be31bc553b38316335b126a7667026990",
+      "file": "bu8kLS9cMVg/007.png",
+      "state": "flash",
+      "names": [
+        "アイドルになります",
+        "翔び立て！",
+        "あふれ出る想い",
+        "輝け！"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          19,
+          886,
+          188,
+          245
+        ],
+        [
+          184,
+          886,
+          190,
+          244
+        ],
+        [
+          347,
+          885,
+          192,
+          247
+        ],
+        [
+          513,
+          886,
+          188,
+          244
+        ]
+      ],
+      "timestampSeconds": 80.08
+    },
+    {
+      "index": 8,
+      "sha256": "1f5231052c22f3fed567a449885569a93c54a0c148a6896748b36e47001549b9",
+      "file": "bu8kLS9cMVg/008.png",
+      "state": "resting",
+      "names": [
+        "アイドルになります",
+        "翔び立て！",
+        "あふれ出る想い",
+        "輝け！"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          19,
+          885,
+          188,
+          248
+        ],
+        [
+          183,
+          885,
+          191,
+          248
+        ],
+        [
+          348,
+          884,
+          192,
+          249
+        ],
+        [
+          513,
+          885,
+          188,
+          248
+        ]
+      ],
+      "timestampSeconds": 90.09
+    },
+    {
+      "index": 9,
+      "sha256": "f9a917ac9106475fd127e326235a78e2224acfd3dc9157762c4f8d4fb18978b9",
+      "file": "bu8kLS9cMVg/009.png",
+      "state": "resting",
+      "names": [
+        "アイドルになります"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          264,
+          889,
+          190,
+          244
+        ]
+      ],
+      "timestampSeconds": 100.1
+    },
+    {
+      "index": 10,
+      "sha256": "be39a2d34102433a264913aff75c45427cdafe730e5af2669d02ef61f41f86f2",
+      "file": "bu8kLS9cMVg/010.png",
+      "state": "resting",
+      "names": [
+        "頂点へ",
+        "セッティング",
+        "積み重ね",
+        "あふれ出る想い",
+        "潜在能力"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          18,
+          885,
+          184,
+          248
+        ],
+        [
+          142,
+          885,
+          185,
+          247
+        ],
+        [
+          264,
+          885,
+          186,
+          248
+        ],
+        [
+          388,
+          884,
+          190,
+          248
+        ],
+        [
+          512,
+          884,
+          189,
+          248
+        ]
+      ],
+      "timestampSeconds": 110.11
+    },
+    {
+      "index": 11,
+      "sha256": "436f33bc6ef98e471e23eccd64c7e8e3ba28c9bcbf22923a1661ba7e59969622",
+      "file": "bu8kLS9cMVg/011.png",
+      "state": "selected",
+      "names": [
+        "セッティング",
+        "積み重ね",
+        "潜在能力"
+      ],
+      "visibleBadgeSlots": [
+        0
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          49,
+          857,
+          188,
+          251
+        ],
+        [
+          265,
+          883,
+          188,
+          249
+        ],
+        [
+          482,
+          884,
+          189,
+          249
+        ]
+      ],
+      "timestampSeconds": 120.12
+    },
+    {
+      "index": 13,
+      "sha256": "dd2708511cd023bac4bcb696ddecdee2037c3421767abba89d6dce55585e222f",
+      "file": "bu8kLS9cMVg/013.png",
+      "state": "selected",
+      "names": [
+        "輝け！",
+        "トレンドリーダー",
+        "積み重ね"
+      ],
+      "visibleBadgeSlots": [
+        2
+      ],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          49,
+          884,
+          186,
+          248
+        ],
+        [
+          265,
+          884,
+          188,
+          249
+        ],
+        [
+          482,
+          858,
+          188,
+          250
+        ]
+      ],
+      "timestampSeconds": 140.14
+    },
+    {
+      "index": 15,
+      "sha256": "25f4b19382e1378c3fdbeea8383888b9cfc726a4384ab8c0dd9607d76e7633a0",
+      "file": "bu8kLS9cMVg/015.png",
+      "state": "resting",
+      "names": [
+        "トレンドリーダー"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          265,
+          884,
+          189,
+          250
+        ]
+      ],
+      "timestampSeconds": 160.16
+    },
+    {
+      "index": 16,
+      "sha256": "281d247e4f8a862abb18b07489133a86737e8d90b654d015bed8207c454cf0a8",
+      "file": "bu8kLS9cMVg/016.png",
+      "state": "selected",
+      "names": [
+        "トレンドリーダー"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          265,
+          856,
+          187,
+          253
+        ]
+      ],
+      "timestampSeconds": 170.17
+    },
+    {
+      "index": 18,
+      "sha256": "099e1c64d1504356bd30e12101a86a84e54ab939d081f372e2d82510dc87e851",
+      "file": "bu8kLS9cMVg/018.png",
+      "state": "resting",
+      "names": [
+        "輝け！",
+        "トレンドリーダー"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          156,
+          884,
+          190,
+          249
+        ],
+        [
+          373,
+          884,
+          188,
+          249
+        ]
+      ],
+      "timestampSeconds": 190.19
+    },
+    {
+      "index": 19,
+      "sha256": "be009fb4a3e1bebdc4ea840f667628c781233c5f2de112768f8bbf883a2c5b57",
+      "file": "bu8kLS9cMVg/019.png",
+      "state": "resting",
+      "names": [
+        "トレンドリーダー"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          264,
+          884,
+          189,
+          250
+        ]
+      ],
+      "timestampSeconds": 200.2
+    },
+    {
+      "index": 20,
+      "sha256": "22719292820e93d6f9233ab57712ed8361a460b152c7241c4a4fb78ab6bcdb03",
+      "file": "bu8kLS9cMVg/020.png",
+      "state": "selected",
+      "names": [
+        "トレンドリーダー",
+        "あふれ出る想い",
+        "輝け！"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          49,
+          884,
+          188,
+          249
+        ],
+        [
+          264,
+          858,
+          188,
+          251
+        ],
+        [
+          482,
+          884,
+          189,
+          247
+        ]
+      ],
+      "timestampSeconds": 210.21
+    },
+    {
+      "index": 22,
+      "sha256": "bf5e974a14e2941ad557465fa083d1aa08d050938ad7ad4fe764b36f817b361f",
+      "file": "bu8kLS9cMVg/022.png",
+      "state": "selected",
+      "names": [
+        "トレンドリーダー"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          263,
+          854,
+          190,
+          252
+        ]
+      ],
+      "timestampSeconds": 230.23
+    },
+    {
+      "index": 23,
+      "sha256": "b8b22e91fbb0ba1ff1af13fef2b460865228cbd9724b12e817b51d2ef98930b7",
+      "file": "bu8kLS9cMVg/023.png",
+      "state": "selected",
+      "names": [
+        "積み重ね",
+        "輝け！",
+        "あふれ出る想い"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          49,
+          885,
+          188,
+          248
+        ],
+        [
+          265,
+          884,
+          188,
+          249
+        ],
+        [
+          482,
+          857,
+          187,
+          250
+        ]
+      ],
+      "timestampSeconds": 240.24
+    },
+    {
+      "index": 24,
+      "sha256": "e3b4d50b0155fbedfa88e39081ff902be3ff1ca950ca91b7f2301aaa5483ee02",
+      "file": "bu8kLS9cMVg/024.png",
+      "state": "selected",
+      "names": [
+        "積み重ね",
+        "輝け！"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          157,
+          884,
+          189,
+          249
+        ],
+        [
+          373,
+          856,
+          189,
+          254
+        ]
+      ],
+      "timestampSeconds": 250.25
+    },
+    {
+      "index": 25,
+      "sha256": "bdf7b9252f522f63ea0687da1cfc9601dc863fa1f3725be1d89011846d5f974e",
+      "file": "bu8kLS9cMVg/025.png",
+      "state": "resting",
+      "names": [
+        "積み重ね",
+        "輝け！",
+        "トレンドリーダー"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          49,
+          883,
+          187,
+          250
+        ],
+        [
+          265,
+          884,
+          188,
+          248
+        ],
+        [
+          481,
+          884,
+          189,
+          250
+        ]
+      ],
+      "timestampSeconds": 260.26
+    },
+    {
+      "index": 26,
+      "sha256": "f1a9f74d82f8225e16fc03c274ee5443b34d88fdd1229e4e4348cc251c517501",
+      "file": "bu8kLS9cMVg/026.png",
+      "state": "resting",
+      "names": [
+        "トレンドリーダー"
+      ],
+      "visibleBadgeSlots": [],
+      "review": "Codex visual review using visible title/artwork and adjacent frames, not generated from matching predictions",
+      "boxes": [
+        [
+          265,
+          883,
+          190,
+          250
+        ]
+      ],
+      "timestampSeconds": 270.27
+    }
+  ],
+  "excludedFrames": {
+    "4": "Deck overlay transition; unsuitable for resting-hand evaluation"
+  }
+}

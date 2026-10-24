@@ -1,0 +1,421 @@
+{
+  "description": "Mark repeated hand views within the same recording and reviewed state.\n\nThe matching input is the visible artwork, with score/effect regions excluded.\nAnimated backgrounds and changing damage numbers do not define a new example.\nLabels and states must already have been reviewed before running this command.\n",
+  "maxRgbDifference": 6.0,
+  "total": 59,
+  "distinctHands": 58,
+  "frames": [
+    {
+      "sha256": "e4aa86d890dbd33882ce2248c46428e0ea0e6198e244265ebd129215ca746f5e",
+      "file": "VRT-g5GMTyk/002.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "52d42050c20bc8f37f5c3b54cbf4c97da4631ebfe84edd5a9f1ec6cc5b3be149",
+      "file": "VRT-g5GMTyk/003.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "e246f6284c6f77c8ec3e9ca5afe8878154301acdc559402aca6bd88213d78a17",
+      "file": "VRT-g5GMTyk/004.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "8fd91e22672c4f9410859d4704b262f73ab8cbe103ca407648441e2d1ab37794",
+      "file": "VRT-g5GMTyk/005.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "selected",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "c41b329f1f7b5a0442bf891defae451bda8e02a2042dc5f4de8234bbd03ff69f",
+      "file": "VRT-g5GMTyk/006.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "selected",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "64a982207fc1f3372250c609992ff58c05244f87d5ffbfc7ad1645dddcc2a63c",
+      "file": "VRT-g5GMTyk/007.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "4c3f2accf99eccac37f992de56fc2814da8a2ab8e559557f12c60ff13aa031e2",
+      "file": "VRT-g5GMTyk/008.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "ba3d199abf8ff912f068f05eb745bbe923ed30e9c12f6044828caee32d409321",
+      "file": "VRT-g5GMTyk/010.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "transition",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "455414f03b8ae975643c3b6b05ac06c313e4044b8706035360ab044b2b2f2719",
+      "file": "VRT-g5GMTyk/011.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "a7b2553fa5093c717c3d4ebce4623af666e4d20d35abe4324e01c250b33e87ad",
+      "file": "VRT-g5GMTyk/013.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "eacafdc11f6d3b748a079cc9eec5bd27d3b837d0b4552cbf817a73fb252ea224",
+      "file": "VRT-g5GMTyk/014.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "87af504516e7d232e160a58cc0db5fcc00a957ffc5cee54c3caaa65dfbbe77dd",
+      "file": "VRT-g5GMTyk/015.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "b9bab14bd3a455df64dfaeddbea12aa250b103b85550bd935c4fc913a379087d",
+      "file": "VRT-g5GMTyk/016.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "e75f62917b678ffd03df341e9392af9c0d67a746cfa816fb00f383a67b7bfdb2",
+      "file": "VRT-g5GMTyk/019.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "3a142b0707de088447b6268987681a1a109a53bc6329a55f2aad5d97af555cbe",
+      "file": "VRT-g5GMTyk/021.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "e24fd87404074fa8226654bf7025145127db45eb0fe182b8911ae44be02d1d0d",
+      "file": "VRT-g5GMTyk/022.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "6b8a83fda1f10d3ebf8341c8d4fb3525cb1570b0aecd0d1d3683b0ece8c05916",
+      "file": "VRT-g5GMTyk/024.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "selected",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "b599c5dc88c5fd61f55c2ed5a32b5bf2c5a4f3329949fe46a6b290b00da27ebf",
+      "file": "VRT-g5GMTyk/025.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "18a43ec5aa1c9788ebfede98cc0ab536f8197cfce53b151dbd66a6e5179ad04d",
+      "file": "VRT-g5GMTyk/026.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "7c4823250363491b502d5e4ad105f296f11032f5ab0628abbe85eaabc9876551",
+      "file": "VRT-g5GMTyk/032.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "moving",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "59dc55c72edfa14706a0e611e16a76fce5029a566c0d30e1df6405e1273345ca",
+      "file": "VRT-g5GMTyk/034.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "eccd4a7e5fcc50862ffa7784f633b01e173fb1efb6a13d03b9828fda95a35c42",
+      "file": "VRT-g5GMTyk/036.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "503ea1ad1492237ea82f24b81ac8e47806088e39c63afe14ee45ee80c64712c5",
+      "file": "VRT-g5GMTyk/038.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "af29dc569d05a0e1b256fee695e6f249770cb2cf060f85437bc3416113e986c6",
+      "file": "VRT-g5GMTyk/039.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "a39c5b2bec0bc5ccfe9a1b41cd1b209f7eb3920a39ae7e17e2a14d2051192894",
+      "file": "VRT-g5GMTyk/040.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "3144715104cd45df5589f9b862a82507ba7a2a39234ff067587a4b86cdc89ab7",
+      "file": "VRT-g5GMTyk/041.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "selected",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "b82954d4b9b60f22739c16d706797641188c29048134d68297873cddf855a079",
+      "file": "VRT-g5GMTyk/043.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "2edfc0683b8b03f07124da8cdef4a854aca75f4990b0d90ebec981231b2df676",
+      "file": "VRT-g5GMTyk/044.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "8050aa9d87b7c66ab53e8ba8cccb42fd254e5ac809aa63a776a313f55f98a368",
+      "file": "VRT-g5GMTyk/045.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "bdc947fda9da43bf8011b8e59023657fc471c8e0a79e3b578d29a49028a5d72e",
+      "file": "VRT-g5GMTyk/046.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "577f7d95813bd76313afa153366588f9a0c6a63a872bfda0e342fb8277e476c0",
+      "file": "VRT-g5GMTyk/047.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "4df3a17feb9437920f8d129180f8e70bff2295ae6ad38fbcf1e34615907601e2",
+      "file": "VRT-g5GMTyk/048.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "457e342fdd51a0e0c6e73f5dd58b108543615927b203d4434af421086cf07508",
+      "file": "VRT-g5GMTyk/049.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": "eccd4a7e5fcc50862ffa7784f633b01e173fb1efb6a13d03b9828fda95a35c42"
+    },
+    {
+      "sha256": "112db1dafca94bf75453735238a7d99010f03d931d079cbcd274bb7651a10de6",
+      "file": "VRT-g5GMTyk/050.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "ae140c665512d53bf1ceda69b9fdcdc44821b03f78b41f2d97d9da8ec8206c6d",
+      "file": "VRT-g5GMTyk/051.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "9b1f2ee2b3946fd644d6b650048ae2943d9aea38d06d81b902b534e307993617",
+      "file": "VRT-g5GMTyk/052.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "023639c0283534438c5c0f2d5e9981d5474fbbf1bdcd748cbf5f89222e640d8b",
+      "file": "VRT-g5GMTyk/054.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "flash",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "1fecad1474111a08c69be9da5b5d87b25b91af5992a7af0cebb964b2f4219b90",
+      "file": "VRT-g5GMTyk/055.png",
+      "recordingGroup": "VRT-g5GMTyk",
+      "state": "flash",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "72b4f9eb3fa3e97e09cece36671c8346462a9c42691030c448605820ff2e407c",
+      "file": "bu8kLS9cMVg/000.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "d47009897bd4773f9bb8fbcbfcc520ff0749f9309720289f1e2b2ebda609fca4",
+      "file": "bu8kLS9cMVg/001.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "1be7ba43ccca4780300e40af212c588fc9303e7244e46fc3ed790266f8b73b09",
+      "file": "bu8kLS9cMVg/002.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "caea0091d4844fce94cfff75e27eee91a62c4e2c52656227a87269d801319272",
+      "file": "bu8kLS9cMVg/003.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "3437e831e110015d84e95735c0e6f41af40122b715ed45812c552c7f5bbc80c7",
+      "file": "bu8kLS9cMVg/005.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "selected",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "4520a7fd321c7b408089bdd7ef22fd5be31bc553b38316335b126a7667026990",
+      "file": "bu8kLS9cMVg/007.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "flash",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "1f5231052c22f3fed567a449885569a93c54a0c148a6896748b36e47001549b9",
+      "file": "bu8kLS9cMVg/008.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "f9a917ac9106475fd127e326235a78e2224acfd3dc9157762c4f8d4fb18978b9",
+      "file": "bu8kLS9cMVg/009.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "be39a2d34102433a264913aff75c45427cdafe730e5af2669d02ef61f41f86f2",
+      "file": "bu8kLS9cMVg/010.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "436f33bc6ef98e471e23eccd64c7e8e3ba28c9bcbf22923a1661ba7e59969622",
+      "file": "bu8kLS9cMVg/011.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "selected",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "dd2708511cd023bac4bcb696ddecdee2037c3421767abba89d6dce55585e222f",
+      "file": "bu8kLS9cMVg/013.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "selected",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "25f4b19382e1378c3fdbeea8383888b9cfc726a4384ab8c0dd9607d76e7633a0",
+      "file": "bu8kLS9cMVg/015.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "281d247e4f8a862abb18b07489133a86737e8d90b654d015bed8207c454cf0a8",
+      "file": "bu8kLS9cMVg/016.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "selected",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "099e1c64d1504356bd30e12101a86a84e54ab939d081f372e2d82510dc87e851",
+      "file": "bu8kLS9cMVg/018.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "be009fb4a3e1bebdc4ea840f667628c781233c5f2de112768f8bbf883a2c5b57",
+      "file": "bu8kLS9cMVg/019.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "22719292820e93d6f9233ab57712ed8361a460b152c7241c4a4fb78ab6bcdb03",
+      "file": "bu8kLS9cMVg/020.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "selected",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "bf5e974a14e2941ad557465fa083d1aa08d050938ad7ad4fe764b36f817b361f",
+      "file": "bu8kLS9cMVg/022.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "selected",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "b8b22e91fbb0ba1ff1af13fef2b460865228cbd9724b12e817b51d2ef98930b7",
+      "file": "bu8kLS9cMVg/023.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "selected",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "e3b4d50b0155fbedfa88e39081ff902be3ff1ca950ca91b7f2301aaa5483ee02",
+      "file": "bu8kLS9cMVg/024.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "selected",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "bdf7b9252f522f63ea0687da1cfc9601dc863fa1f3725be1d89011846d5f974e",
+      "file": "bu8kLS9cMVg/025.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "resting",
+      "duplicateOf": null
+    },
+    {
+      "sha256": "f1a9f74d82f8225e16fc03c274ee5443b34d88fdd1229e4e4348cc251c517501",
+      "file": "bu8kLS9cMVg/026.png",
+      "recordingGroup": "bu8kLS9cMVg",
+      "state": "resting",
+      "duplicateOf": null
+    }
+  ]
+}
