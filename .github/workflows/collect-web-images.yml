@@ -1,0 +1,14 @@
+name: Collect public evaluation images
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch public source images
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 tools/collect_web_images_ci.py datasets/web-eval-20261030/sources.json

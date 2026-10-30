@@ -1,0 +1,10 @@
+{
+  "scope": "New public source screenshots for offline evaluation; not training labels",
+  "pages": [
+    {"id":"morishi39","group":"morishimemo","url":"https://morishimemo.com/gakumasu-memo-39"},
+    {"id":"morishi43","group":"morishimemo","url":"https://morishimemo.com/gakumasu-memo-43"},
+    {"id":"morishi23","group":"morishimemo","url":"https://morishimemo.com/gakumasu-memo-23"},
+    {"id":"appgame-sumika","group":"appgamelog","url":"https://appgamelog.com/gkmas-hif-sumika/"},
+    {"id":"setandset","group":"setandset","url":"https://www.setandset.com/archives/gakumasanomaly.html"}
+  ]
+}
