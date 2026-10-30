@@ -69,6 +69,7 @@ YOLO11 的标注格式、GPU 环境、训练与导出命令见 [训练说明](do
 | `source/` | 固定提交的主仓库，包含测试、脚本、资源、原生 UI 源码 |
 | `fixtures/` | 26 张本机回放与手牌评估截图及 SHA-256 清单，约 20 MB |
 | [`datasets/video-eval-20261025/`](datasets/video-eval-20261025/README.md) | 两段公开视频的 59 张目视核对截图、136 次身份及来源；去重后 58 帧、135 次身份 |
+| [`datasets/web-eval-20261030/`](datasets/web-eval-20261030/README.md) | 新网页来源的 20 张战斗图、66 次可见手牌、65 个原模型手牌框；静止 18 正确 / 4 未知 / 0 错认，两版一致 |
 | [`game-assets/`](game-assets/README.md) | 3191 张原尺寸卡图、饮料、按钮和 UI 素材，约 185 MiB，附离线预览及来源清单 |
 | `lab.py`、`setup.ps1` | 恢复环境、测试、回放与校准入口 |
 | `train.py`、`datasets/cards.example.yaml` | 标注校验、YOLO 训练及候选 ONNX 导出 |

@@ -1,0 +1,775 @@
+{
+  "scope": "Identity scoring on original native detector boxes, excluding the separately documented detector miss; states separated; no live workflow test",
+  "sourceUrl": [
+    {
+      "id": "morishi39",
+      "group": "morishimemo",
+      "url": "https://morishimemo.com/gakumasu-memo-39"
+    },
+    {
+      "id": "morishi43",
+      "group": "morishimemo",
+      "url": "https://morishimemo.com/gakumasu-memo-43"
+    },
+    {
+      "id": "morishi23",
+      "group": "morishimemo",
+      "url": "https://morishimemo.com/gakumasu-memo-23"
+    },
+    {
+      "id": "appgame-sumika",
+      "group": "appgamelog",
+      "url": "https://appgamelog.com/gkmas-hif-sumika/"
+    },
+    {
+      "id": "setandset",
+      "group": "setandset",
+      "url": "https://www.setandset.com/archives/gakumasanomaly.html"
+    }
+  ],
+  "split": "new-source offline evaluation; no tuning or training",
+  "recordingGroup": [
+    "morishimemo",
+    "appgamelog"
+  ],
+  "reviewBasis": "Visible titles plus original card-art reference gallery; name labels frozen before this batch inference",
+  "labels": [
+    {
+      "id": "appgame-sumika-1",
+      "index": 0,
+      "sha256": "63fff83f8f505e1a2329545a5e2e8d5f885aed700a9273b009a2d067280e728d",
+      "names": [
+        "立ち位置チェック",
+        "至高のエンタメ"
+      ],
+      "state": "hover_selected",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1
+      ],
+      "expectedHandNames": [
+        "立ち位置チェック",
+        "至高のエンタメ"
+      ],
+      "expectedHandCount": 2,
+      "floatingNames": [],
+      "sourcePage": "https://appgamelog.com/gkmas-hif-sumika/",
+      "sourceUrl": "https://appgamelog.com/wp-content/uploads/gkmas-hif-sumika-5.jpg",
+      "sourceSha256": "eed732efd2c01401cccf1af642917017f9fcefc273432401dd9968214a57b064",
+      "sourcePath": "originals/appgame-sumika-1.jpg",
+      "sourceCropXYWH": [
+        0,
+        215,
+        554,
+        985
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "appgame-sumika-4",
+      "index": 1,
+      "sha256": "19f474bea5717a83cdeabf2c8ad1d5abb48538f4aecb7f9179b5fb61e03e7c3c",
+      "names": [
+        "アイドル魂",
+        "静かな意志",
+        "国民的アイドル"
+      ],
+      "state": "resting",
+      "visibleBadgeSlots": [
+        2
+      ],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2
+      ],
+      "expectedHandNames": [
+        "アイドル魂",
+        "静かな意志",
+        "国民的アイドル"
+      ],
+      "expectedHandCount": 3,
+      "floatingNames": [],
+      "sourcePage": "https://appgamelog.com/gkmas-hif-sumika/",
+      "sourceUrl": "https://appgamelog.com/wp-content/uploads/gkmas-hif-sumika-16.jpg",
+      "sourceSha256": "3283fe153e0c97277636ddaa83599e5d90a28ee50009ef7b081cbc297dd935e4",
+      "sourcePath": "originals/appgame-sumika-4.jpg",
+      "sourceCropXYWH": [
+        0,
+        215,
+        554,
+        985
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "appgame-sumika-5",
+      "index": 2,
+      "sha256": "dc618b8408abbdcba2a738fd5827b8d89f227efb5cec660b0a9fd95b91a3c414",
+      "names": [
+        "立ち位置チェック",
+        "スポットライト"
+      ],
+      "state": "hover_selected",
+      "visibleBadgeSlots": [
+        0
+      ],
+      "detectedToExpectedSlots": [
+        0,
+        1
+      ],
+      "expectedHandNames": [
+        "立ち位置チェック",
+        "スポットライト"
+      ],
+      "expectedHandCount": 2,
+      "floatingNames": [],
+      "sourcePage": "https://appgamelog.com/gkmas-hif-sumika/",
+      "sourceUrl": "https://appgamelog.com/wp-content/uploads/gkmas-hif-sumika-18.jpg",
+      "sourceSha256": "f5854803060430b344dde44307825e3b29000793710bdc81a4e05e77099e5af0",
+      "sourcePath": "originals/appgame-sumika-5.jpg",
+      "sourceCropXYWH": [
+        0,
+        215,
+        554,
+        985
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi23-4",
+      "index": 3,
+      "sha256": "95cb49ef1e65b2c68e2a6cd0cf6025a12bd28e720c3c697abc49915fc067f9ce",
+      "names": [
+        "アイドル魂",
+        "静かな意志",
+        "国民的アイドル",
+        "魅惑のパフォーマンス"
+      ],
+      "state": "hover_selected",
+      "visibleBadgeSlots": [
+        0,
+        1,
+        2
+      ],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expectedHandNames": [
+        "アイドル魂",
+        "静かな意志",
+        "国民的アイドル",
+        "魅惑のパフォーマンス"
+      ],
+      "expectedHandCount": 4,
+      "floatingNames": [],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-23",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2025/06/image-41.jpg",
+      "sourceSha256": "a22026f35a440a0e8ad7bc1e4bffcdc1479e2574d35446f42940fd263ce29114",
+      "sourcePath": "originals/morishi23-4.jpg",
+      "sourceCropXYWH": [
+        0,
+        1,
+        342,
+        608
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi23-5",
+      "index": 4,
+      "sha256": "27e8b66c0a3e195633faea77f77186c5f8bccc2201de808f75b6027d94b7ede7",
+      "names": [
+        "眼力",
+        "距離感"
+      ],
+      "state": "card_animation",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1
+      ],
+      "expectedHandNames": [
+        "眼力",
+        "距離感"
+      ],
+      "expectedHandCount": 2,
+      "floatingNames": [
+        "コール＆レスポンス"
+      ],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-23",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2025/06/image-41-1.jpg",
+      "sourceSha256": "5ed37709acf6100ce3b1e6b05fbda40eed158ecf9b46fa92515a8ee234396edf",
+      "sourcePath": "originals/morishi23-5.jpg",
+      "sourceCropXYWH": [
+        0,
+        17,
+        333,
+        592
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi39-10",
+      "index": 5,
+      "sha256": "0146654e4c1e9ffeddeb02c29aed371a7cf5a4ff32bcd029cca6a9a506e0b2a1",
+      "names": [
+        "話題沸騰",
+        "存在感",
+        "スポットライト",
+        "眠気",
+        "立ち位置チェック"
+      ],
+      "state": "resting",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expectedHandNames": [
+        "話題沸騰",
+        "存在感",
+        "スポットライト",
+        "眠気",
+        "立ち位置チェック"
+      ],
+      "expectedHandCount": 5,
+      "floatingNames": [],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-39",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-21-5.jpg",
+      "sourceSha256": "dd425e412c651ae8f5eac8fd797c363c0b2c44cee33bfa3e544845be2dc2e1bb",
+      "sourcePath": "originals/morishi39-10.jpg",
+      "sourceCropXYWH": [
+        0,
+        10,
+        383,
+        681
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi39-16",
+      "index": 6,
+      "sha256": "03dff49628ce868ada737dd2d8ef6940df9d19c9bf199a406b13358a88620adc",
+      "names": [
+        "天真爛漫",
+        "アイドル宣言",
+        "ヒーローとの出会い",
+        "成功への道筋"
+      ],
+      "state": "card_animation",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expectedHandNames": [
+        "天真爛漫",
+        "アイドル宣言",
+        "ヒーローとの出会い",
+        "成功への道筋"
+      ],
+      "expectedHandCount": 4,
+      "floatingNames": [
+        "国民的アイドル"
+      ],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-39",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-25-2.jpg",
+      "sourceSha256": "ff8eee2f3cb5082f933561bbcae554da12f32f987643d0ea0c445704afd167e1",
+      "sourcePath": "originals/morishi39-16.jpg",
+      "sourceCropXYWH": [
+        0,
+        7,
+        384,
+        683
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi39-17",
+      "index": 7,
+      "sha256": "334cdec35133d000e098e262cb2e6349f0e47d7819f3eb01253dc477041dfe77",
+      "names": [
+        "眠気",
+        "スポットライト",
+        "立ち位置チェック",
+        "話題沸騰"
+      ],
+      "state": "hover_selected",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expectedHandNames": [
+        "眠気",
+        "スポットライト",
+        "立ち位置チェック",
+        "話題沸騰"
+      ],
+      "expectedHandCount": 4,
+      "floatingNames": [],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-39",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-25-3.jpg",
+      "sourceSha256": "f9360a4554033851b9d24174a4152ad9d1b76c83ed4cb6d2d8d2a67fee2886a4",
+      "sourcePath": "originals/morishi39-17.jpg",
+      "sourceCropXYWH": [
+        0,
+        14,
+        381,
+        677
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi39-21",
+      "index": 8,
+      "sha256": "a633b8704afa5b5000a856999b5c418c5dc0365e9594b3850043a5dc31ce891f",
+      "names": [
+        "スポットライト",
+        "破竹の勢い",
+        "天真爛漫"
+      ],
+      "state": "tooltip",
+      "visibleBadgeSlots": [
+        1,
+        2
+      ],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2
+      ],
+      "expectedHandNames": [
+        "スポットライト",
+        "破竹の勢い",
+        "天真爛漫"
+      ],
+      "expectedHandCount": 3,
+      "floatingNames": [],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-39",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-26-2.jpg",
+      "sourceSha256": "cb726ed9adcdebb2b7e658ffaaec47e5562cc3e147d3dd7d9a5b3d84f7d68143",
+      "sourcePath": "originals/morishi39-21.jpg",
+      "sourceCropXYWH": [
+        0,
+        11,
+        380,
+        676
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi39-22",
+      "index": 9,
+      "sha256": "41083bc6dc88554e6217b6d6abc0d82d967724818a84e9e7a239cc0518cd2d06",
+      "names": [
+        "天賦の才",
+        "国民的アイドル",
+        "スポットライト",
+        "話題沸騰"
+      ],
+      "state": "card_animation",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expectedHandNames": [
+        "天賦の才",
+        "国民的アイドル",
+        "スポットライト",
+        "話題沸騰"
+      ],
+      "expectedHandCount": 4,
+      "floatingNames": [
+        "存在感"
+      ],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-39",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-26-3.jpg",
+      "sourceSha256": "469122c1797e212211dd6bf05beeab3dbfb3aec681665a517bc401d18e8df74f",
+      "sourcePath": "originals/morishi39-22.jpg",
+      "sourceCropXYWH": [
+        0,
+        3,
+        384,
+        683
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi39-23",
+      "index": 10,
+      "sha256": "0140af36b63365e0c8667de7240ddf0c81632378b99399935064f720a307344a",
+      "names": [
+        "天賦の才"
+      ],
+      "state": "resting",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0
+      ],
+      "expectedHandNames": [
+        "天賦の才"
+      ],
+      "expectedHandCount": 1,
+      "floatingNames": [],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-39",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-26-4.jpg",
+      "sourceSha256": "a0a155c543bb1050ba0f750d03c4cdcaff3047bd85075507bf2626a2dbee92c0",
+      "sourcePath": "originals/morishi39-23.jpg",
+      "sourceCropXYWH": [
+        0,
+        8,
+        384,
+        683
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi39-3",
+      "index": 11,
+      "sha256": "351a48c1a8af5d7740e49d53f6f1b49eece8facbe5c2bc0485bd9b8cc75b32bf",
+      "names": [
+        "アイドル宣言",
+        "タイミングの基本",
+        "眠気"
+      ],
+      "state": "resting",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2
+      ],
+      "expectedHandNames": [
+        "アイドル宣言",
+        "タイミングの基本",
+        "眠気"
+      ],
+      "expectedHandCount": 3,
+      "floatingNames": [],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-39",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-20.jpg",
+      "sourceSha256": "db3682c5464ea36ab5fd23a73730c57aca86d00bd9faf53ae4ba1442a959fdcc",
+      "sourcePath": "originals/morishi39-3.jpg",
+      "sourceCropXYWH": [
+        0,
+        8,
+        383,
+        681
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi39-4",
+      "index": 12,
+      "sha256": "8bff79989e2ec83e5b56135312358f21cb71329514cbbcc9e7cd30069518524e",
+      "names": [
+        "立ち位置チェック",
+        "眠気"
+      ],
+      "state": "hover_selected",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1
+      ],
+      "expectedHandNames": [
+        "立ち位置チェック",
+        "眠気"
+      ],
+      "expectedHandCount": 2,
+      "floatingNames": [],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-39",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-20-1.jpg",
+      "sourceSha256": "1d9dc31e963ec4be18d25312da66d1f38b1a915cdc618379235bd556262cd3e8",
+      "sourcePath": "originals/morishi39-4.jpg",
+      "sourceCropXYWH": [
+        0,
+        13,
+        379,
+        674
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi39-9",
+      "index": 13,
+      "sha256": "ee5da59640c7beee4492740169958a725790b71c27e0348d1e4d9d24366df686",
+      "names": [
+        "眠気",
+        "立ち位置チェック",
+        "スポットライト"
+      ],
+      "state": "card_animation",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2
+      ],
+      "expectedHandNames": [
+        "眠気",
+        "立ち位置チェック",
+        "スポットライト"
+      ],
+      "expectedHandCount": 3,
+      "floatingNames": [
+        "国民的アイドル"
+      ],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-39",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-21-4.jpg",
+      "sourceSha256": "5f3071897c6c903bd200cc41915ba33b41fb6baa12381aad0a927f9d27dbb740",
+      "sourcePath": "originals/morishi39-9.jpg",
+      "sourceCropXYWH": [
+        0,
+        14,
+        380,
+        676
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi43-12",
+      "index": 14,
+      "sha256": "d1503d0c15851fc11b6262c8b0707a7e3c29751b1d82b218146a15da94f3600e",
+      "names": [
+        "アイドルになります",
+        "プライド",
+        "リスキーチャンス",
+        "羽ばたけ！",
+        "積み重ね"
+      ],
+      "state": "resting",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expectedHandNames": [
+        "アイドルになります",
+        "プライド",
+        "リスキーチャンス",
+        "羽ばたけ！",
+        "積み重ね"
+      ],
+      "expectedHandCount": 5,
+      "floatingNames": [],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-43",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-162-3.jpg",
+      "sourceSha256": "b3363f2185780b7c2ae62a6c61d2605e712b413652c96189da95b82876ac5238",
+      "sourcePath": "originals/morishi43-12.jpg",
+      "sourceCropXYWH": [
+        0,
+        0,
+        382,
+        680
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi43-17",
+      "index": 15,
+      "sha256": "03d7e024d4c1dee84797b3fbf4df9ae5896f23714b231b311870d0831972154c",
+      "names": [
+        "セッティング",
+        "羽ばたけ！",
+        "積み重ね",
+        "アイドルになります"
+      ],
+      "state": "hover_selected",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "expectedHandNames": [
+        "セッティング",
+        "羽ばたけ！",
+        "積み重ね",
+        "眠気",
+        "アイドルになります"
+      ],
+      "expectedHandCount": 5,
+      "floatingNames": [],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-43",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-166.jpg",
+      "sourceSha256": "737df4e2d0e781703e1f029868917014e6779677a6136dd40fd96d182fc7e81e",
+      "sourcePath": "originals/morishi43-17.jpg",
+      "sourceCropXYWH": [
+        0,
+        19,
+        376,
+        668
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi43-21",
+      "index": 16,
+      "sha256": "b645c3107eb6919eaab863b5a98bdfab01d0bc2c6435ba4d5c3c5e91fe735ba2",
+      "names": [
+        "屋上からの景色",
+        "プライド",
+        "オーバードライブ"
+      ],
+      "state": "drink_animation",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2
+      ],
+      "expectedHandNames": [
+        "屋上からの景色",
+        "プライド",
+        "オーバードライブ"
+      ],
+      "expectedHandCount": 3,
+      "floatingNames": [],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-43",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-167-1.jpg",
+      "sourceSha256": "7a4bf69a3716716a8a33e093a21f726674f44f2225716b664eee53e4734c81fc",
+      "sourcePath": "originals/morishi43-21.jpg",
+      "sourceCropXYWH": [
+        0,
+        8,
+        383,
+        681
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi43-22",
+      "index": 17,
+      "sha256": "f6646fa1a8e6a75724c9f5b50ed702832d1432e95cc6f40e5b183fd82f5f819f",
+      "names": [
+        "羽ばたけ！",
+        "積み重ね",
+        "モチベ",
+        "ハッピー♪",
+        "アイドルになります"
+      ],
+      "state": "resting",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expectedHandNames": [
+        "羽ばたけ！",
+        "積み重ね",
+        "モチベ",
+        "ハッピー♪",
+        "アイドルになります"
+      ],
+      "expectedHandCount": 5,
+      "floatingNames": [],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-43",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-167-2.jpg",
+      "sourceSha256": "3f7dc12ae3ba2155bc9cfefaf1667cb7b43445656d21d32f9b64540c4f1aec2c",
+      "sourcePath": "originals/morishi43-22.jpg",
+      "sourceCropXYWH": [
+        0,
+        2,
+        386,
+        686
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi43-23",
+      "index": 18,
+      "sha256": "1b16f3835c4c894cf31575e4198b7115371130fcfbf2cd9d9a499dde46a00e24",
+      "names": [
+        "眠気",
+        "眠気"
+      ],
+      "state": "card_animation",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1
+      ],
+      "expectedHandNames": [
+        "眠気",
+        "眠気"
+      ],
+      "expectedHandCount": 2,
+      "floatingNames": [
+        "羽ばたけ！"
+      ],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-43",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-167-3.jpg",
+      "sourceSha256": "0998785c2cfd0dfac68676c5b21c92ac2f42a7209b84c70c016fc4628178069d",
+      "sourcePath": "originals/morishi43-23.jpg",
+      "sourceCropXYWH": [
+        0,
+        8,
+        382,
+        679
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    },
+    {
+      "id": "morishi43-7",
+      "index": 19,
+      "sha256": "710b6d0438544a8ac6ea963a3df60c08b13b22c2a3a2f0c73cf1e79249798359",
+      "names": [
+        "盛り上げ上手",
+        "アドリブの基本",
+        "アイドルになります",
+        "積み重ね"
+      ],
+      "state": "hover_selected",
+      "visibleBadgeSlots": [],
+      "detectedToExpectedSlots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expectedHandNames": [
+        "盛り上げ上手",
+        "アドリブの基本",
+        "アイドルになります",
+        "積み重ね"
+      ],
+      "expectedHandCount": 4,
+      "floatingNames": [],
+      "sourcePage": "https://morishimemo.com/gakumasu-memo-43",
+      "sourceUrl": "https://morishimemo.com/wp-content/uploads/2026/07/image-161.jpg",
+      "sourceSha256": "78ba8e9945cf47b32ef7a0f32ab47ad7d0ab8f41b2e78b696c179de8892a470a",
+      "sourcePath": "originals/morishi43-7.jpg",
+      "sourceCropXYWH": [
+        0,
+        2,
+        382,
+        679
+      ],
+      "normalization": "bottom-anchored aspect-preserving 9:16 viewport then Lanczos 720x1280"
+    }
+  ]
+}

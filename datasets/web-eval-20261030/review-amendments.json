@@ -1,0 +1,21 @@
+[
+  {
+    "id": "morishi39-23",
+    "reason": "Full-frame review confirms a single card at the normal resting hand position, with no SELECT marker. The pre-existing visually identified name is reclassified from floating to hand; no identity label was changed.",
+    "initialLabelsSha256": "c48a30c312d8923496284fc8aa0b56a096a67c3ead9c73170df6aa7de355afd5",
+    "from": {
+      "state": "card_animation",
+      "names": [],
+      "floatingNames": [
+        "天賦の才"
+      ]
+    },
+    "to": {
+      "state": "resting",
+      "names": [
+        "天賦の才"
+      ],
+      "floatingNames": []
+    }
+  }
+]

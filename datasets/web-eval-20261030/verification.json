@@ -1,0 +1,23 @@
+{
+  "baseline": "6d54f4daf4146800a117f0f2ba78c02cab7242db",
+  "candidate": "8c7e1eaef07f8f0b6a112a0e75cd63de857fd234",
+  "detectorGitBlob": "c443c4e14c96309a296e4b269484b34d6c0fcf51",
+  "python": "3.12.14",
+  "packages": {
+    "maafw": "5.13.0",
+    "numpy": "2.5.4",
+    "Pillow": "12.3.0"
+  },
+  "selectedFrames": 20,
+  "uniqueOriginalHashes": 20,
+  "visibleHandCards": 66,
+  "detectedHandCards": 65,
+  "uniqueBaseCardNames": 31,
+  "originalResultFieldChanges": 0,
+  "flatArtworkRejects": 0,
+  "sourceCropPixelsReproduced": true,
+  "initialLabelsHashVerified": true,
+  "collectionRun": "https://github.com/Quiter53/MaaGakumasuEX-Lab/actions/runs/41020233043",
+  "newLiveCultivation": false,
+  "independentHumanAudit": false
+}

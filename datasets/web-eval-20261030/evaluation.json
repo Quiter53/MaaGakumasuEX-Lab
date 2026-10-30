@@ -1,0 +1,668 @@
+{
+  "scope": "Identity scoring on original native detector boxes, excluding the separately documented detector miss; states separated; no live workflow test",
+  "sourceUrl": [
+    {
+      "id": "morishi39",
+      "group": "morishimemo",
+      "url": "https://morishimemo.com/gakumasu-memo-39"
+    },
+    {
+      "id": "morishi43",
+      "group": "morishimemo",
+      "url": "https://morishimemo.com/gakumasu-memo-43"
+    },
+    {
+      "id": "morishi23",
+      "group": "morishimemo",
+      "url": "https://morishimemo.com/gakumasu-memo-23"
+    },
+    {
+      "id": "appgame-sumika",
+      "group": "appgamelog",
+      "url": "https://appgamelog.com/gkmas-hif-sumika/"
+    },
+    {
+      "id": "setandset",
+      "group": "setandset",
+      "url": "https://www.setandset.com/archives/gakumasanomaly.html"
+    }
+  ],
+  "split": "new-source offline evaluation; no tuning or training",
+  "recordingGroup": [
+    "morishimemo",
+    "appgamelog"
+  ],
+  "deduplicated": false,
+  "stats": {
+    "all": {
+      "baseline": {
+        "total": 65,
+        "unknown": 28,
+        "correct": 37
+      },
+      "candidate": {
+        "total": 65,
+        "unknown": 28,
+        "correct": 37
+      }
+    },
+    "hover_selected": {
+      "baseline": {
+        "total": 22,
+        "unknown": 22,
+        "frames": 7,
+        "wholeFrameCorrect": 0
+      },
+      "candidate": {
+        "total": 22,
+        "unknown": 22,
+        "frames": 7,
+        "wholeFrameCorrect": 0
+      }
+    },
+    "no-badge": {
+      "baseline": {
+        "total": 58,
+        "unknown": 24,
+        "correct": 34
+      },
+      "candidate": {
+        "total": 58,
+        "unknown": 24,
+        "correct": 34
+      }
+    },
+    "resting": {
+      "baseline": {
+        "total": 22,
+        "correct": 18,
+        "frames": 6,
+        "wholeFrameCorrect": 4,
+        "unknown": 4
+      },
+      "candidate": {
+        "total": 22,
+        "correct": 18,
+        "frames": 6,
+        "wholeFrameCorrect": 4,
+        "unknown": 4
+      }
+    },
+    "badge": {
+      "baseline": {
+        "total": 7,
+        "correct": 3,
+        "unknown": 4
+      },
+      "candidate": {
+        "total": 7,
+        "correct": 3,
+        "unknown": 4
+      }
+    },
+    "card_animation": {
+      "baseline": {
+        "total": 15,
+        "correct": 13,
+        "frames": 5,
+        "wholeFrameCorrect": 4,
+        "unknown": 2
+      },
+      "candidate": {
+        "total": 15,
+        "correct": 13,
+        "frames": 5,
+        "wholeFrameCorrect": 4,
+        "unknown": 2
+      }
+    },
+    "tooltip": {
+      "baseline": {
+        "total": 3,
+        "correct": 3,
+        "frames": 1,
+        "wholeFrameCorrect": 1
+      },
+      "candidate": {
+        "total": 3,
+        "correct": 3,
+        "frames": 1,
+        "wholeFrameCorrect": 1
+      }
+    },
+    "drink_animation": {
+      "baseline": {
+        "total": 3,
+        "correct": 3,
+        "frames": 1,
+        "wholeFrameCorrect": 1
+      },
+      "candidate": {
+        "total": 3,
+        "correct": 3,
+        "frames": 1,
+        "wholeFrameCorrect": 1
+      }
+    }
+  },
+  "failures": [
+    {
+      "index": 0,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "立ち位置チェック",
+      "result": null
+    },
+    {
+      "index": 0,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "至高のエンタメ",
+      "result": null
+    },
+    {
+      "index": 0,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "立ち位置チェック",
+      "result": null
+    },
+    {
+      "index": 0,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "至高のエンタメ",
+      "result": null
+    },
+    {
+      "index": 2,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "立ち位置チェック",
+      "result": null
+    },
+    {
+      "index": 2,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "スポットライト",
+      "result": null
+    },
+    {
+      "index": 2,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "立ち位置チェック",
+      "result": null
+    },
+    {
+      "index": 2,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "スポットライト",
+      "result": null
+    },
+    {
+      "index": 3,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "アイドル魂",
+      "result": null
+    },
+    {
+      "index": 3,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "静かな意志",
+      "result": null
+    },
+    {
+      "index": 3,
+      "slot": 2,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "国民的アイドル",
+      "result": null
+    },
+    {
+      "index": 3,
+      "slot": 3,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "魅惑のパフォーマンス",
+      "result": null
+    },
+    {
+      "index": 3,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "アイドル魂",
+      "result": null
+    },
+    {
+      "index": 3,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "静かな意志",
+      "result": null
+    },
+    {
+      "index": 3,
+      "slot": 2,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "国民的アイドル",
+      "result": null
+    },
+    {
+      "index": 3,
+      "slot": 3,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "魅惑のパフォーマンス",
+      "result": null
+    },
+    {
+      "index": 5,
+      "slot": 2,
+      "state": "resting",
+      "tag": "baseline",
+      "expected": "スポットライト",
+      "result": {
+        "name": null,
+        "candidate": "スポットライト",
+        "mode": "local",
+        "score": 0.4248411669353711,
+        "margin": 0.12298279364725967,
+        "visible": 0.2744140625,
+        "badge_recovered": false
+      }
+    },
+    {
+      "index": 5,
+      "slot": 2,
+      "state": "resting",
+      "tag": "candidate",
+      "expected": "スポットライト",
+      "result": {
+        "name": null,
+        "candidate": "スポットライト",
+        "mode": "local",
+        "score": 0.4248411669353711,
+        "margin": 0.12298279364725967,
+        "visible": 0.2744140625,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "index": 7,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "眠気",
+      "result": null
+    },
+    {
+      "index": 7,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "スポットライト",
+      "result": null
+    },
+    {
+      "index": 7,
+      "slot": 2,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "立ち位置チェック",
+      "result": null
+    },
+    {
+      "index": 7,
+      "slot": 3,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "話題沸騰",
+      "result": null
+    },
+    {
+      "index": 7,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "眠気",
+      "result": null
+    },
+    {
+      "index": 7,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "スポットライト",
+      "result": null
+    },
+    {
+      "index": 7,
+      "slot": 2,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "立ち位置チェック",
+      "result": null
+    },
+    {
+      "index": 7,
+      "slot": 3,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "話題沸騰",
+      "result": null
+    },
+    {
+      "index": 12,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "立ち位置チェック",
+      "result": null
+    },
+    {
+      "index": 12,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "眠気",
+      "result": null
+    },
+    {
+      "index": 12,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "立ち位置チェック",
+      "result": null
+    },
+    {
+      "index": 12,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "眠気",
+      "result": null
+    },
+    {
+      "index": 15,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "セッティング",
+      "result": null
+    },
+    {
+      "index": 15,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "羽ばたけ！",
+      "result": null
+    },
+    {
+      "index": 15,
+      "slot": 2,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "積み重ね",
+      "result": null
+    },
+    {
+      "index": 15,
+      "slot": 3,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "アイドルになります",
+      "result": null
+    },
+    {
+      "index": 15,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "セッティング",
+      "result": null
+    },
+    {
+      "index": 15,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "羽ばたけ！",
+      "result": null
+    },
+    {
+      "index": 15,
+      "slot": 2,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "積み重ね",
+      "result": null
+    },
+    {
+      "index": 15,
+      "slot": 3,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "アイドルになります",
+      "result": null
+    },
+    {
+      "index": 17,
+      "slot": 0,
+      "state": "resting",
+      "tag": "baseline",
+      "expected": "羽ばたけ！",
+      "result": {
+        "name": null,
+        "candidate": "羽ばたけ！",
+        "mode": "local",
+        "score": 0.4225000864973094,
+        "margin": 0.16883048064153006,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      }
+    },
+    {
+      "index": 17,
+      "slot": 1,
+      "state": "resting",
+      "tag": "baseline",
+      "expected": "積み重ね",
+      "result": {
+        "name": null,
+        "candidate": "積み重ね",
+        "mode": "local",
+        "score": 0.5527615093719711,
+        "margin": 0.09939257202221469,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      }
+    },
+    {
+      "index": 17,
+      "slot": 3,
+      "state": "resting",
+      "tag": "baseline",
+      "expected": "ハッピー♪",
+      "result": {
+        "name": null,
+        "candidate": "ハッピー♪",
+        "mode": "local",
+        "score": 0.7810821212899528,
+        "margin": 0.1014715550718368,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      }
+    },
+    {
+      "index": 17,
+      "slot": 0,
+      "state": "resting",
+      "tag": "candidate",
+      "expected": "羽ばたけ！",
+      "result": {
+        "name": null,
+        "candidate": "羽ばたけ！",
+        "mode": "local",
+        "score": 0.4225000864973094,
+        "margin": 0.16883048064153006,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "index": 17,
+      "slot": 1,
+      "state": "resting",
+      "tag": "candidate",
+      "expected": "積み重ね",
+      "result": {
+        "name": null,
+        "candidate": "積み重ね",
+        "mode": "local",
+        "score": 0.5527615093719711,
+        "margin": 0.09939257202221469,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "index": 17,
+      "slot": 3,
+      "state": "resting",
+      "tag": "candidate",
+      "expected": "ハッピー♪",
+      "result": {
+        "name": null,
+        "candidate": "ハッピー♪",
+        "mode": "local",
+        "score": 0.7810821212899528,
+        "margin": 0.1014715550718368,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "index": 18,
+      "slot": 0,
+      "state": "card_animation",
+      "tag": "baseline",
+      "expected": "眠気",
+      "result": null
+    },
+    {
+      "index": 18,
+      "slot": 1,
+      "state": "card_animation",
+      "tag": "baseline",
+      "expected": "眠気",
+      "result": null
+    },
+    {
+      "index": 18,
+      "slot": 0,
+      "state": "card_animation",
+      "tag": "candidate",
+      "expected": "眠気",
+      "result": null
+    },
+    {
+      "index": 18,
+      "slot": 1,
+      "state": "card_animation",
+      "tag": "candidate",
+      "expected": "眠気",
+      "result": null
+    },
+    {
+      "index": 19,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "盛り上げ上手",
+      "result": null
+    },
+    {
+      "index": 19,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "アドリブの基本",
+      "result": null
+    },
+    {
+      "index": 19,
+      "slot": 2,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "アイドルになります",
+      "result": null
+    },
+    {
+      "index": 19,
+      "slot": 3,
+      "state": "hover_selected",
+      "tag": "baseline",
+      "expected": "積み重ね",
+      "result": null
+    },
+    {
+      "index": 19,
+      "slot": 0,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "盛り上げ上手",
+      "result": null
+    },
+    {
+      "index": 19,
+      "slot": 1,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "アドリブの基本",
+      "result": null
+    },
+    {
+      "index": 19,
+      "slot": 2,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "アイドルになります",
+      "result": null
+    },
+    {
+      "index": 19,
+      "slot": 3,
+      "state": "hover_selected",
+      "tag": "candidate",
+      "expected": "積み重ね",
+      "result": null
+    }
+  ],
+  "labelsFile": "datasets\\web-eval-20261030\\labels.json",
+  "predictionsFile": "datasets\\web-eval-20261030\\predictions.json"
+}

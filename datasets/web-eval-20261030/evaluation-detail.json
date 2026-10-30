@@ -1,0 +1,1845 @@
+{
+  "scope": "Visually reviewed identities on native detector boxes; selected/animation states separate; not full live workflow accuracy",
+  "stats": {
+    "all": {
+      "baseline": {
+        "total": 65,
+        "unknown": 28,
+        "correct": 37
+      },
+      "candidate": {
+        "total": 65,
+        "unknown": 28,
+        "correct": 37
+      }
+    },
+    "hover_selected": {
+      "baseline": {
+        "total": 22,
+        "unknown": 22
+      },
+      "candidate": {
+        "total": 22,
+        "unknown": 22
+      }
+    },
+    "no-badge": {
+      "baseline": {
+        "total": 58,
+        "unknown": 24,
+        "correct": 34
+      },
+      "candidate": {
+        "total": 58,
+        "unknown": 24,
+        "correct": 34
+      }
+    },
+    "resting": {
+      "baseline": {
+        "total": 22,
+        "correct": 18,
+        "unknown": 4
+      },
+      "candidate": {
+        "total": 22,
+        "correct": 18,
+        "unknown": 4
+      }
+    },
+    "badge": {
+      "baseline": {
+        "total": 7,
+        "correct": 3,
+        "unknown": 4
+      },
+      "candidate": {
+        "total": 7,
+        "correct": 3,
+        "unknown": 4
+      }
+    },
+    "card_animation": {
+      "baseline": {
+        "total": 15,
+        "correct": 13,
+        "unknown": 2
+      },
+      "candidate": {
+        "total": 15,
+        "correct": 13,
+        "unknown": 2
+      }
+    },
+    "tooltip": {
+      "baseline": {
+        "total": 3,
+        "correct": 3
+      },
+      "candidate": {
+        "total": 3,
+        "correct": 3
+      }
+    },
+    "drink_animation": {
+      "baseline": {
+        "total": 3,
+        "correct": 3
+      },
+      "candidate": {
+        "total": 3,
+        "correct": 3
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "appgame-sumika-1",
+      "state": "hover_selected",
+      "slot": 0,
+      "box": [
+        157,
+        857,
+        188,
+        250
+      ],
+      "expected": "立ち位置チェック",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "appgame-sumika-1",
+      "state": "hover_selected",
+      "slot": 1,
+      "box": [
+        373,
+        884,
+        187,
+        249
+      ],
+      "expected": "至高のエンタメ",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "appgame-sumika-4",
+      "state": "resting",
+      "slot": 0,
+      "box": [
+        48,
+        884,
+        189,
+        250
+      ],
+      "expected": "アイドル魂",
+      "baseline": {
+        "name": "アイドル魂",
+        "candidate": "アイドル魂",
+        "mode": "full",
+        "score": 0.5227449779332395,
+        "margin": 0.35836429646089124,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "アイドル魂",
+        "candidate": "アイドル魂",
+        "mode": "full",
+        "score": 0.5227449779332395,
+        "margin": 0.35836429646089124,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "appgame-sumika-4",
+      "state": "resting",
+      "slot": 1,
+      "box": [
+        265,
+        885,
+        190,
+        249
+      ],
+      "expected": "静かな意志",
+      "baseline": {
+        "name": "静かな意志",
+        "candidate": "静かな意志",
+        "mode": "full",
+        "score": 0.7386281518465778,
+        "margin": 0.4001655978457874,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "静かな意志",
+        "candidate": "静かな意志",
+        "mode": "full",
+        "score": 0.7386281518465778,
+        "margin": 0.4001655978457874,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "appgame-sumika-4",
+      "state": "resting",
+      "slot": 2,
+      "box": [
+        483,
+        885,
+        188,
+        245
+      ],
+      "expected": "国民的アイドル",
+      "baseline": {
+        "name": "国民的アイドル",
+        "candidate": "国民的アイドル",
+        "mode": "full",
+        "score": 0.663719735131774,
+        "margin": 0.399902645501246,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "国民的アイドル",
+        "candidate": "国民的アイドル",
+        "mode": "full",
+        "score": 0.663719735131774,
+        "margin": 0.399902645501246,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "appgame-sumika-5",
+      "state": "hover_selected",
+      "slot": 0,
+      "box": [
+        157,
+        857,
+        188,
+        251
+      ],
+      "expected": "立ち位置チェック",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "appgame-sumika-5",
+      "state": "hover_selected",
+      "slot": 1,
+      "box": [
+        372,
+        883,
+        192,
+        251
+      ],
+      "expected": "スポットライト",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi23-4",
+      "state": "hover_selected",
+      "slot": 0,
+      "box": [
+        6,
+        864,
+        193,
+        254
+      ],
+      "expected": "アイドル魂",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi23-4",
+      "state": "hover_selected",
+      "slot": 1,
+      "box": [
+        173,
+        885,
+        194,
+        260
+      ],
+      "expected": "静かな意志",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi23-4",
+      "state": "hover_selected",
+      "slot": 2,
+      "box": [
+        342,
+        892,
+        193,
+        253
+      ],
+      "expected": "国民的アイドル",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi23-4",
+      "state": "hover_selected",
+      "slot": 3,
+      "box": [
+        508,
+        892,
+        191,
+        253
+      ],
+      "expected": "魅惑のパフォーマンス",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi23-5",
+      "state": "card_animation",
+      "slot": 0,
+      "box": [
+        149,
+        877,
+        197,
+        260
+      ],
+      "expected": "眼力",
+      "baseline": {
+        "name": "眼力",
+        "candidate": "眼力",
+        "mode": "full",
+        "score": 0.7837365096523281,
+        "margin": 0.36856358415395174,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "眼力",
+        "candidate": "眼力",
+        "mode": "full",
+        "score": 0.7837365096523281,
+        "margin": 0.36856358415395174,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi23-5",
+      "state": "card_animation",
+      "slot": 1,
+      "box": [
+        375,
+        876,
+        197,
+        262
+      ],
+      "expected": "距離感",
+      "baseline": {
+        "name": "距離感",
+        "candidate": "距離感",
+        "mode": "full",
+        "score": 0.7567080676825068,
+        "margin": 0.3711921023462918,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "距離感",
+        "candidate": "距離感",
+        "mode": "full",
+        "score": 0.7567080676825068,
+        "margin": 0.3711921023462918,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-10",
+      "state": "resting",
+      "slot": 0,
+      "box": [
+        11,
+        878,
+        191,
+        254
+      ],
+      "expected": "話題沸騰",
+      "baseline": {
+        "name": "話題沸騰",
+        "candidate": "話題沸騰",
+        "mode": "local",
+        "score": 0.6133093191012906,
+        "margin": 0.28025595723549634,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "話題沸騰",
+        "candidate": "話題沸騰",
+        "mode": "local",
+        "score": 0.6133093191012906,
+        "margin": 0.28025595723549634,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-10",
+      "state": "resting",
+      "slot": 1,
+      "box": [
+        138,
+        879,
+        193,
+        253
+      ],
+      "expected": "存在感",
+      "baseline": {
+        "name": "存在感",
+        "candidate": "存在感",
+        "mode": "local",
+        "score": 0.7422598990432365,
+        "margin": 0.31450603987740167,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "存在感",
+        "candidate": "存在感",
+        "mode": "local",
+        "score": 0.7422598990432365,
+        "margin": 0.31450603987740167,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-10",
+      "state": "resting",
+      "slot": 2,
+      "box": [
+        264,
+        878,
+        194,
+        254
+      ],
+      "expected": "スポットライト",
+      "baseline": {
+        "name": null,
+        "candidate": "スポットライト",
+        "mode": "local",
+        "score": 0.4248411669353711,
+        "margin": 0.12298279364725967,
+        "visible": 0.2744140625,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "unknown",
+      "candidate": {
+        "name": null,
+        "candidate": "スポットライト",
+        "mode": "local",
+        "score": 0.4248411669353711,
+        "margin": 0.12298279364725967,
+        "visible": 0.2744140625,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi39-10",
+      "state": "resting",
+      "slot": 3,
+      "box": [
+        398,
+        879,
+        190,
+        253
+      ],
+      "expected": "眠気",
+      "baseline": {
+        "name": "眠気",
+        "candidate": "眠気",
+        "mode": "local",
+        "score": 0.5368233897846687,
+        "margin": 0.21829884733293392,
+        "visible": 0.2294921875,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "眠気",
+        "candidate": "眠気",
+        "mode": "local",
+        "score": 0.5368233897846687,
+        "margin": 0.21829884733293392,
+        "visible": 0.2294921875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-10",
+      "state": "resting",
+      "slot": 4,
+      "box": [
+        519,
+        879,
+        196,
+        253
+      ],
+      "expected": "立ち位置チェック",
+      "baseline": {
+        "name": "立ち位置チェック",
+        "candidate": "立ち位置チェック",
+        "mode": "local",
+        "score": 0.541387975266313,
+        "margin": 0.380361542629322,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "立ち位置チェック",
+        "candidate": "立ち位置チェック",
+        "mode": "local",
+        "score": 0.541387975266313,
+        "margin": 0.380361542629322,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-16",
+      "state": "card_animation",
+      "slot": 0,
+      "box": [
+        11,
+        887,
+        193,
+        253
+      ],
+      "expected": "天真爛漫",
+      "baseline": {
+        "name": "天真爛漫",
+        "candidate": "天真爛漫",
+        "mode": "local",
+        "score": 0.6029615273899126,
+        "margin": 0.3932001081204308,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "天真爛漫",
+        "candidate": "天真爛漫",
+        "mode": "local",
+        "score": 0.6029615273899126,
+        "margin": 0.3932001081204308,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-16",
+      "state": "card_animation",
+      "slot": 1,
+      "box": [
+        181,
+        887,
+        194,
+        254
+      ],
+      "expected": "アイドル宣言",
+      "baseline": {
+        "name": "アイドル宣言",
+        "candidate": "アイドル宣言",
+        "mode": "local",
+        "score": 0.5007723752656829,
+        "margin": 0.282457260613983,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "アイドル宣言",
+        "candidate": "アイドル宣言",
+        "mode": "local",
+        "score": 0.5007723752656829,
+        "margin": 0.282457260613983,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-16",
+      "state": "card_animation",
+      "slot": 2,
+      "box": [
+        349,
+        887,
+        194,
+        253
+      ],
+      "expected": "ヒーローとの出会い",
+      "baseline": {
+        "name": "ヒーローとの出会い",
+        "candidate": "ヒーローとの出会い",
+        "mode": "local",
+        "score": 0.5332582199949255,
+        "margin": 0.30184737799093925,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "ヒーローとの出会い",
+        "candidate": "ヒーローとの出会い",
+        "mode": "local",
+        "score": 0.5332582199949255,
+        "margin": 0.30184737799093925,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-16",
+      "state": "card_animation",
+      "slot": 3,
+      "box": [
+        518,
+        887,
+        193,
+        254
+      ],
+      "expected": "成功への道筋",
+      "baseline": {
+        "name": "成功への道筋",
+        "candidate": "成功への道筋",
+        "mode": "local",
+        "score": 0.601103394218109,
+        "margin": 0.37188851117382526,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "成功への道筋",
+        "candidate": "成功への道筋",
+        "mode": "local",
+        "score": 0.601103394218109,
+        "margin": 0.37188851117382526,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-17",
+      "state": "hover_selected",
+      "slot": 0,
+      "box": [
+        14,
+        882,
+        189,
+        257
+      ],
+      "expected": "眠気",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi39-17",
+      "state": "hover_selected",
+      "slot": 1,
+      "box": [
+        178,
+        881,
+        197,
+        257
+      ],
+      "expected": "スポットライト",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi39-17",
+      "state": "hover_selected",
+      "slot": 2,
+      "box": [
+        348,
+        854,
+        195,
+        258
+      ],
+      "expected": "立ち位置チェック",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi39-17",
+      "state": "hover_selected",
+      "slot": 3,
+      "box": [
+        516,
+        880,
+        198,
+        259
+      ],
+      "expected": "話題沸騰",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi39-21",
+      "state": "tooltip",
+      "slot": 0,
+      "box": [
+        44,
+        884,
+        194,
+        257
+      ],
+      "expected": "スポットライト",
+      "baseline": {
+        "name": "スポットライト",
+        "candidate": "スポットライト",
+        "mode": "full",
+        "score": 0.47992323336201664,
+        "margin": 0.2901697593825767,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "スポットライト",
+        "candidate": "スポットライト",
+        "mode": "full",
+        "score": 0.47992323336201664,
+        "margin": 0.2901697593825767,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-21",
+      "state": "tooltip",
+      "slot": 1,
+      "box": [
+        267,
+        884,
+        195,
+        257
+      ],
+      "expected": "破竹の勢い",
+      "baseline": {
+        "name": "破竹の勢い",
+        "candidate": "破竹の勢い",
+        "mode": "full",
+        "score": 0.5495616765985276,
+        "margin": 0.2229644043419115,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "破竹の勢い",
+        "candidate": "破竹の勢い",
+        "mode": "full",
+        "score": 0.5495616765985276,
+        "margin": 0.2229644043419115,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-21",
+      "state": "tooltip",
+      "slot": 2,
+      "box": [
+        490,
+        884,
+        195,
+        258
+      ],
+      "expected": "天真爛漫",
+      "baseline": {
+        "name": "天真爛漫",
+        "candidate": "天真爛漫",
+        "mode": "full",
+        "score": 0.6044314550848154,
+        "margin": 0.3978671464478525,
+        "visible": 0.3369140625,
+        "badge_recovered": true
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "天真爛漫",
+        "candidate": "天真爛漫",
+        "mode": "full",
+        "score": 0.6044314550848154,
+        "margin": 0.3978671464478525,
+        "visible": 0.3369140625,
+        "badge_recovered": true,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-22",
+      "state": "card_animation",
+      "slot": 0,
+      "box": [
+        9,
+        889,
+        194,
+        254
+      ],
+      "expected": "天賦の才",
+      "baseline": {
+        "name": "天賦の才",
+        "candidate": "天賦の才",
+        "mode": "local",
+        "score": 0.5332256990063698,
+        "margin": 0.2304977299644499,
+        "visible": 0.2744140625,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "天賦の才",
+        "candidate": "天賦の才",
+        "mode": "local",
+        "score": 0.5332256990063698,
+        "margin": 0.2304977299644499,
+        "visible": 0.2744140625,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-22",
+      "state": "card_animation",
+      "slot": 1,
+      "box": [
+        140,
+        887,
+        188,
+        255
+      ],
+      "expected": "国民的アイドル",
+      "baseline": {
+        "name": "国民的アイドル",
+        "candidate": "国民的アイドル",
+        "mode": "local",
+        "score": 0.6007524538143378,
+        "margin": 0.2795427778660761,
+        "visible": 0.2294921875,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "国民的アイドル",
+        "candidate": "国民的アイドル",
+        "mode": "local",
+        "score": 0.6007524538143378,
+        "margin": 0.2795427778660761,
+        "visible": 0.2294921875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-22",
+      "state": "card_animation",
+      "slot": 2,
+      "box": [
+        260,
+        888,
+        193,
+        254
+      ],
+      "expected": "スポットライト",
+      "baseline": {
+        "name": "スポットライト",
+        "candidate": "スポットライト",
+        "mode": "local",
+        "score": 0.47925703158552035,
+        "margin": 0.28119220466472133,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "スポットライト",
+        "candidate": "スポットライト",
+        "mode": "local",
+        "score": 0.47925703158552035,
+        "margin": 0.28119220466472133,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-22",
+      "state": "card_animation",
+      "slot": 3,
+      "box": [
+        513,
+        889,
+        193,
+        254
+      ],
+      "expected": "話題沸騰",
+      "baseline": {
+        "name": "話題沸騰",
+        "candidate": "話題沸騰",
+        "mode": "local",
+        "score": 0.6365632340990385,
+        "margin": 0.35321938485232945,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "話題沸騰",
+        "candidate": "話題沸騰",
+        "mode": "local",
+        "score": 0.6365632340990385,
+        "margin": 0.35321938485232945,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-23",
+      "state": "resting",
+      "slot": 0,
+      "box": [
+        263,
+        884,
+        194,
+        255
+      ],
+      "expected": "天賦の才",
+      "baseline": {
+        "name": "天賦の才",
+        "candidate": "天賦の才",
+        "mode": "full",
+        "score": 0.47671976091977364,
+        "margin": 0.2597278685354347,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "天賦の才",
+        "candidate": "天賦の才",
+        "mode": "full",
+        "score": 0.47671976091977364,
+        "margin": 0.2597278685354347,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-3",
+      "state": "resting",
+      "slot": 0,
+      "box": [
+        46,
+        884,
+        195,
+        255
+      ],
+      "expected": "アイドル宣言",
+      "baseline": {
+        "name": "アイドル宣言",
+        "candidate": "アイドル宣言",
+        "mode": "full",
+        "score": 0.611573519274159,
+        "margin": 0.3250814653069357,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "アイドル宣言",
+        "candidate": "アイドル宣言",
+        "mode": "full",
+        "score": 0.611573519274159,
+        "margin": 0.3250814653069357,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-3",
+      "state": "resting",
+      "slot": 1,
+      "box": [
+        268,
+        883,
+        195,
+        257
+      ],
+      "expected": "タイミングの基本",
+      "baseline": {
+        "name": "タイミングの基本",
+        "candidate": "タイミングの基本",
+        "mode": "full",
+        "score": 0.7182481417069011,
+        "margin": 0.13513398909709806,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "タイミングの基本",
+        "candidate": "タイミングの基本",
+        "mode": "full",
+        "score": 0.7182481417069011,
+        "margin": 0.13513398909709806,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-3",
+      "state": "resting",
+      "slot": 2,
+      "box": [
+        492,
+        884,
+        192,
+        254
+      ],
+      "expected": "眠気",
+      "baseline": {
+        "name": "眠気",
+        "candidate": "眠気",
+        "mode": "full",
+        "score": 0.7292450186060241,
+        "margin": 0.2892628888590034,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "眠気",
+        "candidate": "眠気",
+        "mode": "full",
+        "score": 0.7292450186060241,
+        "margin": 0.2892628888590034,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-4",
+      "state": "hover_selected",
+      "slot": 0,
+      "box": [
+        151,
+        854,
+        196,
+        258
+      ],
+      "expected": "立ち位置チェック",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi39-4",
+      "state": "hover_selected",
+      "slot": 1,
+      "box": [
+        380,
+        881,
+        193,
+        257
+      ],
+      "expected": "眠気",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi39-9",
+      "state": "card_animation",
+      "slot": 0,
+      "box": [
+        43,
+        882,
+        195,
+        256
+      ],
+      "expected": "眠気",
+      "baseline": {
+        "name": "眠気",
+        "candidate": "眠気",
+        "mode": "full",
+        "score": 0.7328985902323473,
+        "margin": 0.2889146183536937,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "眠気",
+        "candidate": "眠気",
+        "mode": "full",
+        "score": 0.7328985902323473,
+        "margin": 0.2889146183536937,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-9",
+      "state": "card_animation",
+      "slot": 1,
+      "box": [
+        266,
+        883,
+        194,
+        257
+      ],
+      "expected": "立ち位置チェック",
+      "baseline": {
+        "name": "立ち位置チェック",
+        "candidate": "立ち位置チェック",
+        "mode": "full",
+        "score": 0.543547649893312,
+        "margin": 0.40027558861742524,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "立ち位置チェック",
+        "candidate": "立ち位置チェック",
+        "mode": "full",
+        "score": 0.543547649893312,
+        "margin": 0.40027558861742524,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi39-9",
+      "state": "card_animation",
+      "slot": 2,
+      "box": [
+        491,
+        883,
+        195,
+        257
+      ],
+      "expected": "スポットライト",
+      "baseline": {
+        "name": "スポットライト",
+        "candidate": "スポットライト",
+        "mode": "full",
+        "score": 0.5263875235997245,
+        "margin": 0.34190895650946457,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "スポットライト",
+        "candidate": "スポットライト",
+        "mode": "full",
+        "score": 0.5263875235997245,
+        "margin": 0.34190895650946457,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi43-12",
+      "state": "resting",
+      "slot": 0,
+      "box": [
+        10,
+        902,
+        192,
+        254
+      ],
+      "expected": "アイドルになります",
+      "baseline": {
+        "name": "アイドルになります",
+        "candidate": "アイドルになります",
+        "mode": "local",
+        "score": 0.6847169941117142,
+        "margin": 0.3955586822193596,
+        "visible": 0.2744140625,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "アイドルになります",
+        "candidate": "アイドルになります",
+        "mode": "local",
+        "score": 0.6847169941117142,
+        "margin": 0.3955586822193596,
+        "visible": 0.2744140625,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi43-12",
+      "state": "resting",
+      "slot": 1,
+      "box": [
+        139,
+        903,
+        187,
+        252
+      ],
+      "expected": "プライド",
+      "baseline": {
+        "name": "プライド",
+        "candidate": "プライド",
+        "mode": "local",
+        "score": 0.7387640277009263,
+        "margin": 0.29286373612001837,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "プライド",
+        "candidate": "プライド",
+        "mode": "local",
+        "score": 0.7387640277009263,
+        "margin": 0.29286373612001837,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi43-12",
+      "state": "resting",
+      "slot": 2,
+      "box": [
+        264,
+        903,
+        194,
+        252
+      ],
+      "expected": "リスキーチャンス",
+      "baseline": {
+        "name": "リスキーチャンス",
+        "candidate": "リスキーチャンス",
+        "mode": "local",
+        "score": 0.470728890611665,
+        "margin": 0.23993973980598318,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "リスキーチャンス",
+        "candidate": "リスキーチャンス",
+        "mode": "local",
+        "score": 0.470728890611665,
+        "margin": 0.23993973980598318,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi43-12",
+      "state": "resting",
+      "slot": 3,
+      "box": [
+        392,
+        903,
+        193,
+        252
+      ],
+      "expected": "羽ばたけ！",
+      "baseline": {
+        "name": "羽ばたけ！",
+        "candidate": "羽ばたけ！",
+        "mode": "local",
+        "score": 0.4256850933451692,
+        "margin": 0.21628738349187607,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "羽ばたけ！",
+        "candidate": "羽ばたけ！",
+        "mode": "local",
+        "score": 0.4256850933451692,
+        "margin": 0.21628738349187607,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi43-12",
+      "state": "resting",
+      "slot": 4,
+      "box": [
+        519,
+        902,
+        197,
+        253
+      ],
+      "expected": "積み重ね",
+      "baseline": {
+        "name": "積み重ね",
+        "candidate": "積み重ね",
+        "mode": "local",
+        "score": 0.6336593117969593,
+        "margin": 0.17090493207106433,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "積み重ね",
+        "candidate": "積み重ね",
+        "mode": "local",
+        "score": 0.6336593117969593,
+        "margin": 0.17090493207106433,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi43-17",
+      "state": "hover_selected",
+      "slot": 0,
+      "box": [
+        3,
+        881,
+        195,
+        259
+      ],
+      "expected": "セッティング",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi43-17",
+      "state": "hover_selected",
+      "slot": 1,
+      "box": [
+        133,
+        881,
+        198,
+        259
+      ],
+      "expected": "羽ばたけ！",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi43-17",
+      "state": "hover_selected",
+      "slot": 2,
+      "box": [
+        261,
+        881,
+        203,
+        258
+      ],
+      "expected": "積み重ね",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi43-17",
+      "state": "hover_selected",
+      "slot": 4,
+      "box": [
+        521,
+        851,
+        198,
+        261
+      ],
+      "expected": "アイドルになります",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi43-21",
+      "state": "drink_animation",
+      "slot": 0,
+      "box": [
+        43,
+        884,
+        192,
+        256
+      ],
+      "expected": "屋上からの景色",
+      "baseline": {
+        "name": "屋上からの景色",
+        "candidate": "屋上からの景色",
+        "mode": "full",
+        "score": 0.6272739001320808,
+        "margin": 0.3263885788580737,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "屋上からの景色",
+        "candidate": "屋上からの景色",
+        "mode": "full",
+        "score": 0.6272739001320808,
+        "margin": 0.3263885788580737,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi43-21",
+      "state": "drink_animation",
+      "slot": 1,
+      "box": [
+        266,
+        886,
+        192,
+        254
+      ],
+      "expected": "プライド",
+      "baseline": {
+        "name": "プライド",
+        "candidate": "プライド",
+        "mode": "full",
+        "score": 0.8228138141151228,
+        "margin": 0.4789210252449453,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "プライド",
+        "candidate": "プライド",
+        "mode": "full",
+        "score": 0.8228138141151228,
+        "margin": 0.4789210252449453,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi43-21",
+      "state": "drink_animation",
+      "slot": 2,
+      "box": [
+        486,
+        885,
+        192,
+        255
+      ],
+      "expected": "オーバードライブ",
+      "baseline": {
+        "name": "オーバードライブ",
+        "candidate": "オーバードライブ",
+        "mode": "full",
+        "score": 0.763087188383829,
+        "margin": 0.2655898837723585,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "オーバードライブ",
+        "candidate": "オーバードライブ",
+        "mode": "full",
+        "score": 0.763087188383829,
+        "margin": 0.2655898837723585,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi43-22",
+      "state": "resting",
+      "slot": 0,
+      "box": [
+        10,
+        891,
+        188,
+        253
+      ],
+      "expected": "羽ばたけ！",
+      "baseline": {
+        "name": null,
+        "candidate": "羽ばたけ！",
+        "mode": "local",
+        "score": 0.4225000864973094,
+        "margin": 0.16883048064153006,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "unknown",
+      "candidate": {
+        "name": null,
+        "candidate": "羽ばたけ！",
+        "mode": "local",
+        "score": 0.4225000864973094,
+        "margin": 0.16883048064153006,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi43-22",
+      "state": "resting",
+      "slot": 1,
+      "box": [
+        135,
+        891,
+        190,
+        252
+      ],
+      "expected": "積み重ね",
+      "baseline": {
+        "name": null,
+        "candidate": "積み重ね",
+        "mode": "local",
+        "score": 0.5527615093719711,
+        "margin": 0.09939257202221469,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "unknown",
+      "candidate": {
+        "name": null,
+        "candidate": "積み重ね",
+        "mode": "local",
+        "score": 0.5527615093719711,
+        "margin": 0.09939257202221469,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi43-22",
+      "state": "resting",
+      "slot": 2,
+      "box": [
+        261,
+        892,
+        189,
+        251
+      ],
+      "expected": "モチベ",
+      "baseline": {
+        "name": "モチベ",
+        "candidate": "モチベ",
+        "mode": "local",
+        "score": 0.49801910174362646,
+        "margin": 0.26657450117631737,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "モチベ",
+        "candidate": "モチベ",
+        "mode": "local",
+        "score": 0.49801910174362646,
+        "margin": 0.26657450117631737,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi43-22",
+      "state": "resting",
+      "slot": 3,
+      "box": [
+        386,
+        892,
+        195,
+        251
+      ],
+      "expected": "ハッピー♪",
+      "baseline": {
+        "name": null,
+        "candidate": "ハッピー♪",
+        "mode": "local",
+        "score": 0.7810821212899528,
+        "margin": 0.1014715550718368,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "unknown",
+      "candidate": {
+        "name": null,
+        "candidate": "ハッピー♪",
+        "mode": "local",
+        "score": 0.7810821212899528,
+        "margin": 0.1014715550718368,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi43-22",
+      "state": "resting",
+      "slot": 4,
+      "box": [
+        512,
+        891,
+        193,
+        252
+      ],
+      "expected": "アイドルになります",
+      "baseline": {
+        "name": "アイドルになります",
+        "candidate": "アイドルになります",
+        "mode": "local",
+        "score": 0.7139487826027655,
+        "margin": 0.5375754454080954,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "baselineOutcome": "correct",
+      "candidate": {
+        "name": "アイドルになります",
+        "candidate": "アイドルになります",
+        "mode": "local",
+        "score": 0.7139487826027655,
+        "margin": 0.5375754454080954,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      },
+      "candidateOutcome": "correct"
+    },
+    {
+      "id": "morishi43-23",
+      "state": "card_animation",
+      "slot": 0,
+      "box": [
+        152,
+        911,
+        190,
+        232
+      ],
+      "expected": "眠気",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi43-23",
+      "state": "card_animation",
+      "slot": 1,
+      "box": [
+        373,
+        891,
+        196,
+        251
+      ],
+      "expected": "眠気",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi43-7",
+      "state": "hover_selected",
+      "slot": 0,
+      "box": [
+        8,
+        899,
+        195,
+        254
+      ],
+      "expected": "盛り上げ上手",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi43-7",
+      "state": "hover_selected",
+      "slot": 1,
+      "box": [
+        178,
+        900,
+        195,
+        254
+      ],
+      "expected": "アドリブの基本",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi43-7",
+      "state": "hover_selected",
+      "slot": 2,
+      "box": [
+        347,
+        872,
+        195,
+        255
+      ],
+      "expected": "アイドルになります",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    },
+    {
+      "id": "morishi43-7",
+      "state": "hover_selected",
+      "slot": 3,
+      "box": [
+        514,
+        898,
+        197,
+        255
+      ],
+      "expected": "積み重ね",
+      "baseline": null,
+      "baselineOutcome": "unknown",
+      "candidate": null,
+      "candidateOutcome": "unknown"
+    }
+  ],
+  "expectedHandCards": 66,
+  "detectedHandCards": 65,
+  "detectorMisses": [
+    {
+      "id": "morishi43-17",
+      "slot": 3,
+      "name": "眠気",
+      "state": "hover_selected"
+    }
+  ],
+  "changedNames": 0
+}

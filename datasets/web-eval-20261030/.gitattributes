@@ -1,0 +1,3 @@
+# Preserve the originally frozen label bytes, including their line endings.
+blind-labels.json -text whitespace=cr-at-eol
+.gitattributes text eol=lf

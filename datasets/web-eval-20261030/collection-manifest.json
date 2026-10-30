@@ -1,0 +1,1306 @@
+{
+  "scope": "Manual public-image relay; original bytes and provenance, no labels or tuning.\n\nThe GitHub token is used only for this repository's Git blob API. Requests to\nexternal image/page sources contain no authorization, cookies or credentials.\n",
+  "labelsVerified": false,
+  "sourcePages": [
+    {
+      "id": "morishi39",
+      "group": "morishimemo",
+      "url": "https://morishimemo.com/gakumasu-memo-39"
+    },
+    {
+      "id": "morishi43",
+      "group": "morishimemo",
+      "url": "https://morishimemo.com/gakumasu-memo-43"
+    },
+    {
+      "id": "morishi23",
+      "group": "morishimemo",
+      "url": "https://morishimemo.com/gakumasu-memo-23"
+    },
+    {
+      "id": "appgame-sumika",
+      "group": "appgamelog",
+      "url": "https://appgamelog.com/gkmas-hif-sumika/"
+    },
+    {
+      "id": "setandset",
+      "group": "setandset",
+      "url": "https://www.setandset.com/archives/gakumasanomaly.html"
+    }
+  ],
+  "records": [
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/01/image-35-19.jpg",
+      "declaredSize": [
+        523,
+        805
+      ],
+      "alt": "",
+      "id": "morishi39-0",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 87417,
+      "sha256": "e3602ed6e81b7a0bfd73d61cd454f139792c0ab06c88f880f870122718c8fc77",
+      "gitBlob": "0d49aa261c0439904cade7fdbd8d9fd40c0b309c",
+      "path": "remote\\morishi39-0.jpg",
+      "size": [
+        523,
+        805
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/06/image-56-6.jpg",
+      "declaredSize": [
+        523,
+        822
+      ],
+      "alt": "",
+      "id": "morishi39-1",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 89418,
+      "sha256": "6bd02d099aabee179992991c03da4c01c5d586ce7c8908a341e7d22ddc03edbf",
+      "gitBlob": "f5b468fc1f3b3de11d992f56f26ddb76d62a1935",
+      "path": "remote\\morishi39-1.jpg",
+      "size": [
+        523,
+        822
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/01/image-35-21.jpg",
+      "declaredSize": [
+        524,
+        802
+      ],
+      "alt": "",
+      "id": "morishi39-2",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 89865,
+      "sha256": "47e79621e58d779442e8c05a1d02b014bec4870148b63fecf6bfb28b6031f66b",
+      "gitBlob": "aadfdf4511149b03605cd430bdd4b4477e96b91a",
+      "path": "remote\\morishi39-2.jpg",
+      "size": [
+        524,
+        802
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-20.jpg",
+      "declaredSize": [
+        383,
+        689
+      ],
+      "alt": "",
+      "id": "morishi39-3",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 62167,
+      "sha256": "db3682c5464ea36ab5fd23a73730c57aca86d00bd9faf53ae4ba1442a959fdcc",
+      "gitBlob": "c9ca4fc939c07f5e186190abec4430f8784af04f",
+      "path": "remote\\morishi39-3.jpg",
+      "size": [
+        383,
+        689
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-20-1.jpg",
+      "declaredSize": [
+        379,
+        687
+      ],
+      "alt": "",
+      "id": "morishi39-4",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 58290,
+      "sha256": "1d9dc31e963ec4be18d25312da66d1f38b1a915cdc618379235bd556262cd3e8",
+      "gitBlob": "ae7edf462ca5a9d7002ae8cc5afc845f42109ba2",
+      "path": "remote\\morishi39-4.jpg",
+      "size": [
+        379,
+        687
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-20-2.jpg",
+      "declaredSize": [
+        373,
+        688
+      ],
+      "alt": "",
+      "id": "morishi39-5",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 42954,
+      "sha256": "3add8897290ffb488fcd52c9e1c1ddfd6bd56dc0dce15c1e755774363d48e79f",
+      "gitBlob": "e17c333913d8ef0e2b1235e1a3a25001c536ec02",
+      "path": "remote\\morishi39-5.jpg",
+      "size": [
+        373,
+        688
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-21.jpg",
+      "declaredSize": [
+        384,
+        682
+      ],
+      "alt": "",
+      "id": "morishi39-6",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 53440,
+      "sha256": "3025bd910420c189e7ff94978693b8cb1f93bfff559f8292d45599a3009e4259",
+      "gitBlob": "f30ab8e9cebc5b5f77eed91f5220304da71d205c",
+      "path": "remote\\morishi39-6.jpg",
+      "size": [
+        384,
+        682
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-21-1.jpg",
+      "declaredSize": [
+        382,
+        689
+      ],
+      "alt": "",
+      "id": "morishi39-7",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 47540,
+      "sha256": "6ef7e257d03ed84e0eff5a3e07b86e985e0781099e2e4707549eca9adeae7218",
+      "gitBlob": "0965c09104bf8a5f1e515562230dc2a557d73def",
+      "path": "remote\\morishi39-7.jpg",
+      "size": [
+        382,
+        689
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-21-2.jpg",
+      "declaredSize": [
+        382,
+        693
+      ],
+      "alt": "",
+      "id": "morishi39-8",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 46480,
+      "sha256": "316c213faf03e08d94dac921f1d7d4776b518c8967c4563c75226a22d892ba7b",
+      "gitBlob": "b740140b46a1fc1dd83ff74c6a25e0d58d736625",
+      "path": "remote\\morishi39-8.jpg",
+      "size": [
+        382,
+        693
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-21-4.jpg",
+      "declaredSize": [
+        380,
+        690
+      ],
+      "alt": "",
+      "id": "morishi39-9",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 65178,
+      "sha256": "5f3071897c6c903bd200cc41915ba33b41fb6baa12381aad0a927f9d27dbb740",
+      "gitBlob": "8ac67c5e22bf780f47f16272b0c2501c6585909d",
+      "path": "remote\\morishi39-9.jpg",
+      "size": [
+        380,
+        690
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-21-5.jpg",
+      "declaredSize": [
+        383,
+        691
+      ],
+      "alt": "",
+      "id": "morishi39-10",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 65926,
+      "sha256": "dd425e412c651ae8f5eac8fd797c363c0b2c44cee33bfa3e544845be2dc2e1bb",
+      "gitBlob": "87d2135bf50ea0f4d3cf76948f79c00851098ca8",
+      "path": "remote\\morishi39-10.jpg",
+      "size": [
+        383,
+        691
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-21-6.jpg",
+      "declaredSize": [
+        378,
+        689
+      ],
+      "alt": "",
+      "id": "morishi39-11",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 43771,
+      "sha256": "09f99dffe9c09133d840ffb8949c6fa0d477b69aef50f37d68ef3378e86f2284",
+      "gitBlob": "d6b8afeaa29a51a63ab2c5db71297b985def523a",
+      "path": "remote\\morishi39-11.jpg",
+      "size": [
+        378,
+        689
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-23.jpg",
+      "declaredSize": [
+        379,
+        676
+      ],
+      "alt": "",
+      "id": "morishi39-12",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 53129,
+      "sha256": "1410029d621600632d9e708e580d3c35586d18f9cf41f1b0e96decc07a0e6b22",
+      "gitBlob": "40e8513f56d36deb2c82001de4a17a458a589367",
+      "path": "remote\\morishi39-12.jpg",
+      "size": [
+        379,
+        676
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-23.png",
+      "declaredSize": [
+        378,
+        681
+      ],
+      "alt": "",
+      "id": "morishi39-13",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 150116,
+      "sha256": "567d120ad4ea0f4016b46cf52b1353a6131cdef987da42c243fbfd247a70380e",
+      "gitBlob": "23c97013c8e6a512db75874474d515e2ad51354e",
+      "path": "remote\\morishi39-13.png",
+      "size": [
+        378,
+        681
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-24.png",
+      "declaredSize": [
+        386,
+        688
+      ],
+      "alt": "",
+      "id": "morishi39-14",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 138277,
+      "sha256": "fab9e4e0e48a8957c7560fa9fa559f4de296d657fdc6fe735cecf82bc5c99120",
+      "gitBlob": "1d3f92d18a85132b6b312be95e6ed39359fd2bfa",
+      "path": "remote\\morishi39-14.png",
+      "size": [
+        386,
+        688
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-25.jpg",
+      "declaredSize": [
+        380,
+        667
+      ],
+      "alt": "",
+      "id": "morishi39-15",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 48639,
+      "sha256": "c4c3d51d910396b2e48d24b834d9fa5708fcb8bfbf59519c7e566bdf31f43ff6",
+      "gitBlob": "9525f8bd671d9f75198147d4b02a7d0c77a40a51",
+      "path": "remote\\morishi39-15.jpg",
+      "size": [
+        380,
+        667
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-25-2.jpg",
+      "declaredSize": [
+        384,
+        690
+      ],
+      "alt": "",
+      "id": "morishi39-16",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 65647,
+      "sha256": "ff8eee2f3cb5082f933561bbcae554da12f32f987643d0ea0c445704afd167e1",
+      "gitBlob": "2782aca4fc28124eb3b0b277a301fd98e1e00ef4",
+      "path": "remote\\morishi39-16.jpg",
+      "size": [
+        384,
+        690
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-25-3.jpg",
+      "declaredSize": [
+        381,
+        691
+      ],
+      "alt": "",
+      "id": "morishi39-17",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 61718,
+      "sha256": "f9360a4554033851b9d24174a4152ad9d1b76c83ed4cb6d2d8d2a67fee2886a4",
+      "gitBlob": "b2ac55f5de2fbf7dbcb0fe3289a02e633cc9f5ca",
+      "path": "remote\\morishi39-17.jpg",
+      "size": [
+        381,
+        691
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-25-4.jpg",
+      "declaredSize": [
+        377,
+        685
+      ],
+      "alt": "",
+      "id": "morishi39-18",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 52827,
+      "sha256": "a0376757176e73d49d0c18c3a59b9c83aac68014d34bedf2f86d7901642afa99",
+      "gitBlob": "33e51f6036573a34420b91fcf8c51eed065e1196",
+      "path": "remote\\morishi39-18.jpg",
+      "size": [
+        377,
+        685
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-26.jpg",
+      "declaredSize": [
+        379,
+        687
+      ],
+      "alt": "",
+      "id": "morishi39-19",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 55967,
+      "sha256": "dcd3a0497a99a1ec6dd223d8a5eb145efd295d1566f9ac736e9ee2648789bec7",
+      "gitBlob": "725ca447ef8931e8e75771d7566a2752c12a2d8b",
+      "path": "remote\\morishi39-19.jpg",
+      "size": [
+        379,
+        687
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-26-1.jpg",
+      "declaredSize": [
+        386,
+        691
+      ],
+      "alt": "",
+      "id": "morishi39-20",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 46819,
+      "sha256": "940382e63b1ee6cb4fdeb54a840b2ac5171fa0223fb88b1dd1c5bfc88d59d83a",
+      "gitBlob": "aecbf984b2a817759e079bc1cb0817735dc63612",
+      "path": "remote\\morishi39-20.jpg",
+      "size": [
+        386,
+        691
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-26-2.jpg",
+      "declaredSize": [
+        380,
+        687
+      ],
+      "alt": "",
+      "id": "morishi39-21",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 58242,
+      "sha256": "cb726ed9adcdebb2b7e658ffaaec47e5562cc3e147d3dd7d9a5b3d84f7d68143",
+      "gitBlob": "d34ad011fc6167618bf016654b77e4cedb61d906",
+      "path": "remote\\morishi39-21.jpg",
+      "size": [
+        380,
+        687
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-26-3.jpg",
+      "declaredSize": [
+        384,
+        686
+      ],
+      "alt": "",
+      "id": "morishi39-22",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 59813,
+      "sha256": "469122c1797e212211dd6bf05beeab3dbfb3aec681665a517bc401d18e8df74f",
+      "gitBlob": "cfd1dae7aacdc9829e60151fb3b103b24f636f16",
+      "path": "remote\\morishi39-22.jpg",
+      "size": [
+        384,
+        686
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-26-4.jpg",
+      "declaredSize": [
+        384,
+        691
+      ],
+      "alt": "",
+      "id": "morishi39-23",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 54674,
+      "sha256": "a0a155c543bb1050ba0f750d03c4cdcaff3047bd85075507bf2626a2dbee92c0",
+      "gitBlob": "316816485521f81200e219d461a5102fe53ccaaa",
+      "path": "remote\\morishi39-23.jpg",
+      "size": [
+        384,
+        691
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-28.jpg",
+      "declaredSize": [
+        526,
+        944
+      ],
+      "alt": "",
+      "id": "morishi39-24",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 52235,
+      "sha256": "4d7ec6a4c140f5c537ee72c6cb12d37db630817e61b322859e389a61fb97862d",
+      "gitBlob": "5416886f7ff5e44e11cb54e6610f14b66692df84",
+      "path": "remote\\morishi39-24.jpg",
+      "size": [
+        526,
+        944
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-29.jpg",
+      "declaredSize": [
+        494,
+        706
+      ],
+      "alt": "",
+      "id": "morishi39-25",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-39",
+      "sizeBytes": 85728,
+      "sha256": "62618a71cc1836b2f7c09f5efdbdbefec67987fce57d3cb4cd693d378a752f7b",
+      "gitBlob": "ea96d9ee8adce4f4e8d5b3c509153f9a3f206c1d",
+      "path": "remote\\morishi39-25.jpg",
+      "size": [
+        494,
+        706
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/01/image-35-13.jpg",
+      "declaredSize": [
+        515,
+        781
+      ],
+      "alt": "",
+      "id": "morishi43-0",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 81730,
+      "sha256": "ae779da071c84543f0f1ca28e0fc6ede0d3f47ee839cf1461e2ff6ce996fbd39",
+      "gitBlob": "f89ab141a839e0995cc50e995825aa0b0c7fb894",
+      "path": "remote\\morishi43-0.jpg",
+      "size": [
+        515,
+        781
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-119-11.jpg",
+      "declaredSize": [
+        527,
+        807
+      ],
+      "alt": "",
+      "id": "morishi43-1",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 92490,
+      "sha256": "3313494608c34018c7f59edbc7f83e8a41e6e5dff42b2d7ed0da15cded5526fb",
+      "gitBlob": "5c2a2345cb8e9e08ead206751732a60ec8f0453c",
+      "path": "remote\\morishi43-1.jpg",
+      "size": [
+        527,
+        807
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/01/image-96-10.jpg",
+      "declaredSize": [
+        527,
+        808
+      ],
+      "alt": "",
+      "id": "morishi43-2",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 86145,
+      "sha256": "45681a5798dc22c783471fb9bc70a708fed9879b1cb0b9a928d0aa7aea500441",
+      "gitBlob": "765e8dc85c9876358a05903713b5ba3dd8104fd4",
+      "path": "remote\\morishi43-2.jpg",
+      "size": [
+        527,
+        808
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/02/image-65-9.jpg",
+      "declaredSize": [
+        522,
+        807
+      ],
+      "alt": "",
+      "id": "morishi43-3",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 80998,
+      "sha256": "7e7f8df4b05e8d7b31c78ed099e64dc229b21b75df474a36a666f64782d28f59",
+      "gitBlob": "00296d2294a503106f5247e89d7637155268bd69",
+      "path": "remote\\morishi43-3.jpg",
+      "size": [
+        522,
+        807
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-34-8.jpg",
+      "declaredSize": [
+        521,
+        819
+      ],
+      "alt": "",
+      "id": "morishi43-4",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 74281,
+      "sha256": "4341b9dd117a348aa268b3d53ab3c576a2eef6a8b5f5a5b9abc3fa5db88d88bd",
+      "gitBlob": "e7de31f8592acebebf4cc99e6ae21138ab7bd42d",
+      "path": "remote\\morishi43-4.jpg",
+      "size": [
+        521,
+        819
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-119-13.jpg",
+      "declaredSize": [
+        525,
+        813
+      ],
+      "alt": "",
+      "id": "morishi43-5",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 85769,
+      "sha256": "d93d9f4b08464d521692e8265984ee709a9de734e6969c1327868b0a1c9b722a",
+      "gitBlob": "2fdc45a01868ab23bd978ee0df62c2e76d42cb80",
+      "path": "remote\\morishi43-5.jpg",
+      "size": [
+        525,
+        813
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/01/image-35-21.jpg",
+      "declaredSize": [
+        524,
+        802
+      ],
+      "alt": "",
+      "id": "morishi43-6",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 89865,
+      "sha256": "47e79621e58d779442e8c05a1d02b014bec4870148b63fecf6bfb28b6031f66b",
+      "gitBlob": "aadfdf4511149b03605cd430bdd4b4477e96b91a",
+      "path": "remote\\morishi43-6.jpg",
+      "size": [
+        524,
+        802
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-161.jpg",
+      "declaredSize": [
+        382,
+        681
+      ],
+      "alt": "",
+      "id": "morishi43-7",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 56748,
+      "sha256": "78ba8e9945cf47b32ef7a0f32ab47ad7d0ab8f41b2e78b696c179de8892a470a",
+      "gitBlob": "50438b3e76868031fe2512e55dafa37ce8636231",
+      "path": "remote\\morishi43-7.jpg",
+      "size": [
+        382,
+        681
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-161-1.jpg",
+      "declaredSize": [
+        377,
+        673
+      ],
+      "alt": "",
+      "id": "morishi43-8",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 41595,
+      "sha256": "83a7cb5db4916ffe8f403c6944ebeb89d12a0674774155b3fa439aa9a13dfe3c",
+      "gitBlob": "795ee106e91e945c5132534ed649db6eba4fe418",
+      "path": "remote\\morishi43-8.jpg",
+      "size": [
+        377,
+        673
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-162.jpg",
+      "declaredSize": [
+        387,
+        667
+      ],
+      "alt": "",
+      "id": "morishi43-9",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 53107,
+      "sha256": "3c52c7f0ae8e9bcfd359a9be0d202b21f4770ad167c7b21cf776ef974ae56907",
+      "gitBlob": "80ab5975198c4a00752ab8ea8ec530572a5b2934",
+      "path": "remote\\morishi43-9.jpg",
+      "size": [
+        387,
+        667
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-162-2.jpg",
+      "declaredSize": [
+        379,
+        683
+      ],
+      "alt": "",
+      "id": "morishi43-10",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 47284,
+      "sha256": "72bb0a0adc57e1c2628bbd2725e92d2837c9c02972ec45b80e9c1e134dc330b2",
+      "gitBlob": "c4da779992f99391f3ffb4e47e927f5f14000dc2",
+      "path": "remote\\morishi43-10.jpg",
+      "size": [
+        379,
+        683
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-162-1.jpg",
+      "declaredSize": [
+        381,
+        687
+      ],
+      "alt": "",
+      "id": "morishi43-11",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 46720,
+      "sha256": "3bedbfab267bec6806b748537b671c84c3207877eed1ad5f4663c276f63eb928",
+      "gitBlob": "1f303dbad08f8a8024209b00465dfca85ca3f5db",
+      "path": "remote\\morishi43-11.jpg",
+      "size": [
+        381,
+        687
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-162-3.jpg",
+      "declaredSize": [
+        383,
+        680
+      ],
+      "alt": "",
+      "id": "morishi43-12",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 61403,
+      "sha256": "b3363f2185780b7c2ae62a6c61d2605e712b413652c96189da95b82876ac5238",
+      "gitBlob": "8798a1398a697d7aec2f7418be7448d301e5c615",
+      "path": "remote\\morishi43-12.jpg",
+      "size": [
+        383,
+        680
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-162-4.jpg",
+      "declaredSize": [
+        378,
+        673
+      ],
+      "alt": "",
+      "id": "morishi43-13",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 40364,
+      "sha256": "437b1241e07ace7cfd9d1e5b17844041ef9bc2eb6fd53ea6fe6e0771bdf58c08",
+      "gitBlob": "3fee1bc18e70a1392f5e23d428731505635ef5df",
+      "path": "remote\\morishi43-13.jpg",
+      "size": [
+        378,
+        673
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-164.jpg",
+      "declaredSize": [
+        379,
+        674
+      ],
+      "alt": "",
+      "id": "morishi43-14",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 54301,
+      "sha256": "0a378f24f6f0d23d45eae1acc8b97dcbabc94352dbe79edcce6500b56aebb5ab",
+      "gitBlob": "4408c5da45f6cae344cedb1b5e769da949410b92",
+      "path": "remote\\morishi43-14.jpg",
+      "size": [
+        379,
+        674
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-164.png",
+      "declaredSize": [
+        382,
+        678
+      ],
+      "alt": "",
+      "id": "morishi43-15",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 148357,
+      "sha256": "bc36cf383f657a3458000d9b49d41865519df322d2a47c24b6f8241cbf922b12",
+      "gitBlob": "4d96d0b661f73ec6cf8a9603945d309949e540ff",
+      "path": "remote\\morishi43-15.png",
+      "size": [
+        382,
+        678
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-165.png",
+      "declaredSize": [
+        381,
+        684
+      ],
+      "alt": "",
+      "id": "morishi43-16",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 153637,
+      "sha256": "3de4599f8a3eae3f7063ed8f17b6d3df9a148e5978c6d9e903e883dcdf046227",
+      "gitBlob": "7f2d8b9224a162759b0bcfa55c7daf58c0aa0cb7",
+      "path": "remote\\morishi43-16.png",
+      "size": [
+        381,
+        684
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-166.jpg",
+      "declaredSize": [
+        376,
+        687
+      ],
+      "alt": "",
+      "id": "morishi43-17",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 57369,
+      "sha256": "737df4e2d0e781703e1f029868917014e6779677a6136dd40fd96d182fc7e81e",
+      "gitBlob": "907b97996911019b91ede32e7d4d10ef4625d37a",
+      "path": "remote\\morishi43-17.jpg",
+      "size": [
+        376,
+        687
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-166-1.jpg",
+      "declaredSize": [
+        383,
+        683
+      ],
+      "alt": "",
+      "id": "morishi43-18",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 41770,
+      "sha256": "8f85e47617beef2deac1d33fb1c3b2a44e844fa85a4772e24a42a575d3edcbb9",
+      "gitBlob": "3c55538e49de595840f983642273e4d6422a686b",
+      "path": "remote\\morishi43-18.jpg",
+      "size": [
+        383,
+        683
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-166-2.jpg",
+      "declaredSize": [
+        377,
+        681
+      ],
+      "alt": "",
+      "id": "morishi43-19",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 54215,
+      "sha256": "77c26a3db1372c575ffa2cc6740681fa2d90a8d36eb51310bf985384b9d682fc",
+      "gitBlob": "af0718d91eeaf358dd5bccfe139b7df5845095d3",
+      "path": "remote\\morishi43-19.jpg",
+      "size": [
+        377,
+        681
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-167.jpg",
+      "declaredSize": [
+        384,
+        683
+      ],
+      "alt": "",
+      "id": "morishi43-20",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 50676,
+      "sha256": "293ea6b68c29a59b16c84db047b1057a16c1da5fe13c8c7f93fe753faaee5b7b",
+      "gitBlob": "50ed72cb99d332af664cf7ad93dc8734a3f8e8e5",
+      "path": "remote\\morishi43-20.jpg",
+      "size": [
+        384,
+        683
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-167-1.jpg",
+      "declaredSize": [
+        383,
+        689
+      ],
+      "alt": "",
+      "id": "morishi43-21",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 55671,
+      "sha256": "7a4bf69a3716716a8a33e093a21f726674f44f2225716b664eee53e4734c81fc",
+      "gitBlob": "9d6d1404e53cc92a73b73a51cf69fc768ae4b4ff",
+      "path": "remote\\morishi43-21.jpg",
+      "size": [
+        383,
+        689
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-167-2.jpg",
+      "declaredSize": [
+        386,
+        688
+      ],
+      "alt": "",
+      "id": "morishi43-22",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 57277,
+      "sha256": "3f7dc12ae3ba2155bc9cfefaf1667cb7b43445656d21d32f9b64540c4f1aec2c",
+      "gitBlob": "1685b692a19a5946b21bd42d668f6ecdefe786f8",
+      "path": "remote\\morishi43-22.jpg",
+      "size": [
+        386,
+        688
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-167-3.jpg",
+      "declaredSize": [
+        382,
+        687
+      ],
+      "alt": "",
+      "id": "morishi43-23",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 50554,
+      "sha256": "0998785c2cfd0dfac68676c5b21c92ac2f42a7209b84c70c016fc4628178069d",
+      "gitBlob": "9dec8ad6b82756534c66b6e1c3df800d67a08241",
+      "path": "remote\\morishi43-23.jpg",
+      "size": [
+        382,
+        687
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-167-4.jpg",
+      "declaredSize": [
+        524,
+        928
+      ],
+      "alt": "",
+      "id": "morishi43-24",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 51579,
+      "sha256": "cb5f60a04abeac2fda02c6b4d984ebaa2873f970ac3f1bc5f582d0e4b4b77cd3",
+      "gitBlob": "59f502b9bc4f881bcae07a35dd24365131cadca4",
+      "path": "remote\\morishi43-24.jpg",
+      "size": [
+        524,
+        928
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2026/07/image-167-5.jpg",
+      "declaredSize": [
+        508,
+        756
+      ],
+      "alt": "",
+      "id": "morishi43-25",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-43",
+      "sizeBytes": 84151,
+      "sha256": "7c5331488775ace63e8eb12bb42166d20347cc2065ca6142253084b2c3767dc9",
+      "gitBlob": "c5b7012e4b4e90a28036bad6d4a51fba3859de99",
+      "path": "remote\\morishi43-25.jpg",
+      "size": [
+        508,
+        756
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2025/05/image-106-7.jpg",
+      "declaredSize": [
+        524,
+        772
+      ],
+      "alt": "",
+      "id": "morishi23-0",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-23",
+      "sizeBytes": 81401,
+      "sha256": "15c7889e70c7b4821b24d94ddbee7e99ff8bd8e3e15b394fef24c304c3577853",
+      "gitBlob": "910eb840bbbb6aa7f8e6a40729b6bec90f428881",
+      "path": "remote\\morishi23-0.jpg",
+      "size": [
+        524,
+        772
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2025/05/image-106-8.jpg",
+      "declaredSize": [
+        524,
+        802
+      ],
+      "alt": "",
+      "id": "morishi23-1",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-23",
+      "sizeBytes": 82095,
+      "sha256": "406217078b58efcd9326ecce31c3eac748b8aaaed8be16bd8a9ed6e3bd0625e6",
+      "gitBlob": "97967227fc5f97dc2057a368fce199480263e3e1",
+      "path": "remote\\morishi23-1.jpg",
+      "size": [
+        524,
+        802
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2025/05/image-106-10.jpg",
+      "declaredSize": [
+        525,
+        802
+      ],
+      "alt": "",
+      "id": "morishi23-2",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-23",
+      "sizeBytes": 71859,
+      "sha256": "adc6833b948f4c309a4ca7ab37ab75629f8c2286962e3e622d1a78c77af96b0b",
+      "gitBlob": "6b853894332ba6c9e52bc642e80fe79ac51749d7",
+      "path": "remote\\morishi23-2.jpg",
+      "size": [
+        525,
+        802
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2025/05/image-106-18.jpg",
+      "declaredSize": [
+        526,
+        776
+      ],
+      "alt": "",
+      "id": "morishi23-3",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-23",
+      "sizeBytes": 87819,
+      "sha256": "bfe56c0c845c889c796dbfeb421e1db17d07ec7c5079baed74276b5679fe7aa7",
+      "gitBlob": "977b046e3bdeb43bc1f08a13417d17f6b23243f6",
+      "path": "remote\\morishi23-3.jpg",
+      "size": [
+        526,
+        776
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2025/06/image-41.jpg",
+      "declaredSize": [
+        342,
+        609
+      ],
+      "alt": "",
+      "id": "morishi23-4",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-23",
+      "sizeBytes": 52474,
+      "sha256": "a22026f35a440a0e8ad7bc1e4bffcdc1479e2574d35446f42940fd263ce29114",
+      "gitBlob": "5f5e528f158ce3fbcfe660cea8756605cccca083",
+      "path": "remote\\morishi23-4.jpg",
+      "size": [
+        342,
+        609
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2025/06/image-41-1.jpg",
+      "declaredSize": [
+        333,
+        609
+      ],
+      "alt": "",
+      "id": "morishi23-5",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-23",
+      "sizeBytes": 48747,
+      "sha256": "5ed37709acf6100ce3b1e6b05fbda40eed158ecf9b46fa92515a8ee234396edf",
+      "gitBlob": "e9fd62e19590eb9acee5fb68070d793c76449904",
+      "path": "remote\\morishi23-5.jpg",
+      "size": [
+        333,
+        609
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2025/06/image-43.png",
+      "declaredSize": [
+        337,
+        594
+      ],
+      "alt": "",
+      "id": "morishi23-6",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-23",
+      "sizeBytes": 107179,
+      "sha256": "5c895c0cf950c702a57d327aa167e63c70bbb636066134143f723a56b19d2855",
+      "gitBlob": "da94202c8f216580953627bd109f94f2686dff24",
+      "path": "remote\\morishi23-6.png",
+      "size": [
+        337,
+        594
+      ]
+    },
+    {
+      "url": "https://morishimemo.com/wp-content/uploads/2025/06/image-44.png",
+      "declaredSize": [
+        338,
+        598
+      ],
+      "alt": "",
+      "id": "morishi23-7",
+      "group": "morishimemo",
+      "page": "https://morishimemo.com/gakumasu-memo-23",
+      "sizeBytes": 172705,
+      "sha256": "203be3b2996cbd95013973f16751886e3c07f490dd017dacf0ff869f4bf92285",
+      "gitBlob": "27d1b284367e28d4ae2e821c421125c29992973a",
+      "path": "remote\\morishi23-7.png",
+      "size": [
+        338,
+        598
+      ]
+    },
+    {
+      "url": "https://appgamelog.com/wp-content/uploads/gkmas-hif-sumika-2.jpg",
+      "declaredSize": [
+        1080,
+        1782
+      ],
+      "alt": "HIFボーナス",
+      "id": "appgame-sumika-0",
+      "group": "appgamelog",
+      "page": "https://appgamelog.com/gkmas-hif-sumika/",
+      "sizeBytes": 244860,
+      "sha256": "225086ffe963341f2e9d1019c58bc17b60140e8104a04b749fa6b47db7a10af6",
+      "gitBlob": "c13a0f3f72543077cdbfafbf9aeb019fa274d30b",
+      "path": "remote\\appgame-sumika-0.jpg",
+      "size": [
+        1080,
+        1782
+      ]
+    },
+    {
+      "url": "https://appgamelog.com/wp-content/uploads/gkmas-hif-sumika-5.jpg",
+      "declaredSize": [
+        554,
+        1200
+      ],
+      "alt": "本戦ラウンド1のスコア",
+      "id": "appgame-sumika-1",
+      "group": "appgamelog",
+      "page": "https://appgamelog.com/gkmas-hif-sumika/",
+      "sizeBytes": 262644,
+      "sha256": "eed732efd2c01401cccf1af642917017f9fcefc273432401dd9968214a57b064",
+      "gitBlob": "1fcfff4bc00e0d205032c72fa54bc828fdc5ea8b",
+      "path": "remote\\appgame-sumika-1.jpg",
+      "size": [
+        554,
+        1200
+      ]
+    },
+    {
+      "url": "https://appgamelog.com/wp-content/uploads/gkmas-hif-sumika-9.jpg",
+      "declaredSize": [
+        1080,
+        2020
+      ],
+      "alt": "選抜試験メモリー",
+      "id": "appgame-sumika-2",
+      "group": "appgamelog",
+      "page": "https://appgamelog.com/gkmas-hif-sumika/",
+      "sizeBytes": 630388,
+      "sha256": "8965309bce2d7c4683ff603ce041e86bdb9a0d3c9fc37ad56b4ec63bfe2f6029",
+      "gitBlob": "bb1dea33a3f9c4fdd08b4b79d97624d676d54153",
+      "path": "remote\\appgame-sumika-2.jpg",
+      "size": [
+        1080,
+        2020
+      ]
+    },
+    {
+      "url": "https://appgamelog.com/wp-content/uploads/gkmas-hif-sumika-12.jpg",
+      "declaredSize": [
+        554,
+        1200
+      ],
+      "alt": "本戦の相談",
+      "id": "appgame-sumika-3",
+      "group": "appgamelog",
+      "page": "https://appgamelog.com/gkmas-hif-sumika/",
+      "sizeBytes": 177691,
+      "sha256": "becd1059e38c6e1be8f7fd822dce44a63ee32a2f7cd9b0994a348baa5d4bcf9e",
+      "gitBlob": "de4fb22a21a5e4768019db1fb8835eb643835f0e",
+      "path": "remote\\appgame-sumika-3.jpg",
+      "size": [
+        554,
+        1200
+      ]
+    },
+    {
+      "url": "https://appgamelog.com/wp-content/uploads/gkmas-hif-sumika-16.jpg",
+      "declaredSize": [
+        554,
+        1200
+      ],
+      "alt": "本戦ラウンド2",
+      "id": "appgame-sumika-4",
+      "group": "appgamelog",
+      "page": "https://appgamelog.com/gkmas-hif-sumika/",
+      "sizeBytes": 242815,
+      "sha256": "3283fe153e0c97277636ddaa83599e5d90a28ee50009ef7b081cbc297dd935e4",
+      "gitBlob": "f8c94f613ef96c4ec4854a7b94370509afd321a0",
+      "path": "remote\\appgame-sumika-4.jpg",
+      "size": [
+        554,
+        1200
+      ]
+    },
+    {
+      "url": "https://appgamelog.com/wp-content/uploads/gkmas-hif-sumika-18.jpg",
+      "declaredSize": [
+        554,
+        1200
+      ],
+      "alt": "ラウンド2のスコア目安",
+      "id": "appgame-sumika-5",
+      "group": "appgamelog",
+      "page": "https://appgamelog.com/gkmas-hif-sumika/",
+      "sizeBytes": 239715,
+      "sha256": "f5854803060430b344dde44307825e3b29000793710bdc81a4e05e77099e5af0",
+      "gitBlob": "a000bf4bcb446c246d654e439942c9755abadc8f",
+      "path": "remote\\appgame-sumika-5.jpg",
+      "size": [
+        554,
+        1200
+      ]
+    },
+    {
+      "url": "https://www.setandset.com/wp-content/uploads/2025/12/Screenshot_20251225_191530s.jpg",
+      "declaredSize": [
+        640,
+        1124
+      ],
+      "alt": "",
+      "id": "setandset-0",
+      "group": "setandset",
+      "page": "https://www.setandset.com/archives/gakumasanomaly.html",
+      "sizeBytes": 169872,
+      "sha256": "c8cff1e41dd62a0439ebeff65f852b6b633e86509aaab9e2c7d040c86fd49b60",
+      "gitBlob": "5e2e020458bf79d00bd16c26aea76089adc0ae3d",
+      "path": "remote\\setandset-0.jpg",
+      "size": [
+        640,
+        1124
+      ]
+    }
+  ]
+}
