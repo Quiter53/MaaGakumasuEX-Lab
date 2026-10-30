@@ -1,0 +1,693 @@
+{
+  "scope": "Synthetic negatives and existing reviewed boxes; not live-game accuracy",
+  "newLiveCultivation": false,
+  "originalEvaluationSha256": "f31e0473e3dca8ae22e25711b83054bfd27a6020f3c7af60c66881790aa1ab63",
+  "runs": {
+    "before-final": {
+      "baseline": "1b3d1f7e7b9f06624fac747775820e20a39efcc9",
+      "sourceCommit": "b06e998e76a35e8c5b801bba8d15f652aee34954",
+      "sourceHashes": {
+        "agent/custom/hand_identity.py": "b12ef32c185c11d89c6831e02937817cf0e74832c5634b4f61386ebfb49fdedf",
+        "agent/custom/hand_badge.py": "3f4305aa4b8e4a5a4944b9c6c1d861ff31e23703c31359b525c51433272424ec",
+        "agent/custom/hand_identity_calibration.json": "d2b0dde24e75e917f52d56de11912316f0b1666927fb92775c5c5ec02c5320ae",
+        "agent/custom/card_visual.py": "6e527a2073f9f4f87f65fa4c1d0c8dc9e8881bbcab097de44a972318814974cd",
+        "agent/custom/card_fingerprints.npz": "6b719cdb23741bf88d084e5e72b174f7c83a7357c8c18bda0cebb1036976d31d",
+        "tools/evaluate_hand_synthetic.py": "4a85666eb6584dbb8d2b342107b4b3433e5879300c137186e9ef6c50a027e4ca"
+      },
+      "seed": 92471,
+      "perK": 200,
+      "workers": 8,
+      "hard": true,
+      "stacked": false,
+      "stats": {
+        "1-clean": {
+          "baseline": {
+            "total": 200,
+            "correct": 200
+          },
+          "candidate": {
+            "total": 200,
+            "correct": 200
+          }
+        },
+        "1-badge": {
+          "baseline": {
+            "total": 200,
+            "correct": 184,
+            "unknown": 16
+          },
+          "candidate": {
+            "total": 200,
+            "correct": 191,
+            "unknown": 9,
+            "changed": 7
+          }
+        },
+        "2-clean": {
+          "baseline": {
+            "total": 400,
+            "correct": 400
+          },
+          "candidate": {
+            "total": 400,
+            "correct": 400
+          }
+        },
+        "2-badge": {
+          "baseline": {
+            "total": 400,
+            "correct": 384,
+            "unknown": 16
+          },
+          "candidate": {
+            "total": 400,
+            "correct": 392,
+            "unknown": 8,
+            "changed": 8
+          }
+        },
+        "3-clean": {
+          "baseline": {
+            "total": 600,
+            "correct": 600
+          },
+          "candidate": {
+            "total": 600,
+            "correct": 600
+          }
+        },
+        "3-badge": {
+          "baseline": {
+            "total": 600,
+            "correct": 573,
+            "unknown": 27
+          },
+          "candidate": {
+            "total": 600,
+            "correct": 588,
+            "unknown": 12,
+            "changed": 15
+          }
+        },
+        "4-clean": {
+          "baseline": {
+            "total": 800,
+            "correct": 797,
+            "unknown": 3
+          },
+          "candidate": {
+            "total": 800,
+            "correct": 797,
+            "unknown": 3
+          }
+        },
+        "4-badge": {
+          "baseline": {
+            "total": 800,
+            "correct": 698,
+            "unknown": 102
+          },
+          "candidate": {
+            "total": 800,
+            "correct": 768,
+            "changed": 70,
+            "unknown": 32
+          }
+        },
+        "5-clean": {
+          "baseline": {
+            "total": 1000,
+            "correct": 995,
+            "unknown": 5
+          },
+          "candidate": {
+            "total": 1000,
+            "correct": 995,
+            "unknown": 5
+          }
+        },
+        "5-badge": {
+          "baseline": {
+            "total": 1000,
+            "correct": 977,
+            "unknown": 23
+          },
+          "candidate": {
+            "total": 1000,
+            "correct": 991,
+            "changed": 14,
+            "unknown": 9
+          }
+        },
+        "negative-badge": {
+          "baseline": {
+            "total": 600,
+            "unknown": 586,
+            "wrong": 14
+          },
+          "candidate": {
+            "total": 600,
+            "unknown": 586,
+            "wrong": 14
+          }
+        }
+      },
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "numpy": "2.3.5",
+        "pillow": "12.3.0"
+      },
+      "fullReportSha256": "355e2a33fb2a42f2aa0948dc1476b7294a587487b462623d8039d41879328774"
+    },
+    "before-stacked": {
+      "baseline": "1b3d1f7e7b9f06624fac747775820e20a39efcc9",
+      "sourceCommit": "b06e998e76a35e8c5b801bba8d15f652aee34954",
+      "sourceHashes": {
+        "agent/custom/hand_identity.py": "b12ef32c185c11d89c6831e02937817cf0e74832c5634b4f61386ebfb49fdedf",
+        "agent/custom/hand_badge.py": "3f4305aa4b8e4a5a4944b9c6c1d861ff31e23703c31359b525c51433272424ec",
+        "agent/custom/hand_identity_calibration.json": "d2b0dde24e75e917f52d56de11912316f0b1666927fb92775c5c5ec02c5320ae",
+        "agent/custom/card_visual.py": "6e527a2073f9f4f87f65fa4c1d0c8dc9e8881bbcab097de44a972318814974cd",
+        "agent/custom/card_fingerprints.npz": "6b719cdb23741bf88d084e5e72b174f7c83a7357c8c18bda0cebb1036976d31d",
+        "tools/evaluate_hand_synthetic.py": "4a85666eb6584dbb8d2b342107b4b3433e5879300c137186e9ef6c50a027e4ca"
+      },
+      "seed": 54077,
+      "perK": 100,
+      "workers": 6,
+      "hard": true,
+      "stacked": true,
+      "stats": {
+        "negative-badge": {
+          "baseline": {
+            "total": 300,
+            "unknown": 294,
+            "wrong": 6
+          },
+          "candidate": {
+            "total": 300,
+            "unknown": 294,
+            "wrong": 6
+          }
+        }
+      },
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "numpy": "2.5.4",
+        "pillow": "12.3.0"
+      },
+      "fullReportSha256": "ba03c1cb6ef545e0e5b7b478e35dfef3a58897e0126b4ee3b2929eb937f9bba2"
+    },
+    "after-final": {
+      "baseline": "1b3d1f7e7b9f06624fac747775820e20a39efcc9",
+      "sourceCommit": "f8ed59c6d6c42184354125c2aaf0ab5d695c0a6f",
+      "sourceHashes": {
+        "agent/custom/hand_identity.py": "23f8648f720cad0bb3cba8f1e1648cd672287d0cc551c1c327f33c493ca8f895",
+        "agent/custom/hand_badge.py": "3f4305aa4b8e4a5a4944b9c6c1d861ff31e23703c31359b525c51433272424ec",
+        "agent/custom/hand_identity_calibration.json": "d2b0dde24e75e917f52d56de11912316f0b1666927fb92775c5c5ec02c5320ae",
+        "agent/custom/card_visual.py": "6e527a2073f9f4f87f65fa4c1d0c8dc9e8881bbcab097de44a972318814974cd",
+        "agent/custom/card_fingerprints.npz": "6b719cdb23741bf88d084e5e72b174f7c83a7357c8c18bda0cebb1036976d31d",
+        "tools/evaluate_hand_synthetic.py": "4a85666eb6584dbb8d2b342107b4b3433e5879300c137186e9ef6c50a027e4ca",
+        "tests/fixtures/hand_identity_labels.json": "41fae4f00e1f17cc28d2b4c69d30b1a5cf1eb4f3e6ea8f1ff8922a5d66e4413b"
+      },
+      "seed": 92471,
+      "perK": 200,
+      "workers": 8,
+      "hard": true,
+      "stacked": false,
+      "stats": {
+        "1-clean": {
+          "baseline": {
+            "total": 200,
+            "correct": 200
+          },
+          "candidate": {
+            "total": 200,
+            "correct": 200
+          }
+        },
+        "1-badge": {
+          "baseline": {
+            "total": 200,
+            "correct": 184,
+            "unknown": 16
+          },
+          "candidate": {
+            "total": 200,
+            "correct": 191,
+            "unknown": 9,
+            "changed": 7
+          }
+        },
+        "2-clean": {
+          "baseline": {
+            "total": 400,
+            "correct": 400
+          },
+          "candidate": {
+            "total": 400,
+            "correct": 400
+          }
+        },
+        "2-badge": {
+          "baseline": {
+            "total": 400,
+            "correct": 384,
+            "unknown": 16
+          },
+          "candidate": {
+            "total": 400,
+            "correct": 392,
+            "unknown": 8,
+            "changed": 8
+          }
+        },
+        "3-clean": {
+          "baseline": {
+            "total": 600,
+            "correct": 600
+          },
+          "candidate": {
+            "total": 600,
+            "correct": 600
+          }
+        },
+        "3-badge": {
+          "baseline": {
+            "total": 600,
+            "correct": 573,
+            "unknown": 27
+          },
+          "candidate": {
+            "total": 600,
+            "correct": 588,
+            "unknown": 12,
+            "changed": 15
+          }
+        },
+        "4-clean": {
+          "baseline": {
+            "total": 800,
+            "correct": 797,
+            "unknown": 3
+          },
+          "candidate": {
+            "total": 800,
+            "correct": 797,
+            "unknown": 3
+          }
+        },
+        "4-badge": {
+          "baseline": {
+            "total": 800,
+            "correct": 698,
+            "unknown": 102
+          },
+          "candidate": {
+            "total": 800,
+            "correct": 768,
+            "changed": 70,
+            "unknown": 32
+          }
+        },
+        "5-clean": {
+          "baseline": {
+            "total": 1000,
+            "correct": 995,
+            "unknown": 5
+          },
+          "candidate": {
+            "total": 1000,
+            "correct": 995,
+            "unknown": 5
+          }
+        },
+        "5-badge": {
+          "baseline": {
+            "total": 1000,
+            "correct": 977,
+            "unknown": 23
+          },
+          "candidate": {
+            "total": 1000,
+            "correct": 991,
+            "changed": 14,
+            "unknown": 9
+          }
+        },
+        "negative-badge": {
+          "baseline": {
+            "total": 600,
+            "unknown": 586,
+            "wrong": 14
+          },
+          "candidate": {
+            "total": 600,
+            "unknown": 600,
+            "changed": 14
+          }
+        }
+      },
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "numpy": "2.5.4",
+        "pillow": "12.3.0"
+      },
+      "fullReportSha256": "b3aee6078e1d26202839da39fad5b71ab302571c42b5c976f6b3505e13508746"
+    },
+    "after-stacked": {
+      "baseline": "1b3d1f7e7b9f06624fac747775820e20a39efcc9",
+      "sourceCommit": "f8ed59c6d6c42184354125c2aaf0ab5d695c0a6f",
+      "sourceHashes": {
+        "agent/custom/hand_identity.py": "23f8648f720cad0bb3cba8f1e1648cd672287d0cc551c1c327f33c493ca8f895",
+        "agent/custom/hand_badge.py": "3f4305aa4b8e4a5a4944b9c6c1d861ff31e23703c31359b525c51433272424ec",
+        "agent/custom/hand_identity_calibration.json": "d2b0dde24e75e917f52d56de11912316f0b1666927fb92775c5c5ec02c5320ae",
+        "agent/custom/card_visual.py": "6e527a2073f9f4f87f65fa4c1d0c8dc9e8881bbcab097de44a972318814974cd",
+        "agent/custom/card_fingerprints.npz": "6b719cdb23741bf88d084e5e72b174f7c83a7357c8c18bda0cebb1036976d31d",
+        "tools/evaluate_hand_synthetic.py": "4a85666eb6584dbb8d2b342107b4b3433e5879300c137186e9ef6c50a027e4ca",
+        "tests/fixtures/hand_identity_labels.json": "41fae4f00e1f17cc28d2b4c69d30b1a5cf1eb4f3e6ea8f1ff8922a5d66e4413b"
+      },
+      "seed": 54077,
+      "perK": 100,
+      "workers": 6,
+      "hard": true,
+      "stacked": true,
+      "stats": {
+        "1-clean": {
+          "baseline": {
+            "total": 100,
+            "correct": 100
+          },
+          "candidate": {
+            "total": 100,
+            "correct": 100
+          }
+        },
+        "1-badge": {
+          "baseline": {
+            "total": 100,
+            "correct": 88,
+            "unknown": 12
+          },
+          "candidate": {
+            "total": 100,
+            "correct": 91,
+            "unknown": 9,
+            "changed": 3
+          }
+        },
+        "2-clean": {
+          "baseline": {
+            "total": 200,
+            "correct": 200
+          },
+          "candidate": {
+            "total": 200,
+            "correct": 200
+          }
+        },
+        "2-badge": {
+          "baseline": {
+            "total": 200,
+            "correct": 177,
+            "unknown": 23
+          },
+          "candidate": {
+            "total": 200,
+            "correct": 188,
+            "unknown": 12,
+            "changed": 11
+          }
+        },
+        "3-clean": {
+          "baseline": {
+            "total": 300,
+            "correct": 300
+          },
+          "candidate": {
+            "total": 300,
+            "correct": 300
+          }
+        },
+        "3-badge": {
+          "baseline": {
+            "total": 300,
+            "correct": 260,
+            "unknown": 40
+          },
+          "candidate": {
+            "total": 300,
+            "correct": 273,
+            "unknown": 27,
+            "changed": 13
+          }
+        },
+        "4-clean": {
+          "baseline": {
+            "total": 400,
+            "correct": 397,
+            "unknown": 3
+          },
+          "candidate": {
+            "total": 400,
+            "correct": 397,
+            "unknown": 3
+          }
+        },
+        "4-badge": {
+          "baseline": {
+            "total": 400,
+            "correct": 335,
+            "unknown": 65
+          },
+          "candidate": {
+            "total": 400,
+            "correct": 366,
+            "unknown": 34,
+            "changed": 31
+          }
+        },
+        "5-clean": {
+          "baseline": {
+            "total": 500,
+            "correct": 498,
+            "unknown": 2
+          },
+          "candidate": {
+            "total": 500,
+            "correct": 498,
+            "unknown": 2
+          }
+        },
+        "5-badge": {
+          "baseline": {
+            "total": 500,
+            "correct": 473,
+            "unknown": 27
+          },
+          "candidate": {
+            "total": 500,
+            "correct": 485,
+            "unknown": 15,
+            "changed": 12
+          }
+        },
+        "negative-badge": {
+          "baseline": {
+            "total": 300,
+            "unknown": 294,
+            "wrong": 6
+          },
+          "candidate": {
+            "total": 300,
+            "unknown": 300,
+            "changed": 6
+          }
+        }
+      },
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "numpy": "2.5.4",
+        "pillow": "12.3.0"
+      },
+      "fullReportSha256": "92c3d829d70484db07d671ae5a9791b05a0991b50610227158f7b9a96c2340e2"
+    },
+    "additional-seed": {
+      "baseline": "1b3d1f7e7b9f06624fac747775820e20a39efcc9",
+      "sourceCommit": "f8ed59c6d6c42184354125c2aaf0ab5d695c0a6f",
+      "sourceHashes": {
+        "agent/custom/hand_identity.py": "23f8648f720cad0bb3cba8f1e1648cd672287d0cc551c1c327f33c493ca8f895",
+        "agent/custom/hand_badge.py": "3f4305aa4b8e4a5a4944b9c6c1d861ff31e23703c31359b525c51433272424ec",
+        "agent/custom/hand_identity_calibration.json": "d2b0dde24e75e917f52d56de11912316f0b1666927fb92775c5c5ec02c5320ae",
+        "agent/custom/card_visual.py": "6e527a2073f9f4f87f65fa4c1d0c8dc9e8881bbcab097de44a972318814974cd",
+        "agent/custom/card_fingerprints.npz": "6b719cdb23741bf88d084e5e72b174f7c83a7357c8c18bda0cebb1036976d31d",
+        "tools/evaluate_hand_synthetic.py": "4a85666eb6584dbb8d2b342107b4b3433e5879300c137186e9ef6c50a027e4ca",
+        "tests/fixtures/hand_identity_labels.json": "41fae4f00e1f17cc28d2b4c69d30b1a5cf1eb4f3e6ea8f1ff8922a5d66e4413b"
+      },
+      "seed": 20261030,
+      "perK": 50,
+      "workers": 4,
+      "hard": true,
+      "stacked": true,
+      "stats": {
+        "1-clean": {
+          "baseline": {
+            "total": 50,
+            "correct": 50
+          },
+          "candidate": {
+            "total": 50,
+            "correct": 50
+          }
+        },
+        "1-badge": {
+          "baseline": {
+            "total": 50,
+            "unknown": 6,
+            "correct": 44
+          },
+          "candidate": {
+            "total": 50,
+            "unknown": 3,
+            "correct": 47,
+            "changed": 3
+          }
+        },
+        "2-clean": {
+          "baseline": {
+            "total": 100,
+            "correct": 100
+          },
+          "candidate": {
+            "total": 100,
+            "correct": 100
+          }
+        },
+        "2-badge": {
+          "baseline": {
+            "total": 100,
+            "correct": 83,
+            "unknown": 17
+          },
+          "candidate": {
+            "total": 100,
+            "correct": 89,
+            "unknown": 11,
+            "changed": 6
+          }
+        },
+        "3-clean": {
+          "baseline": {
+            "total": 150,
+            "correct": 150
+          },
+          "candidate": {
+            "total": 150,
+            "correct": 150
+          }
+        },
+        "3-badge": {
+          "baseline": {
+            "total": 150,
+            "correct": 127,
+            "unknown": 23
+          },
+          "candidate": {
+            "total": 150,
+            "correct": 134,
+            "unknown": 16,
+            "changed": 7
+          }
+        },
+        "4-clean": {
+          "baseline": {
+            "total": 200,
+            "correct": 198,
+            "unknown": 2
+          },
+          "candidate": {
+            "total": 200,
+            "correct": 198,
+            "unknown": 2
+          }
+        },
+        "4-badge": {
+          "baseline": {
+            "total": 200,
+            "correct": 157,
+            "unknown": 43
+          },
+          "candidate": {
+            "total": 200,
+            "correct": 183,
+            "changed": 26,
+            "unknown": 17
+          }
+        },
+        "5-clean": {
+          "baseline": {
+            "total": 250,
+            "correct": 248,
+            "unknown": 2
+          },
+          "candidate": {
+            "total": 250,
+            "correct": 248,
+            "unknown": 2
+          }
+        },
+        "5-badge": {
+          "baseline": {
+            "total": 250,
+            "correct": 238,
+            "unknown": 12
+          },
+          "candidate": {
+            "total": 250,
+            "correct": 241,
+            "unknown": 9,
+            "changed": 3
+          }
+        },
+        "negative-badge": {
+          "baseline": {
+            "total": 150,
+            "unknown": 148,
+            "wrong": 2
+          },
+          "candidate": {
+            "total": 150,
+            "unknown": 150,
+            "changed": 2
+          }
+        }
+      },
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "numpy": "2.5.4",
+        "pillow": "12.3.0"
+      },
+      "fullReportSha256": "b6dea78d0f3780f84da980854b167ac8d4b77013c7998a3c776bd99df5c1dc1d"
+    }
+  },
+  "tests": {
+    "sourcePassed": 1241,
+    "sourceSkipped": 1,
+    "subtestsPassed": 1307,
+    "labPassed": 12,
+    "skippedReason": "Native/Python math equivalence needs CardRulesUi native-policy-vectors.json",
+    "compileall": true
+  },
+  "fixedSourceCommit": "4fc234e9d5ce3f1202d65b958df66f7d017a9d96",
+  "sourcePullRequest": "https://github.com/Quiter53/MaaGakumasuEX/pull/1",
+  "archiveReplay": {
+    "finalFrames": 14,
+    "stackedFrames": 6,
+    "allPixelHashesMatch": true,
+    "allRecordedResultsMatch": true,
+    "candidateAccepts": 0
+  }
+}

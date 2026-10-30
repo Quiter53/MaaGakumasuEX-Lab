@@ -1,0 +1,4926 @@
+{
+  "scope": "Existing reviewed identity boxes; Codex visual labels, not independent human audit or live cultivation",
+  "reference": "b06e998e76a35e8c5b801bba8d15f652aee34954",
+  "sourceCommit": "f8ed59c6d6c42184354125c2aaf0ab5d695c0a6f",
+  "identitySha256": "23f8648f720cad0bb3cba8f1e1648cd672287d0cc551c1c327f33c493ca8f895",
+  "stats": {
+    "first": {
+      "reference": {
+        "total": 82,
+        "correct": 66,
+        "unknown": 16
+      },
+      "candidate": {
+        "total": 82,
+        "correct": 66,
+        "unknown": 16
+      }
+    },
+    "second": {
+      "reference": {
+        "total": 53,
+        "correct": 32,
+        "unknown": 21
+      },
+      "candidate": {
+        "total": 53,
+        "correct": 32,
+        "unknown": 21
+      }
+    },
+    "historical": {
+      "reference": {
+        "total": 34,
+        "correct": 34
+      },
+      "candidate": {
+        "total": 34,
+        "correct": 34
+      }
+    }
+  },
+  "changes": [],
+  "records": [
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/002.png",
+      "sha256": "e4aa86d890dbd33882ce2248c46428e0ea0e6198e244265ebd129215ca746f5e",
+      "slot": 0,
+      "box": [
+        12,
+        887,
+        190,
+        251
+      ],
+      "expected": "虹色ドリーマー",
+      "reference": {
+        "name": "虹色ドリーマー",
+        "candidate": "虹色ドリーマー",
+        "mode": "local",
+        "score": 0.49683007143325014,
+        "margin": 0.2880008906989539,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "虹色ドリーマー",
+        "candidate": "虹色ドリーマー",
+        "mode": "local",
+        "score": 0.49683007143325014,
+        "margin": 0.2880008906989539,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/002.png",
+      "sha256": "e4aa86d890dbd33882ce2248c46428e0ea0e6198e244265ebd129215ca746f5e",
+      "slot": 1,
+      "box": [
+        178,
+        886,
+        189,
+        252
+      ],
+      "expected": "びしっとキメ顔",
+      "reference": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "local",
+        "score": 0.5172291504114226,
+        "margin": 0.35146991269698724,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "local",
+        "score": 0.5172291504114226,
+        "margin": 0.35146991269698724,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/002.png",
+      "sha256": "e4aa86d890dbd33882ce2248c46428e0ea0e6198e244265ebd129215ca746f5e",
+      "slot": 2,
+      "box": [
+        343,
+        886,
+        191,
+        252
+      ],
+      "expected": "幸せのおまじない",
+      "reference": {
+        "name": "幸せのおまじない",
+        "candidate": "幸せのおまじない",
+        "mode": "local",
+        "score": 0.7367949711653559,
+        "margin": 0.45640567033363627,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "幸せのおまじない",
+        "candidate": "幸せのおまじない",
+        "mode": "local",
+        "score": 0.7367949711653559,
+        "margin": 0.45640567033363627,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/002.png",
+      "sha256": "e4aa86d890dbd33882ce2248c46428e0ea0e6198e244265ebd129215ca746f5e",
+      "slot": 3,
+      "box": [
+        509,
+        886,
+        191,
+        252
+      ],
+      "expected": "輝くキミへ",
+      "reference": {
+        "name": "輝くキミへ",
+        "candidate": "輝くキミへ",
+        "mode": "local",
+        "score": 0.5498749627194497,
+        "margin": 0.264162517185551,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "輝くキミへ",
+        "candidate": "輝くキミへ",
+        "mode": "local",
+        "score": 0.5498749627194497,
+        "margin": 0.264162517185551,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/003.png",
+      "sha256": "52d42050c20bc8f37f5c3b54cbf4c97da4631ebfe84edd5a9f1ec6cc5b3be149",
+      "slot": 0,
+      "box": [
+        42,
+        886,
+        190,
+        251
+      ],
+      "expected": "虹色ドリーマー",
+      "reference": {
+        "name": "虹色ドリーマー",
+        "candidate": "虹色ドリーマー",
+        "mode": "full",
+        "score": 0.7171937315792142,
+        "margin": 0.30587557936906373,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "虹色ドリーマー",
+        "candidate": "虹色ドリーマー",
+        "mode": "full",
+        "score": 0.7171937315792142,
+        "margin": 0.30587557936906373,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/003.png",
+      "sha256": "52d42050c20bc8f37f5c3b54cbf4c97da4631ebfe84edd5a9f1ec6cc5b3be149",
+      "slot": 1,
+      "box": [
+        260,
+        885,
+        190,
+        253
+      ],
+      "expected": "びしっとキメ顔",
+      "reference": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "full",
+        "score": 0.6309605115025533,
+        "margin": 0.37667435286893136,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "full",
+        "score": 0.6309605115025533,
+        "margin": 0.37667435286893136,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/003.png",
+      "sha256": "52d42050c20bc8f37f5c3b54cbf4c97da4631ebfe84edd5a9f1ec6cc5b3be149",
+      "slot": 2,
+      "box": [
+        457,
+        886,
+        192,
+        251
+      ],
+      "expected": "幸せのおまじない",
+      "reference": {
+        "name": "幸せのおまじない",
+        "candidate": "幸せのおまじない",
+        "mode": "full",
+        "score": 0.868952910418224,
+        "margin": 0.35694887107741136,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "幸せのおまじない",
+        "candidate": "幸せのおまじない",
+        "mode": "full",
+        "score": 0.868952910418224,
+        "margin": 0.35694887107741136,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/004.png",
+      "sha256": "e246f6284c6f77c8ec3e9ca5afe8878154301acdc559402aca6bd88213d78a17",
+      "slot": 0,
+      "box": [
+        260,
+        885,
+        190,
+        253
+      ],
+      "expected": "びしっとキメ顔",
+      "reference": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "full",
+        "score": 0.6304363570833316,
+        "margin": 0.379984007294841,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "full",
+        "score": 0.6304363570833316,
+        "margin": 0.379984007294841,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/005.png",
+      "sha256": "8fd91e22672c4f9410859d4704b262f73ab8cbe103ca407648441e2d1ab37794",
+      "slot": 0,
+      "box": [
+        40,
+        885,
+        192,
+        253
+      ],
+      "expected": "夢色リップ",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/005.png",
+      "sha256": "8fd91e22672c4f9410859d4704b262f73ab8cbe103ca407648441e2d1ab37794",
+      "slot": 1,
+      "box": [
+        260,
+        858,
+        190,
+        252
+      ],
+      "expected": "止められない想い",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/005.png",
+      "sha256": "8fd91e22672c4f9410859d4704b262f73ab8cbe103ca407648441e2d1ab37794",
+      "slot": 2,
+      "box": [
+        479,
+        887,
+        191,
+        252
+      ],
+      "expected": "幸せのおまじない",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/006.png",
+      "sha256": "c41b329f1f7b5a0442bf891defae451bda8e02a2042dc5f4de8234bbd03ff69f",
+      "slot": 0,
+      "box": [
+        151,
+        886,
+        191,
+        251
+      ],
+      "expected": "夢色リップ",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/006.png",
+      "sha256": "c41b329f1f7b5a0442bf891defae451bda8e02a2042dc5f4de8234bbd03ff69f",
+      "slot": 1,
+      "box": [
+        370,
+        860,
+        190,
+        250
+      ],
+      "expected": "幸せのおまじない",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/007.png",
+      "sha256": "64a982207fc1f3372250c609992ff58c05244f87d5ffbfc7ad1645dddcc2a63c",
+      "slot": 0,
+      "box": [
+        260,
+        885,
+        190,
+        252
+      ],
+      "expected": "夢色リップ",
+      "reference": {
+        "name": "夢色リップ",
+        "candidate": "夢色リップ",
+        "mode": "full",
+        "score": 0.5979853671729521,
+        "margin": 0.37229885372267535,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢色リップ",
+        "candidate": "夢色リップ",
+        "mode": "full",
+        "score": 0.5979853671729521,
+        "margin": 0.37229885372267535,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/008.png",
+      "sha256": "4c3f2accf99eccac37f992de56fc2814da8a2ab8e559557f12c60ff13aa031e2",
+      "slot": 0,
+      "box": [
+        151,
+        886,
+        191,
+        252
+      ],
+      "expected": "夢と現の境界線",
+      "reference": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.6080492394875421,
+        "margin": 0.24456704111705352,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.6080492394875421,
+        "margin": 0.24456704111705352,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/008.png",
+      "sha256": "4c3f2accf99eccac37f992de56fc2814da8a2ab8e559557f12c60ff13aa031e2",
+      "slot": 1,
+      "box": [
+        369,
+        885,
+        191,
+        252
+      ],
+      "expected": "ノートの端の決意",
+      "reference": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7130280673071061,
+        "margin": 0.3663529322267722,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7130280673071061,
+        "margin": 0.3663529322267722,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/010.png",
+      "sha256": "ba3d199abf8ff912f068f05eb745bbe923ed30e9c12f6044828caee32d409321",
+      "slot": 0,
+      "box": [
+        58,
+        886,
+        189,
+        251
+      ],
+      "expected": "ファンシーチャーム",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/010.png",
+      "sha256": "ba3d199abf8ff912f068f05eb745bbe923ed30e9c12f6044828caee32d409321",
+      "slot": 1,
+      "box": [
+        261,
+        929,
+        189,
+        209
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/011.png",
+      "sha256": "455414f03b8ae975643c3b6b05ac06c313e4044b8706035360ab044b2b2f2719",
+      "slot": 0,
+      "box": [
+        151,
+        886,
+        190,
+        252
+      ],
+      "expected": "ファンシーチャーム",
+      "reference": {
+        "name": "ファンシーチャーム",
+        "candidate": "ファンシーチャーム",
+        "mode": "full",
+        "score": 0.5302152396122386,
+        "margin": 0.309686626784616,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ファンシーチャーム",
+        "candidate": "ファンシーチャーム",
+        "mode": "full",
+        "score": 0.5302152396122386,
+        "margin": 0.309686626784616,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/011.png",
+      "sha256": "455414f03b8ae975643c3b6b05ac06c313e4044b8706035360ab044b2b2f2719",
+      "slot": 1,
+      "box": [
+        369,
+        886,
+        189,
+        251
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.47324227031606364,
+        "margin": 0.3079703612130742,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.47324227031606364,
+        "margin": 0.3079703612130742,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/013.png",
+      "sha256": "a7b2553fa5093c717c3d4ebce4623af666e4d20d35abe4324e01c250b33e87ad",
+      "slot": 0,
+      "box": [
+        12,
+        887,
+        188,
+        250
+      ],
+      "expected": "トキメキ",
+      "reference": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "local",
+        "score": 0.7598797741246943,
+        "margin": 0.3823984407669992,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "local",
+        "score": 0.7598797741246943,
+        "margin": 0.3823984407669992,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/013.png",
+      "sha256": "a7b2553fa5093c717c3d4ebce4623af666e4d20d35abe4324e01c250b33e87ad",
+      "slot": 1,
+      "box": [
+        136,
+        887,
+        187,
+        251
+      ],
+      "expected": "みんな大好き",
+      "reference": {
+        "name": null,
+        "candidate": "星々を見下ろす一番星",
+        "mode": "local",
+        "score": 0.34889439620509294,
+        "margin": 0.0190429461687881,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": null,
+        "candidate": "星々を見下ろす一番星",
+        "mode": "local",
+        "score": 0.34889439620509294,
+        "margin": 0.0190429461687881,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/013.png",
+      "sha256": "a7b2553fa5093c717c3d4ebce4623af666e4d20d35abe4324e01c250b33e87ad",
+      "slot": 2,
+      "box": [
+        259,
+        887,
+        189,
+        251
+      ],
+      "expected": "夢と現の境界線",
+      "reference": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "local",
+        "score": 0.8018416425190811,
+        "margin": 0.40947091252554285,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "local",
+        "score": 0.8018416425190811,
+        "margin": 0.40947091252554285,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/013.png",
+      "sha256": "a7b2553fa5093c717c3d4ebce4623af666e4d20d35abe4324e01c250b33e87ad",
+      "slot": 3,
+      "box": [
+        384,
+        887,
+        195,
+        251
+      ],
+      "expected": "ゆめみごこち",
+      "reference": {
+        "name": "ゆめみごこち",
+        "candidate": "ゆめみごこち",
+        "mode": "local",
+        "score": 0.6071564938376441,
+        "margin": 0.25113340230812264,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ゆめみごこち",
+        "candidate": "ゆめみごこち",
+        "mode": "local",
+        "score": 0.6071564938376441,
+        "margin": 0.25113340230812264,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/013.png",
+      "sha256": "a7b2553fa5093c717c3d4ebce4623af666e4d20d35abe4324e01c250b33e87ad",
+      "slot": 4,
+      "box": [
+        509,
+        887,
+        191,
+        251
+      ],
+      "expected": "びしっとキメ顔",
+      "reference": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "local",
+        "score": 0.5389736507279524,
+        "margin": 0.3575402821133293,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "local",
+        "score": 0.5389736507279524,
+        "margin": 0.3575402821133293,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/014.png",
+      "sha256": "eacafdc11f6d3b748a079cc9eec5bd27d3b837d0b4552cbf817a73fb252ea224",
+      "slot": 0,
+      "box": [
+        40,
+        886,
+        192,
+        252
+      ],
+      "expected": "トキメキ",
+      "reference": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "full",
+        "score": 0.7689727033215025,
+        "margin": 0.44228332611387894,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "full",
+        "score": 0.7689727033215025,
+        "margin": 0.44228332611387894,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/014.png",
+      "sha256": "eacafdc11f6d3b748a079cc9eec5bd27d3b837d0b4552cbf817a73fb252ea224",
+      "slot": 1,
+      "box": [
+        260,
+        886,
+        190,
+        251
+      ],
+      "expected": "夢と現の境界線",
+      "reference": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.7092236006051538,
+        "margin": 0.34299182810815976,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.7092236006051538,
+        "margin": 0.34299182810815976,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/014.png",
+      "sha256": "eacafdc11f6d3b748a079cc9eec5bd27d3b837d0b4552cbf817a73fb252ea224",
+      "slot": 2,
+      "box": [
+        479,
+        886,
+        191,
+        251
+      ],
+      "expected": "びしっとキメ顔",
+      "reference": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "full",
+        "score": 0.6620360414471768,
+        "margin": 0.4052734507743389,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "full",
+        "score": 0.6620360414471768,
+        "margin": 0.4052734507743389,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/015.png",
+      "sha256": "87af504516e7d232e160a58cc0db5fcc00a957ffc5cee54c3caaa65dfbbe77dd",
+      "slot": 0,
+      "box": [
+        260,
+        885,
+        190,
+        253
+      ],
+      "expected": "トキメキ",
+      "reference": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "full",
+        "score": 0.7741099142571964,
+        "margin": 0.4436002107434229,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "full",
+        "score": 0.7741099142571964,
+        "margin": 0.4436002107434229,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/016.png",
+      "sha256": "b9bab14bd3a455df64dfaeddbea12aa250b103b85550bd935c4fc913a379087d",
+      "slot": 0,
+      "box": [
+        40,
+        885,
+        192,
+        253
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.4400638139842549,
+        "margin": 0.2632980047332776,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.4400638139842549,
+        "margin": 0.2632980047332776,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/016.png",
+      "sha256": "b9bab14bd3a455df64dfaeddbea12aa250b103b85550bd935c4fc913a379087d",
+      "slot": 1,
+      "box": [
+        260,
+        883,
+        190,
+        255
+      ],
+      "expected": "夢色リップ",
+      "reference": {
+        "name": "夢色リップ",
+        "candidate": "夢色リップ",
+        "mode": "full",
+        "score": 0.5673171173041155,
+        "margin": 0.3439010591087164,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢色リップ",
+        "candidate": "夢色リップ",
+        "mode": "full",
+        "score": 0.5673171173041155,
+        "margin": 0.3439010591087164,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/016.png",
+      "sha256": "b9bab14bd3a455df64dfaeddbea12aa250b103b85550bd935c4fc913a379087d",
+      "slot": 2,
+      "box": [
+        479,
+        886,
+        190,
+        252
+      ],
+      "expected": "トキメキ",
+      "reference": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "full",
+        "score": 0.7841270336017557,
+        "margin": 0.4430700984198199,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "full",
+        "score": 0.7841270336017557,
+        "margin": 0.4430700984198199,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/019.png",
+      "sha256": "e75f62917b678ffd03df341e9392af9c0d67a746cfa816fb00f383a67b7bfdb2",
+      "slot": 0,
+      "box": [
+        261,
+        887,
+        189,
+        251
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.5280165975996326,
+        "margin": 0.36064040990950896,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.5280165975996326,
+        "margin": 0.36064040990950896,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/021.png",
+      "sha256": "3a142b0707de088447b6268987681a1a109a53bc6329a55f2aad5d97af555cbe",
+      "slot": 0,
+      "box": [
+        41,
+        886,
+        191,
+        251
+      ],
+      "expected": "トキメキ",
+      "reference": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "full",
+        "score": 0.790156827435046,
+        "margin": 0.4612216170031694,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "full",
+        "score": 0.790156827435046,
+        "margin": 0.4612216170031694,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/021.png",
+      "sha256": "3a142b0707de088447b6268987681a1a109a53bc6329a55f2aad5d97af555cbe",
+      "slot": 1,
+      "box": [
+        260,
+        888,
+        190,
+        251
+      ],
+      "expected": "夢と現の境界線",
+      "reference": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.743241109070229,
+        "margin": 0.4123518664216893,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.743241109070229,
+        "margin": 0.4123518664216893,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/021.png",
+      "sha256": "3a142b0707de088447b6268987681a1a109a53bc6329a55f2aad5d97af555cbe",
+      "slot": 2,
+      "box": [
+        479,
+        886,
+        190,
+        252
+      ],
+      "expected": "みんな大好き",
+      "reference": {
+        "name": "みんな大好き",
+        "candidate": "みんな大好き",
+        "mode": "full",
+        "score": 0.4511001104700241,
+        "margin": 0.24410189511626007,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "みんな大好き",
+        "candidate": "みんな大好き",
+        "mode": "full",
+        "score": 0.4511001104700241,
+        "margin": 0.24410189511626007,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/022.png",
+      "sha256": "e24fd87404074fa8226654bf7025145127db45eb0fe182b8911ae44be02d1d0d",
+      "slot": 0,
+      "box": [
+        151,
+        886,
+        190,
+        253
+      ],
+      "expected": "トキメキ",
+      "reference": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "full",
+        "score": 0.7597288191343923,
+        "margin": 0.42721284394071785,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "full",
+        "score": 0.7597288191343923,
+        "margin": 0.42721284394071785,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/022.png",
+      "sha256": "e24fd87404074fa8226654bf7025145127db45eb0fe182b8911ae44be02d1d0d",
+      "slot": 1,
+      "box": [
+        369,
+        888,
+        191,
+        250
+      ],
+      "expected": "夢と現の境界線",
+      "reference": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.709229746438815,
+        "margin": 0.31726657429738675,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.709229746438815,
+        "margin": 0.31726657429738675,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/024.png",
+      "sha256": "6b8a83fda1f10d3ebf8341c8d4fb3525cb1570b0aecd0d1d3683b0ece8c05916",
+      "slot": 0,
+      "box": [
+        11,
+        887,
+        191,
+        251
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/024.png",
+      "sha256": "6b8a83fda1f10d3ebf8341c8d4fb3525cb1570b0aecd0d1d3683b0ece8c05916",
+      "slot": 1,
+      "box": [
+        177,
+        886,
+        191,
+        251
+      ],
+      "expected": "みんな大好き",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/024.png",
+      "sha256": "6b8a83fda1f10d3ebf8341c8d4fb3525cb1570b0aecd0d1d3683b0ece8c05916",
+      "slot": 2,
+      "box": [
+        344,
+        887,
+        193,
+        251
+      ],
+      "expected": "夢と現の境界線",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/024.png",
+      "sha256": "6b8a83fda1f10d3ebf8341c8d4fb3525cb1570b0aecd0d1d3683b0ece8c05916",
+      "slot": 3,
+      "box": [
+        510,
+        859,
+        189,
+        254
+      ],
+      "expected": "ゆめみごこち",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/025.png",
+      "sha256": "b599c5dc88c5fd61f55c2ed5a32b5bf2c5a4f3329949fe46a6b290b00da27ebf",
+      "slot": 0,
+      "box": [
+        151,
+        887,
+        189,
+        252
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.4474793157903907,
+        "margin": 0.23477543906328774,
+        "visible": 0.34375,
+        "badge_recovered": true
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.4474793157903907,
+        "margin": 0.23477543906328774,
+        "visible": 0.34375,
+        "badge_recovered": true,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/025.png",
+      "sha256": "b599c5dc88c5fd61f55c2ed5a32b5bf2c5a4f3329949fe46a6b290b00da27ebf",
+      "slot": 1,
+      "box": [
+        368,
+        886,
+        191,
+        251
+      ],
+      "expected": "夢と現の境界線",
+      "reference": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.7322343641759439,
+        "margin": 0.4004386331398802,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.7322343641759439,
+        "margin": 0.4004386331398802,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/026.png",
+      "sha256": "18a43ec5aa1c9788ebfede98cc0ab536f8197cfce53b151dbd66a6e5179ad04d",
+      "slot": 0,
+      "box": [
+        260,
+        886,
+        190,
+        252
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.4505121170279669,
+        "margin": 0.2564706619488094,
+        "visible": 0.34375,
+        "badge_recovered": true
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.4505121170279669,
+        "margin": 0.2564706619488094,
+        "visible": 0.34375,
+        "badge_recovered": true,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/032.png",
+      "sha256": "7c4823250363491b502d5e4ad105f296f11032f5ab0628abbe85eaabc9876551",
+      "slot": 0,
+      "box": [
+        325,
+        890,
+        192,
+        253
+      ],
+      "expected": "トキメキ",
+      "reference": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "full",
+        "score": 0.7816695719712708,
+        "margin": 0.44529279849925857,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トキメキ",
+        "candidate": "トキメキ",
+        "mode": "full",
+        "score": 0.7816695719712708,
+        "margin": 0.44529279849925857,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/034.png",
+      "sha256": "59dc55c72edfa14706a0e611e16a76fce5029a566c0d30e1df6405e1273345ca",
+      "slot": 0,
+      "box": [
+        270,
+        888,
+        192,
+        255
+      ],
+      "expected": "夢色リップ",
+      "reference": {
+        "name": "夢色リップ",
+        "candidate": "夢色リップ",
+        "mode": "full",
+        "score": 0.6348719330153367,
+        "margin": 0.40376833316104394,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢色リップ",
+        "candidate": "夢色リップ",
+        "mode": "full",
+        "score": 0.6348719330153367,
+        "margin": 0.40376833316104394,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/036.png",
+      "sha256": "eccd4a7e5fcc50862ffa7784f633b01e173fb1efb6a13d03b9828fda95a35c42",
+      "slot": 0,
+      "box": [
+        270,
+        888,
+        192,
+        255
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.47807334743443647,
+        "margin": 0.30854687389587376,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.47807334743443647,
+        "margin": 0.30854687389587376,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/038.png",
+      "sha256": "503ea1ad1492237ea82f24b81ac8e47806088e39c63afe14ee45ee80c64712c5",
+      "slot": 0,
+      "box": [
+        49,
+        888,
+        191,
+        254
+      ],
+      "expected": "ファンシーチャーム",
+      "reference": {
+        "name": "ファンシーチャーム",
+        "candidate": "ファンシーチャーム",
+        "mode": "full",
+        "score": 0.5094017325644786,
+        "margin": 0.261549110967417,
+        "visible": 0.34375,
+        "badge_recovered": true
+      },
+      "candidate": {
+        "name": "ファンシーチャーム",
+        "candidate": "ファンシーチャーム",
+        "mode": "full",
+        "score": 0.5094017325644786,
+        "margin": 0.261549110967417,
+        "visible": 0.34375,
+        "badge_recovered": true,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/038.png",
+      "sha256": "503ea1ad1492237ea82f24b81ac8e47806088e39c63afe14ee45ee80c64712c5",
+      "slot": 1,
+      "box": [
+        270,
+        889,
+        192,
+        254
+      ],
+      "expected": "幸せのおまじない",
+      "reference": {
+        "name": "幸せのおまじない",
+        "candidate": "幸せのおまじない",
+        "mode": "full",
+        "score": 0.8702375987180332,
+        "margin": 0.3621833827472172,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "幸せのおまじない",
+        "candidate": "幸せのおまじない",
+        "mode": "full",
+        "score": 0.8702375987180332,
+        "margin": 0.3621833827472172,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/038.png",
+      "sha256": "503ea1ad1492237ea82f24b81ac8e47806088e39c63afe14ee45ee80c64712c5",
+      "slot": 2,
+      "box": [
+        490,
+        888,
+        192,
+        255
+      ],
+      "expected": "幸せのおまじない",
+      "reference": {
+        "name": "幸せのおまじない",
+        "candidate": "幸せのおまじない",
+        "mode": "full",
+        "score": 0.8631434519554859,
+        "margin": 0.35534460816799174,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "幸せのおまじない",
+        "candidate": "幸せのおまじない",
+        "mode": "full",
+        "score": 0.8631434519554859,
+        "margin": 0.35534460816799174,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/039.png",
+      "sha256": "af29dc569d05a0e1b256fee695e6f249770cb2cf060f85437bc3416113e986c6",
+      "slot": 0,
+      "box": [
+        50,
+        888,
+        193,
+        255
+      ],
+      "expected": "私がスター",
+      "reference": {
+        "name": "私がスター",
+        "candidate": "私がスター",
+        "mode": "full",
+        "score": 0.4736325120244204,
+        "margin": 0.13031544862562555,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "私がスター",
+        "candidate": "私がスター",
+        "mode": "full",
+        "score": 0.4736325120244204,
+        "margin": 0.13031544862562555,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/039.png",
+      "sha256": "af29dc569d05a0e1b256fee695e6f249770cb2cf060f85437bc3416113e986c6",
+      "slot": 1,
+      "box": [
+        269,
+        888,
+        192,
+        255
+      ],
+      "expected": "ノートの端の決意",
+      "reference": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7927107636847012,
+        "margin": 0.404449269665061,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7927107636847012,
+        "margin": 0.404449269665061,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/039.png",
+      "sha256": "af29dc569d05a0e1b256fee695e6f249770cb2cf060f85437bc3416113e986c6",
+      "slot": 2,
+      "box": [
+        490,
+        889,
+        192,
+        254
+      ],
+      "expected": "ファンシーチャーム",
+      "reference": {
+        "name": "ファンシーチャーム",
+        "candidate": "ファンシーチャーム",
+        "mode": "full",
+        "score": 0.5343320295927954,
+        "margin": 0.30807871461999636,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ファンシーチャーム",
+        "candidate": "ファンシーチャーム",
+        "mode": "full",
+        "score": 0.5343320295927954,
+        "margin": 0.30807871461999636,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/040.png",
+      "sha256": "a39c5b2bec0bc5ccfe9a1b41cd1b209f7eb3920a39ae7e17e2a14d2051192894",
+      "slot": 0,
+      "box": [
+        160,
+        889,
+        192,
+        254
+      ],
+      "expected": "ノートの端の決意",
+      "reference": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7657398601203911,
+        "margin": 0.3757619669465787,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7657398601203911,
+        "margin": 0.3757619669465787,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/040.png",
+      "sha256": "a39c5b2bec0bc5ccfe9a1b41cd1b209f7eb3920a39ae7e17e2a14d2051192894",
+      "slot": 1,
+      "box": [
+        379,
+        889,
+        193,
+        254
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.4731868724706902,
+        "margin": 0.2992450111210281,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.4731868724706902,
+        "margin": 0.2992450111210281,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/041.png",
+      "sha256": "3144715104cd45df5589f9b862a82507ba7a2a39234ff067587a4b86cdc89ab7",
+      "slot": 0,
+      "box": [
+        160,
+        861,
+        192,
+        255
+      ],
+      "expected": "みんな大好き",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/041.png",
+      "sha256": "3144715104cd45df5589f9b862a82507ba7a2a39234ff067587a4b86cdc89ab7",
+      "slot": 1,
+      "box": [
+        380,
+        889,
+        193,
+        254
+      ],
+      "expected": "幸せのおまじない",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/043.png",
+      "sha256": "b82954d4b9b60f22739c16d706797641188c29048134d68297873cddf855a079",
+      "slot": 0,
+      "box": [
+        270,
+        889,
+        192,
+        254
+      ],
+      "expected": "幸せのおまじない",
+      "reference": {
+        "name": "幸せのおまじない",
+        "candidate": "幸せのおまじない",
+        "mode": "full",
+        "score": 0.8713324317548867,
+        "margin": 0.3648254005989092,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "幸せのおまじない",
+        "candidate": "幸せのおまじない",
+        "mode": "full",
+        "score": 0.8713324317548867,
+        "margin": 0.3648254005989092,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/044.png",
+      "sha256": "2edfc0683b8b03f07124da8cdef4a854aca75f4990b0d90ebec981231b2df676",
+      "slot": 0,
+      "box": [
+        161,
+        889,
+        191,
+        254
+      ],
+      "expected": "びしっとキメ顔",
+      "reference": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "full",
+        "score": 0.6665270460723898,
+        "margin": 0.40199278540947164,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "full",
+        "score": 0.6665270460723898,
+        "margin": 0.40199278540947164,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/044.png",
+      "sha256": "2edfc0683b8b03f07124da8cdef4a854aca75f4990b0d90ebec981231b2df676",
+      "slot": 1,
+      "box": [
+        381,
+        890,
+        192,
+        252
+      ],
+      "expected": "夢と現の境界線",
+      "reference": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.7350788702625308,
+        "margin": 0.3915927544163899,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.7350788702625308,
+        "margin": 0.3915927544163899,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/045.png",
+      "sha256": "8050aa9d87b7c66ab53e8ba8cccb42fd254e5ac809aa63a776a313f55f98a368",
+      "slot": 0,
+      "box": [
+        270,
+        888,
+        192,
+        255
+      ],
+      "expected": "びしっとキメ顔",
+      "reference": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "full",
+        "score": 0.6413805610253207,
+        "margin": 0.36982938283468736,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "びしっとキメ顔",
+        "candidate": "びしっとキメ顔",
+        "mode": "full",
+        "score": 0.6413805610253207,
+        "margin": 0.36982938283468736,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/046.png",
+      "sha256": "bdc947fda9da43bf8011b8e59023657fc471c8e0a79e3b578d29a49028a5d72e",
+      "slot": 0,
+      "box": [
+        50,
+        890,
+        191,
+        252
+      ],
+      "expected": "幸せのおまじない",
+      "reference": {
+        "name": "幸せのおまじない",
+        "candidate": "幸せのおまじない",
+        "mode": "full",
+        "score": 0.8804759762631785,
+        "margin": 0.37270786271819367,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "幸せのおまじない",
+        "candidate": "幸せのおまじない",
+        "mode": "full",
+        "score": 0.8804759762631785,
+        "margin": 0.37270786271819367,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/046.png",
+      "sha256": "bdc947fda9da43bf8011b8e59023657fc471c8e0a79e3b578d29a49028a5d72e",
+      "slot": 1,
+      "box": [
+        270,
+        889,
+        192,
+        254
+      ],
+      "expected": "ゆめみごこち",
+      "reference": {
+        "name": "ゆめみごこち",
+        "candidate": "ゆめみごこち",
+        "mode": "full",
+        "score": 0.7066490089071006,
+        "margin": 0.29793394680592333,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ゆめみごこち",
+        "candidate": "ゆめみごこち",
+        "mode": "full",
+        "score": 0.7066490089071006,
+        "margin": 0.29793394680592333,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/046.png",
+      "sha256": "bdc947fda9da43bf8011b8e59023657fc471c8e0a79e3b578d29a49028a5d72e",
+      "slot": 2,
+      "box": [
+        490,
+        889,
+        192,
+        254
+      ],
+      "expected": "ノートの端の決意",
+      "reference": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7802846462437003,
+        "margin": 0.3927239120227644,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7802846462437003,
+        "margin": 0.3927239120227644,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/047.png",
+      "sha256": "577f7d95813bd76313afa153366588f9a0c6a63a872bfda0e342fb8277e476c0",
+      "slot": 0,
+      "box": [
+        270,
+        888,
+        192,
+        255
+      ],
+      "expected": "ノートの端の決意",
+      "reference": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7779856716869978,
+        "margin": 0.38977249343166515,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7779856716869978,
+        "margin": 0.38977249343166515,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/048.png",
+      "sha256": "4df3a17feb9437920f8d129180f8e70bff2295ae6ad38fbcf1e34615907601e2",
+      "slot": 0,
+      "box": [
+        161,
+        889,
+        191,
+        254
+      ],
+      "expected": "みんな大好き",
+      "reference": {
+        "name": "みんな大好き",
+        "candidate": "みんな大好き",
+        "mode": "full",
+        "score": 0.4507696413020401,
+        "margin": 0.25143290317858136,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "みんな大好き",
+        "candidate": "みんな大好き",
+        "mode": "full",
+        "score": 0.4507696413020401,
+        "margin": 0.25143290317858136,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/048.png",
+      "sha256": "4df3a17feb9437920f8d129180f8e70bff2295ae6ad38fbcf1e34615907601e2",
+      "slot": 1,
+      "box": [
+        379,
+        888,
+        194,
+        255
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.46331312549080605,
+        "margin": 0.2928635547051872,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.46331312549080605,
+        "margin": 0.2928635547051872,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/050.png",
+      "sha256": "112db1dafca94bf75453735238a7d99010f03d931d079cbcd274bb7651a10de6",
+      "slot": 0,
+      "box": [
+        49,
+        888,
+        192,
+        255
+      ],
+      "expected": "夢と現の境界線",
+      "reference": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.7767159716121894,
+        "margin": 0.4226204406574694,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.7767159716121894,
+        "margin": 0.4226204406574694,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/050.png",
+      "sha256": "112db1dafca94bf75453735238a7d99010f03d931d079cbcd274bb7651a10de6",
+      "slot": 1,
+      "box": [
+        270,
+        888,
+        192,
+        255
+      ],
+      "expected": "ノートの端の決意",
+      "reference": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7824025566077988,
+        "margin": 0.3906000185445724,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7824025566077988,
+        "margin": 0.3906000185445724,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/050.png",
+      "sha256": "112db1dafca94bf75453735238a7d99010f03d931d079cbcd274bb7651a10de6",
+      "slot": 2,
+      "box": [
+        490,
+        889,
+        192,
+        254
+      ],
+      "expected": "ゆめみごこち",
+      "reference": {
+        "name": "ゆめみごこち",
+        "candidate": "ゆめみごこち",
+        "mode": "full",
+        "score": 0.7178257936387278,
+        "margin": 0.2906689144953492,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ゆめみごこち",
+        "candidate": "ゆめみごこち",
+        "mode": "full",
+        "score": 0.7178257936387278,
+        "margin": 0.2906689144953492,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/051.png",
+      "sha256": "ae140c665512d53bf1ceda69b9fdcdc44821b03f78b41f2d97d9da8ec8206c6d",
+      "slot": 0,
+      "box": [
+        19,
+        888,
+        191,
+        254
+      ],
+      "expected": "夢と現の境界線",
+      "reference": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "local",
+        "score": 0.7136714988856481,
+        "margin": 0.416947842510823,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "local",
+        "score": 0.7136714988856481,
+        "margin": 0.416947842510823,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/051.png",
+      "sha256": "ae140c665512d53bf1ceda69b9fdcdc44821b03f78b41f2d97d9da8ec8206c6d",
+      "slot": 1,
+      "box": [
+        186,
+        890,
+        195,
+        253
+      ],
+      "expected": "ノートの端の決意",
+      "reference": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "local",
+        "score": 0.5675555896506764,
+        "margin": 0.29507130584263,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "local",
+        "score": 0.5675555896506764,
+        "margin": 0.29507130584263,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/051.png",
+      "sha256": "ae140c665512d53bf1ceda69b9fdcdc44821b03f78b41f2d97d9da8ec8206c6d",
+      "slot": 2,
+      "box": [
+        355,
+        889,
+        191,
+        254
+      ],
+      "expected": "ゆめみごこち",
+      "reference": {
+        "name": "ゆめみごこち",
+        "candidate": "ゆめみごこち",
+        "mode": "local",
+        "score": 0.6647170501513108,
+        "margin": 0.3100879173535825,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ゆめみごこち",
+        "candidate": "ゆめみごこち",
+        "mode": "local",
+        "score": 0.6647170501513108,
+        "margin": 0.3100879173535825,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/051.png",
+      "sha256": "ae140c665512d53bf1ceda69b9fdcdc44821b03f78b41f2d97d9da8ec8206c6d",
+      "slot": 3,
+      "box": [
+        521,
+        889,
+        190,
+        253
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "local",
+        "score": 0.4581518605149135,
+        "margin": 0.3389251548185132,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "local",
+        "score": 0.4581518605149135,
+        "margin": 0.3389251548185132,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/052.png",
+      "sha256": "9b1f2ee2b3946fd644d6b650048ae2943d9aea38d06d81b902b534e307993617",
+      "slot": 0,
+      "box": [
+        161,
+        889,
+        191,
+        253
+      ],
+      "expected": "ノートの端の決意",
+      "reference": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7801507544622032,
+        "margin": 0.3884855759176123,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ノートの端の決意",
+        "candidate": "ノートの端の決意",
+        "mode": "full",
+        "score": 0.7801507544622032,
+        "margin": 0.3884855759176123,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/052.png",
+      "sha256": "9b1f2ee2b3946fd644d6b650048ae2943d9aea38d06d81b902b534e307993617",
+      "slot": 1,
+      "box": [
+        379,
+        889,
+        192,
+        254
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.4330459424755412,
+        "margin": 0.2885932962596053,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.4330459424755412,
+        "margin": 0.2885932962596053,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/054.png",
+      "sha256": "023639c0283534438c5c0f2d5e9981d5474fbbf1bdcd748cbf5f89222e640d8b",
+      "slot": 0,
+      "box": [
+        51,
+        890,
+        189,
+        253
+      ],
+      "expected": "みんな大好き",
+      "reference": {
+        "name": null,
+        "candidate": "みんな大好き",
+        "mode": "local",
+        "score": 0.3440267771928777,
+        "margin": 0.12489639039546177,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": null,
+        "candidate": "みんな大好き",
+        "mode": "local",
+        "score": 0.3440267771928777,
+        "margin": 0.12489639039546177,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/054.png",
+      "sha256": "023639c0283534438c5c0f2d5e9981d5474fbbf1bdcd748cbf5f89222e640d8b",
+      "slot": 1,
+      "box": [
+        265,
+        889,
+        182,
+        254
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": null,
+        "candidate": "あのときの約束",
+        "mode": "local",
+        "score": 0.15272768986118176,
+        "margin": 0.002100089311447506,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": null,
+        "candidate": "あのときの約束",
+        "mode": "local",
+        "score": 0.15272768986118176,
+        "margin": 0.002100089311447506,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/054.png",
+      "sha256": "023639c0283534438c5c0f2d5e9981d5474fbbf1bdcd748cbf5f89222e640d8b",
+      "slot": 2,
+      "box": [
+        422,
+        889,
+        192,
+        253
+      ],
+      "expected": "夢と現の境界線",
+      "reference": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "local",
+        "score": 0.5894211828102556,
+        "margin": 0.23392551138097933,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "local",
+        "score": 0.5894211828102556,
+        "margin": 0.23392551138097933,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/055.png",
+      "sha256": "1fecad1474111a08c69be9da5b5d87b25b91af5992a7af0cebb964b2f4219b90",
+      "slot": 0,
+      "box": [
+        160,
+        888,
+        190,
+        255
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.4616260700455087,
+        "margin": 0.2991812001374137,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.4616260700455087,
+        "margin": 0.2991812001374137,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "first",
+      "file": "datasets/video-eval-20261025/VRT-g5GMTyk/055.png",
+      "sha256": "1fecad1474111a08c69be9da5b5d87b25b91af5992a7af0cebb964b2f4219b90",
+      "slot": 1,
+      "box": [
+        380,
+        889,
+        193,
+        253
+      ],
+      "expected": "夢と現の境界線",
+      "reference": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.5786311335760969,
+        "margin": 0.1535214619011091,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "夢と現の境界線",
+        "candidate": "夢と現の境界線",
+        "mode": "full",
+        "score": 0.5786311335760969,
+        "margin": 0.1535214619011091,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/000.png",
+      "sha256": "72b4f9eb3fa3e97e09cece36671c8346462a9c42691030c448605820ff2e407c",
+      "slot": 0,
+      "box": [
+        49,
+        884,
+        188,
+        249
+      ],
+      "expected": "翔び立て！",
+      "reference": {
+        "name": "翔び立て！",
+        "candidate": "翔び立て！",
+        "mode": "full",
+        "score": 0.6935242529936234,
+        "margin": 0.4384437090221649,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "翔び立て！",
+        "candidate": "翔び立て！",
+        "mode": "full",
+        "score": 0.6935242529936234,
+        "margin": 0.4384437090221649,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/000.png",
+      "sha256": "72b4f9eb3fa3e97e09cece36671c8346462a9c42691030c448605820ff2e407c",
+      "slot": 1,
+      "box": [
+        265,
+        884,
+        189,
+        249
+      ],
+      "expected": "全身全霊",
+      "reference": {
+        "name": "全身全霊",
+        "candidate": "全身全霊",
+        "mode": "full",
+        "score": 0.548571863592326,
+        "margin": 0.23245021061213234,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "全身全霊",
+        "candidate": "全身全霊",
+        "mode": "full",
+        "score": 0.548571863592326,
+        "margin": 0.23245021061213234,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/000.png",
+      "sha256": "72b4f9eb3fa3e97e09cece36671c8346462a9c42691030c448605820ff2e407c",
+      "slot": 2,
+      "box": [
+        482,
+        883,
+        189,
+        250
+      ],
+      "expected": "紅葉ランニング",
+      "reference": {
+        "name": "紅葉ランニング",
+        "candidate": "紅葉ランニング",
+        "mode": "full",
+        "score": 0.738536904395254,
+        "margin": 0.3737146935741093,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "紅葉ランニング",
+        "candidate": "紅葉ランニング",
+        "mode": "full",
+        "score": 0.738536904395254,
+        "margin": 0.3737146935741093,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/001.png",
+      "sha256": "d47009897bd4773f9bb8fbcbfcc520ff0749f9309720289f1e2b2ebda609fca4",
+      "slot": 0,
+      "box": [
+        156,
+        884,
+        190,
+        249
+      ],
+      "expected": "翔び立て！",
+      "reference": {
+        "name": "翔び立て！",
+        "candidate": "翔び立て！",
+        "mode": "full",
+        "score": 0.6831116930871106,
+        "margin": 0.44163174786772486,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "翔び立て！",
+        "candidate": "翔び立て！",
+        "mode": "full",
+        "score": 0.6831116930871106,
+        "margin": 0.44163174786772486,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/001.png",
+      "sha256": "d47009897bd4773f9bb8fbcbfcc520ff0749f9309720289f1e2b2ebda609fca4",
+      "slot": 1,
+      "box": [
+        373,
+        883,
+        190,
+        250
+      ],
+      "expected": "トレンドリーダー",
+      "reference": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.4837749174076164,
+        "margin": 0.196885407068507,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.4837749174076164,
+        "margin": 0.196885407068507,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/002.png",
+      "sha256": "1be7ba43ccca4780300e40af212c588fc9303e7244e46fc3ed790266f8b73b09",
+      "slot": 0,
+      "box": [
+        49,
+        884,
+        187,
+        249
+      ],
+      "expected": "トレンドリーダー",
+      "reference": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.6608873050544317,
+        "margin": 0.37058585159563395,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.6608873050544317,
+        "margin": 0.37058585159563395,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/002.png",
+      "sha256": "1be7ba43ccca4780300e40af212c588fc9303e7244e46fc3ed790266f8b73b09",
+      "slot": 1,
+      "box": [
+        265,
+        884,
+        188,
+        249
+      ],
+      "expected": "仕切り直し",
+      "reference": {
+        "name": "仕切り直し",
+        "candidate": "仕切り直し",
+        "mode": "full",
+        "score": 0.7417186551129918,
+        "margin": 0.4147790252782842,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "仕切り直し",
+        "candidate": "仕切り直し",
+        "mode": "full",
+        "score": 0.7417186551129918,
+        "margin": 0.4147790252782842,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/002.png",
+      "sha256": "1be7ba43ccca4780300e40af212c588fc9303e7244e46fc3ed790266f8b73b09",
+      "slot": 2,
+      "box": [
+        482,
+        884,
+        189,
+        249
+      ],
+      "expected": "アイドル宣言",
+      "reference": {
+        "name": "アイドル宣言",
+        "candidate": "アイドル宣言",
+        "mode": "full",
+        "score": 0.472880328618421,
+        "margin": 0.2600885217945058,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "アイドル宣言",
+        "candidate": "アイドル宣言",
+        "mode": "full",
+        "score": 0.472880328618421,
+        "margin": 0.2600885217945058,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/003.png",
+      "sha256": "caea0091d4844fce94cfff75e27eee91a62c4e2c52656227a87269d801319272",
+      "slot": 0,
+      "box": [
+        48,
+        884,
+        189,
+        249
+      ],
+      "expected": "嬉しい誤算",
+      "reference": {
+        "name": "嬉しい誤算",
+        "candidate": "嬉しい誤算",
+        "mode": "full",
+        "score": 0.5132454779042994,
+        "margin": 0.35426463024398425,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "嬉しい誤算",
+        "candidate": "嬉しい誤算",
+        "mode": "full",
+        "score": 0.5132454779042994,
+        "margin": 0.35426463024398425,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/003.png",
+      "sha256": "caea0091d4844fce94cfff75e27eee91a62c4e2c52656227a87269d801319272",
+      "slot": 1,
+      "box": [
+        265,
+        885,
+        188,
+        248
+      ],
+      "expected": "積み重ね",
+      "reference": {
+        "name": "積み重ね",
+        "candidate": "積み重ね",
+        "mode": "full",
+        "score": 0.7140191021669516,
+        "margin": 0.12550147258782696,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "積み重ね",
+        "candidate": "積み重ね",
+        "mode": "full",
+        "score": 0.7140191021669516,
+        "margin": 0.12550147258782696,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/003.png",
+      "sha256": "caea0091d4844fce94cfff75e27eee91a62c4e2c52656227a87269d801319272",
+      "slot": 2,
+      "box": [
+        481,
+        883,
+        189,
+        249
+      ],
+      "expected": "セッティング",
+      "reference": {
+        "name": "セッティング",
+        "candidate": "セッティング",
+        "mode": "full",
+        "score": 0.6146617252931629,
+        "margin": 0.33809375687854987,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "セッティング",
+        "candidate": "セッティング",
+        "mode": "full",
+        "score": 0.6146617252931629,
+        "margin": 0.33809375687854987,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/005.png",
+      "sha256": "3437e831e110015d84e95735c0e6f41af40122b715ed45812c552c7f5bbc80c7",
+      "slot": 0,
+      "box": [
+        19,
+        885,
+        187,
+        248
+      ],
+      "expected": "積み重ね",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/005.png",
+      "sha256": "3437e831e110015d84e95735c0e6f41af40122b715ed45812c552c7f5bbc80c7",
+      "slot": 1,
+      "box": [
+        183,
+        885,
+        190,
+        248
+      ],
+      "expected": "セッティング",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/005.png",
+      "sha256": "3437e831e110015d84e95735c0e6f41af40122b715ed45812c552c7f5bbc80c7",
+      "slot": 2,
+      "box": [
+        347,
+        857,
+        189,
+        250
+      ],
+      "expected": "心・技・体",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/005.png",
+      "sha256": "3437e831e110015d84e95735c0e6f41af40122b715ed45812c552c7f5bbc80c7",
+      "slot": 3,
+      "box": [
+        511,
+        884,
+        190,
+        248
+      ],
+      "expected": "盛り上げ上手",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/007.png",
+      "sha256": "4520a7fd321c7b408089bdd7ef22fd5be31bc553b38316335b126a7667026990",
+      "slot": 0,
+      "box": [
+        19,
+        886,
+        188,
+        245
+      ],
+      "expected": "アイドルになります",
+      "reference": {
+        "name": "アイドルになります",
+        "candidate": "アイドルになります",
+        "mode": "local",
+        "score": 0.7800420602492928,
+        "margin": 0.5765799781040312,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "アイドルになります",
+        "candidate": "アイドルになります",
+        "mode": "local",
+        "score": 0.7800420602492928,
+        "margin": 0.5765799781040312,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/007.png",
+      "sha256": "4520a7fd321c7b408089bdd7ef22fd5be31bc553b38316335b126a7667026990",
+      "slot": 1,
+      "box": [
+        184,
+        886,
+        190,
+        244
+      ],
+      "expected": "翔び立て！",
+      "reference": {
+        "name": "翔び立て！",
+        "candidate": "翔び立て！",
+        "mode": "local",
+        "score": 0.6225845606291835,
+        "margin": 0.3680799787674942,
+        "visible": 0.375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "翔び立て！",
+        "candidate": "翔び立て！",
+        "mode": "local",
+        "score": 0.6225845606291835,
+        "margin": 0.3680799787674942,
+        "visible": 0.375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/007.png",
+      "sha256": "4520a7fd321c7b408089bdd7ef22fd5be31bc553b38316335b126a7667026990",
+      "slot": 2,
+      "box": [
+        347,
+        885,
+        192,
+        247
+      ],
+      "expected": "あふれ出る想い",
+      "reference": {
+        "name": null,
+        "candidate": "あふれ出る想い",
+        "mode": "local",
+        "score": 0.31431248576597254,
+        "margin": 0.1657035676314851,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": null,
+        "candidate": "あふれ出る想い",
+        "mode": "local",
+        "score": 0.31431248576597254,
+        "margin": 0.1657035676314851,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/007.png",
+      "sha256": "4520a7fd321c7b408089bdd7ef22fd5be31bc553b38316335b126a7667026990",
+      "slot": 3,
+      "box": [
+        513,
+        886,
+        188,
+        244
+      ],
+      "expected": "輝け！",
+      "reference": {
+        "name": "輝け！",
+        "candidate": "輝け！",
+        "mode": "local",
+        "score": 0.40779029119646826,
+        "margin": 0.1760383357405443,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "輝け！",
+        "candidate": "輝け！",
+        "mode": "local",
+        "score": 0.40779029119646826,
+        "margin": 0.1760383357405443,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/008.png",
+      "sha256": "1f5231052c22f3fed567a449885569a93c54a0c148a6896748b36e47001549b9",
+      "slot": 0,
+      "box": [
+        19,
+        885,
+        188,
+        248
+      ],
+      "expected": "アイドルになります",
+      "reference": {
+        "name": "アイドルになります",
+        "candidate": "アイドルになります",
+        "mode": "local",
+        "score": 0.8302300330244408,
+        "margin": 0.6099894415216149,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "アイドルになります",
+        "candidate": "アイドルになります",
+        "mode": "local",
+        "score": 0.8302300330244408,
+        "margin": 0.6099894415216149,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/008.png",
+      "sha256": "1f5231052c22f3fed567a449885569a93c54a0c148a6896748b36e47001549b9",
+      "slot": 1,
+      "box": [
+        183,
+        885,
+        191,
+        248
+      ],
+      "expected": "翔び立て！",
+      "reference": {
+        "name": "翔び立て！",
+        "candidate": "翔び立て！",
+        "mode": "local",
+        "score": 0.5781269529087687,
+        "margin": 0.34992080696245076,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "翔び立て！",
+        "candidate": "翔び立て！",
+        "mode": "local",
+        "score": 0.5781269529087687,
+        "margin": 0.34992080696245076,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/008.png",
+      "sha256": "1f5231052c22f3fed567a449885569a93c54a0c148a6896748b36e47001549b9",
+      "slot": 2,
+      "box": [
+        348,
+        884,
+        192,
+        249
+      ],
+      "expected": "あふれ出る想い",
+      "reference": {
+        "name": null,
+        "candidate": "あふれ出る想い",
+        "mode": "local",
+        "score": 0.3311396846438633,
+        "margin": 0.17467480337845193,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": null,
+        "candidate": "あふれ出る想い",
+        "mode": "local",
+        "score": 0.3311396846438633,
+        "margin": 0.17467480337845193,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/008.png",
+      "sha256": "1f5231052c22f3fed567a449885569a93c54a0c148a6896748b36e47001549b9",
+      "slot": 3,
+      "box": [
+        513,
+        885,
+        188,
+        248
+      ],
+      "expected": "輝け！",
+      "reference": {
+        "name": "輝け！",
+        "candidate": "輝け！",
+        "mode": "local",
+        "score": 0.41990143494608884,
+        "margin": 0.24851078373810356,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "輝け！",
+        "candidate": "輝け！",
+        "mode": "local",
+        "score": 0.41990143494608884,
+        "margin": 0.24851078373810356,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/009.png",
+      "sha256": "f9a917ac9106475fd127e326235a78e2224acfd3dc9157762c4f8d4fb18978b9",
+      "slot": 0,
+      "box": [
+        264,
+        889,
+        190,
+        244
+      ],
+      "expected": "アイドルになります",
+      "reference": {
+        "name": "アイドルになります",
+        "candidate": "アイドルになります",
+        "mode": "full",
+        "score": 0.8961345561874796,
+        "margin": 0.3981100409543696,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "アイドルになります",
+        "candidate": "アイドルになります",
+        "mode": "full",
+        "score": 0.8961345561874796,
+        "margin": 0.3981100409543696,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/010.png",
+      "sha256": "be39a2d34102433a264913aff75c45427cdafe730e5af2669d02ef61f41f86f2",
+      "slot": 0,
+      "box": [
+        18,
+        885,
+        184,
+        248
+      ],
+      "expected": "頂点へ",
+      "reference": {
+        "name": "頂点へ",
+        "candidate": "頂点へ",
+        "mode": "local",
+        "score": 0.6401003202481474,
+        "margin": 0.29784252509007864,
+        "visible": 0.2744140625,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "頂点へ",
+        "candidate": "頂点へ",
+        "mode": "local",
+        "score": 0.6401003202481474,
+        "margin": 0.29784252509007864,
+        "visible": 0.2744140625,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/010.png",
+      "sha256": "be39a2d34102433a264913aff75c45427cdafe730e5af2669d02ef61f41f86f2",
+      "slot": 1,
+      "box": [
+        142,
+        885,
+        185,
+        247
+      ],
+      "expected": "セッティング",
+      "reference": {
+        "name": "セッティング",
+        "candidate": "セッティング",
+        "mode": "local",
+        "score": 0.6109065931207859,
+        "margin": 0.33846615550170134,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "セッティング",
+        "candidate": "セッティング",
+        "mode": "local",
+        "score": 0.6109065931207859,
+        "margin": 0.33846615550170134,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/010.png",
+      "sha256": "be39a2d34102433a264913aff75c45427cdafe730e5af2669d02ef61f41f86f2",
+      "slot": 2,
+      "box": [
+        264,
+        885,
+        186,
+        248
+      ],
+      "expected": "積み重ね",
+      "reference": {
+        "name": null,
+        "candidate": "積み重ね",
+        "mode": "local",
+        "score": 0.5080042210317108,
+        "margin": 0.07941649066670137,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": null,
+        "candidate": "積み重ね",
+        "mode": "local",
+        "score": 0.5080042210317108,
+        "margin": 0.07941649066670137,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/010.png",
+      "sha256": "be39a2d34102433a264913aff75c45427cdafe730e5af2669d02ef61f41f86f2",
+      "slot": 3,
+      "box": [
+        388,
+        884,
+        190,
+        248
+      ],
+      "expected": "あふれ出る想い",
+      "reference": {
+        "name": "あふれ出る想い",
+        "candidate": "あふれ出る想い",
+        "mode": "local",
+        "score": 0.4336692261403878,
+        "margin": 0.20364354007167984,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "あふれ出る想い",
+        "candidate": "あふれ出る想い",
+        "mode": "local",
+        "score": 0.4336692261403878,
+        "margin": 0.20364354007167984,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/010.png",
+      "sha256": "be39a2d34102433a264913aff75c45427cdafe730e5af2669d02ef61f41f86f2",
+      "slot": 4,
+      "box": [
+        512,
+        884,
+        189,
+        248
+      ],
+      "expected": "潜在能力",
+      "reference": {
+        "name": "潜在能力",
+        "candidate": "潜在能力",
+        "mode": "local",
+        "score": 0.6439632564706447,
+        "margin": 0.43145929750716505,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "潜在能力",
+        "candidate": "潜在能力",
+        "mode": "local",
+        "score": 0.6439632564706447,
+        "margin": 0.43145929750716505,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/011.png",
+      "sha256": "436f33bc6ef98e471e23eccd64c7e8e3ba28c9bcbf22923a1661ba7e59969622",
+      "slot": 0,
+      "box": [
+        49,
+        857,
+        188,
+        251
+      ],
+      "expected": "セッティング",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/011.png",
+      "sha256": "436f33bc6ef98e471e23eccd64c7e8e3ba28c9bcbf22923a1661ba7e59969622",
+      "slot": 1,
+      "box": [
+        265,
+        883,
+        188,
+        249
+      ],
+      "expected": "積み重ね",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/011.png",
+      "sha256": "436f33bc6ef98e471e23eccd64c7e8e3ba28c9bcbf22923a1661ba7e59969622",
+      "slot": 2,
+      "box": [
+        482,
+        884,
+        189,
+        249
+      ],
+      "expected": "潜在能力",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/013.png",
+      "sha256": "dd2708511cd023bac4bcb696ddecdee2037c3421767abba89d6dce55585e222f",
+      "slot": 0,
+      "box": [
+        49,
+        884,
+        186,
+        248
+      ],
+      "expected": "輝け！",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/013.png",
+      "sha256": "dd2708511cd023bac4bcb696ddecdee2037c3421767abba89d6dce55585e222f",
+      "slot": 1,
+      "box": [
+        265,
+        884,
+        188,
+        249
+      ],
+      "expected": "トレンドリーダー",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/013.png",
+      "sha256": "dd2708511cd023bac4bcb696ddecdee2037c3421767abba89d6dce55585e222f",
+      "slot": 2,
+      "box": [
+        482,
+        858,
+        188,
+        250
+      ],
+      "expected": "積み重ね",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/015.png",
+      "sha256": "25f4b19382e1378c3fdbeea8383888b9cfc726a4384ab8c0dd9607d76e7633a0",
+      "slot": 0,
+      "box": [
+        265,
+        884,
+        189,
+        250
+      ],
+      "expected": "トレンドリーダー",
+      "reference": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.7012813467418727,
+        "margin": 0.35549486638507094,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.7012813467418727,
+        "margin": 0.35549486638507094,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/016.png",
+      "sha256": "281d247e4f8a862abb18b07489133a86737e8d90b654d015bed8207c454cf0a8",
+      "slot": 0,
+      "box": [
+        265,
+        856,
+        187,
+        253
+      ],
+      "expected": "トレンドリーダー",
+      "reference": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.6467706346233558,
+        "margin": 0.31592404810602087,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.6467706346233558,
+        "margin": 0.31592404810602087,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/018.png",
+      "sha256": "099e1c64d1504356bd30e12101a86a84e54ab939d081f372e2d82510dc87e851",
+      "slot": 0,
+      "box": [
+        156,
+        884,
+        190,
+        249
+      ],
+      "expected": "輝け！",
+      "reference": {
+        "name": "輝け！",
+        "candidate": "輝け！",
+        "mode": "full",
+        "score": 0.5305508579404893,
+        "margin": 0.25893940496212897,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "輝け！",
+        "candidate": "輝け！",
+        "mode": "full",
+        "score": 0.5305508579404893,
+        "margin": 0.25893940496212897,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/018.png",
+      "sha256": "099e1c64d1504356bd30e12101a86a84e54ab939d081f372e2d82510dc87e851",
+      "slot": 1,
+      "box": [
+        373,
+        884,
+        188,
+        249
+      ],
+      "expected": "トレンドリーダー",
+      "reference": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.6991761818847546,
+        "margin": 0.3516057432542059,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.6991761818847546,
+        "margin": 0.3516057432542059,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/019.png",
+      "sha256": "be009fb4a3e1bebdc4ea840f667628c781233c5f2de112768f8bbf883a2c5b57",
+      "slot": 0,
+      "box": [
+        264,
+        884,
+        189,
+        250
+      ],
+      "expected": "トレンドリーダー",
+      "reference": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.6790411592326233,
+        "margin": 0.335758499060933,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.6790411592326233,
+        "margin": 0.335758499060933,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/020.png",
+      "sha256": "22719292820e93d6f9233ab57712ed8361a460b152c7241c4a4fb78ab6bcdb03",
+      "slot": 0,
+      "box": [
+        49,
+        884,
+        188,
+        249
+      ],
+      "expected": "トレンドリーダー",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/020.png",
+      "sha256": "22719292820e93d6f9233ab57712ed8361a460b152c7241c4a4fb78ab6bcdb03",
+      "slot": 1,
+      "box": [
+        264,
+        858,
+        188,
+        251
+      ],
+      "expected": "あふれ出る想い",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/020.png",
+      "sha256": "22719292820e93d6f9233ab57712ed8361a460b152c7241c4a4fb78ab6bcdb03",
+      "slot": 2,
+      "box": [
+        482,
+        884,
+        189,
+        247
+      ],
+      "expected": "輝け！",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/022.png",
+      "sha256": "bf5e974a14e2941ad557465fa083d1aa08d050938ad7ad4fe764b36f817b361f",
+      "slot": 0,
+      "box": [
+        263,
+        854,
+        190,
+        252
+      ],
+      "expected": "トレンドリーダー",
+      "reference": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.6568798965600932,
+        "margin": 0.3384351628513743,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.6568798965600932,
+        "margin": 0.3384351628513743,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/023.png",
+      "sha256": "b8b22e91fbb0ba1ff1af13fef2b460865228cbd9724b12e817b51d2ef98930b7",
+      "slot": 0,
+      "box": [
+        49,
+        885,
+        188,
+        248
+      ],
+      "expected": "積み重ね",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/023.png",
+      "sha256": "b8b22e91fbb0ba1ff1af13fef2b460865228cbd9724b12e817b51d2ef98930b7",
+      "slot": 1,
+      "box": [
+        265,
+        884,
+        188,
+        249
+      ],
+      "expected": "輝け！",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/023.png",
+      "sha256": "b8b22e91fbb0ba1ff1af13fef2b460865228cbd9724b12e817b51d2ef98930b7",
+      "slot": 2,
+      "box": [
+        482,
+        857,
+        187,
+        250
+      ],
+      "expected": "あふれ出る想い",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/024.png",
+      "sha256": "e3b4d50b0155fbedfa88e39081ff902be3ff1ca950ca91b7f2301aaa5483ee02",
+      "slot": 0,
+      "box": [
+        157,
+        884,
+        189,
+        249
+      ],
+      "expected": "積み重ね",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/024.png",
+      "sha256": "e3b4d50b0155fbedfa88e39081ff902be3ff1ca950ca91b7f2301aaa5483ee02",
+      "slot": 1,
+      "box": [
+        373,
+        856,
+        189,
+        254
+      ],
+      "expected": "輝け！",
+      "reference": null,
+      "candidate": null
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/025.png",
+      "sha256": "bdf7b9252f522f63ea0687da1cfc9601dc863fa1f3725be1d89011846d5f974e",
+      "slot": 0,
+      "box": [
+        49,
+        883,
+        187,
+        250
+      ],
+      "expected": "積み重ね",
+      "reference": {
+        "name": "積み重ね",
+        "candidate": "積み重ね",
+        "mode": "full",
+        "score": 0.6666309229452971,
+        "margin": 0.09482594850015158,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "積み重ね",
+        "candidate": "積み重ね",
+        "mode": "full",
+        "score": 0.6666309229452971,
+        "margin": 0.09482594850015158,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/025.png",
+      "sha256": "bdf7b9252f522f63ea0687da1cfc9601dc863fa1f3725be1d89011846d5f974e",
+      "slot": 1,
+      "box": [
+        265,
+        884,
+        188,
+        248
+      ],
+      "expected": "輝け！",
+      "reference": {
+        "name": "輝け！",
+        "candidate": "輝け！",
+        "mode": "full",
+        "score": 0.5358402582970107,
+        "margin": 0.26464449470583007,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "輝け！",
+        "candidate": "輝け！",
+        "mode": "full",
+        "score": 0.5358402582970107,
+        "margin": 0.26464449470583007,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/025.png",
+      "sha256": "bdf7b9252f522f63ea0687da1cfc9601dc863fa1f3725be1d89011846d5f974e",
+      "slot": 2,
+      "box": [
+        481,
+        884,
+        189,
+        250
+      ],
+      "expected": "トレンドリーダー",
+      "reference": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.6891727574148144,
+        "margin": 0.34272598490379264,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.6891727574148144,
+        "margin": 0.34272598490379264,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "second",
+      "file": "datasets/video-eval-20261025/bu8kLS9cMVg/026.png",
+      "sha256": "f1a9f74d82f8225e16fc03c274ee5443b34d88fdd1229e4e4348cc251c517501",
+      "slot": 0,
+      "box": [
+        265,
+        883,
+        190,
+        250
+      ],
+      "expected": "トレンドリーダー",
+      "reference": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.7066385489599089,
+        "margin": 0.35458684318698225,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "トレンドリーダー",
+        "candidate": "トレンドリーダー",
+        "mode": "full",
+        "score": 0.7066385489599089,
+        "margin": 0.35458684318698225,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-000157-503-battle.png",
+      "sha256": "26a81fc7fbf19e86ecc9312b317b9e41b2bce0591e4e026935ab97cf2e811070",
+      "slot": 0,
+      "box": [
+        48,
+        884,
+        189,
+        249
+      ],
+      "expected": "冒険心",
+      "reference": {
+        "name": "冒険心",
+        "candidate": "冒険心",
+        "mode": "full",
+        "score": 0.8149857788698676,
+        "margin": 0.4515443126877883,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "冒険心",
+        "candidate": "冒険心",
+        "mode": "full",
+        "score": 0.8149857788698676,
+        "margin": 0.4515443126877883,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-000157-503-battle.png",
+      "sha256": "26a81fc7fbf19e86ecc9312b317b9e41b2bce0591e4e026935ab97cf2e811070",
+      "slot": 1,
+      "box": [
+        264,
+        884,
+        189,
+        249
+      ],
+      "expected": "アイドル宣言",
+      "reference": {
+        "name": "アイドル宣言",
+        "candidate": "アイドル宣言",
+        "mode": "full",
+        "score": 0.5161425502074514,
+        "margin": 0.15092584360884048,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "アイドル宣言",
+        "candidate": "アイドル宣言",
+        "mode": "full",
+        "score": 0.5161425502074514,
+        "margin": 0.15092584360884048,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-000157-503-battle.png",
+      "sha256": "26a81fc7fbf19e86ecc9312b317b9e41b2bce0591e4e026935ab97cf2e811070",
+      "slot": 2,
+      "box": [
+        481,
+        884,
+        189,
+        249
+      ],
+      "expected": "心が跳ねるままに",
+      "reference": {
+        "name": "心が跳ねるままに",
+        "candidate": "心が跳ねるままに",
+        "mode": "full",
+        "score": 0.6849050742878706,
+        "margin": 0.2660860900471476,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "心が跳ねるままに",
+        "candidate": "心が跳ねるままに",
+        "mode": "full",
+        "score": 0.6849050742878706,
+        "margin": 0.2660860900471476,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-012653-613-battle.png",
+      "sha256": "c83082b366b411b70193a78631cdf686547d4035f49c77c3dbb438dd993b7e66",
+      "slot": 0,
+      "box": [
+        48,
+        884,
+        189,
+        249
+      ],
+      "expected": "みんな大好き",
+      "reference": {
+        "name": "みんな大好き",
+        "candidate": "みんな大好き",
+        "mode": "full",
+        "score": 0.5634682943888705,
+        "margin": 0.38568953021944163,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "みんな大好き",
+        "candidate": "みんな大好き",
+        "mode": "full",
+        "score": 0.5634682943888705,
+        "margin": 0.38568953021944163,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-012653-613-battle.png",
+      "sha256": "c83082b366b411b70193a78631cdf686547d4035f49c77c3dbb438dd993b7e66",
+      "slot": 1,
+      "box": [
+        264,
+        884,
+        189,
+        249
+      ],
+      "expected": "成長痛",
+      "reference": {
+        "name": "成長痛",
+        "candidate": "成長痛",
+        "mode": "full",
+        "score": 0.7078975618939229,
+        "margin": 0.3136703570974807,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "成長痛",
+        "candidate": "成長痛",
+        "mode": "full",
+        "score": 0.7078975618939229,
+        "margin": 0.3136703570974807,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-012653-613-battle.png",
+      "sha256": "c83082b366b411b70193a78631cdf686547d4035f49c77c3dbb438dd993b7e66",
+      "slot": 2,
+      "box": [
+        481,
+        884,
+        189,
+        249
+      ],
+      "expected": "ラブリーウインク",
+      "reference": {
+        "name": "ラブリーウインク",
+        "candidate": "ラブリーウインク",
+        "mode": "full",
+        "score": 0.47534872668994876,
+        "margin": 0.17396420858230893,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ラブリーウインク",
+        "candidate": "ラブリーウインク",
+        "mode": "full",
+        "score": 0.47534872668994876,
+        "margin": 0.17396420858230893,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013931-780-battle.png",
+      "sha256": "fff5084b095615886a6350a8af1f3acb7435fd8acffff919b0b126cc80e09ff1",
+      "slot": 0,
+      "box": [
+        19,
+        884,
+        189,
+        249
+      ],
+      "expected": "手書きのメッセージ",
+      "reference": {
+        "name": "手書きのメッセージ",
+        "candidate": "手書きのメッセージ",
+        "mode": "local",
+        "score": 0.5412292588618662,
+        "margin": 0.3661883336795798,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "手書きのメッセージ",
+        "candidate": "手書きのメッセージ",
+        "mode": "local",
+        "score": 0.5412292588618662,
+        "margin": 0.3661883336795798,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013931-780-battle.png",
+      "sha256": "fff5084b095615886a6350a8af1f3acb7435fd8acffff919b0b126cc80e09ff1",
+      "slot": 1,
+      "box": [
+        142,
+        884,
+        189,
+        249
+      ],
+      "expected": "せのびの魔法",
+      "reference": {
+        "name": "せのびの魔法",
+        "candidate": "せのびの魔法",
+        "mode": "local",
+        "score": 0.6612378427226575,
+        "margin": 0.36205488982979306,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "せのびの魔法",
+        "candidate": "せのびの魔法",
+        "mode": "local",
+        "score": 0.6612378427226575,
+        "margin": 0.36205488982979306,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013931-780-battle.png",
+      "sha256": "fff5084b095615886a6350a8af1f3acb7435fd8acffff919b0b126cc80e09ff1",
+      "slot": 2,
+      "box": [
+        266,
+        884,
+        189,
+        249
+      ],
+      "expected": "届いて！",
+      "reference": {
+        "name": "届いて！",
+        "candidate": "届いて！",
+        "mode": "local",
+        "score": 0.5926681077930239,
+        "margin": 0.3826166836696017,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "届いて！",
+        "candidate": "届いて！",
+        "mode": "local",
+        "score": 0.5926681077930239,
+        "margin": 0.3826166836696017,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013931-780-battle.png",
+      "sha256": "fff5084b095615886a6350a8af1f3acb7435fd8acffff919b0b126cc80e09ff1",
+      "slot": 3,
+      "box": [
+        389,
+        884,
+        189,
+        249
+      ],
+      "expected": "成長痛",
+      "reference": {
+        "name": "成長痛",
+        "candidate": "成長痛",
+        "mode": "local",
+        "score": 0.5906628528557997,
+        "margin": 0.2943812907501152,
+        "visible": 0.251953125,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "成長痛",
+        "candidate": "成長痛",
+        "mode": "local",
+        "score": 0.5906628528557997,
+        "margin": 0.2943812907501152,
+        "visible": 0.251953125,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013931-780-battle.png",
+      "sha256": "fff5084b095615886a6350a8af1f3acb7435fd8acffff919b0b126cc80e09ff1",
+      "slot": 4,
+      "box": [
+        512,
+        884,
+        189,
+        249
+      ],
+      "expected": "叶えたい夢",
+      "reference": {
+        "name": "叶えたい夢",
+        "candidate": "叶えたい夢",
+        "mode": "local",
+        "score": 0.5374467819139781,
+        "margin": 0.3155823131981837,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "叶えたい夢",
+        "candidate": "叶えたい夢",
+        "mode": "local",
+        "score": 0.5374467819139781,
+        "margin": 0.3155823131981837,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013939-039-battle.png",
+      "sha256": "a21604268b0e73e6a68a376b041ade2c3ee3399d802b08140c8f7ddce196f781",
+      "slot": 0,
+      "box": [
+        19,
+        884,
+        189,
+        249
+      ],
+      "expected": "手書きのメッセージ",
+      "reference": {
+        "name": "手書きのメッセージ",
+        "candidate": "手書きのメッセージ",
+        "mode": "local",
+        "score": 0.49787246976315697,
+        "margin": 0.2821019466775898,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "手書きのメッセージ",
+        "candidate": "手書きのメッセージ",
+        "mode": "local",
+        "score": 0.49787246976315697,
+        "margin": 0.2821019466775898,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013939-039-battle.png",
+      "sha256": "a21604268b0e73e6a68a376b041ade2c3ee3399d802b08140c8f7ddce196f781",
+      "slot": 1,
+      "box": [
+        184,
+        884,
+        189,
+        249
+      ],
+      "expected": "せのびの魔法",
+      "reference": {
+        "name": "せのびの魔法",
+        "candidate": "せのびの魔法",
+        "mode": "local",
+        "score": 0.6295920560318627,
+        "margin": 0.4405600563513631,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "せのびの魔法",
+        "candidate": "せのびの魔法",
+        "mode": "local",
+        "score": 0.6295920560318627,
+        "margin": 0.4405600563513631,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013939-039-battle.png",
+      "sha256": "a21604268b0e73e6a68a376b041ade2c3ee3399d802b08140c8f7ddce196f781",
+      "slot": 2,
+      "box": [
+        348,
+        884,
+        189,
+        249
+      ],
+      "expected": "届いて！",
+      "reference": {
+        "name": "届いて！",
+        "candidate": "届いて！",
+        "mode": "local",
+        "score": 0.5969030465327915,
+        "margin": 0.409332741747899,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "届いて！",
+        "candidate": "届いて！",
+        "mode": "local",
+        "score": 0.5969030465327915,
+        "margin": 0.409332741747899,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013939-039-battle.png",
+      "sha256": "a21604268b0e73e6a68a376b041ade2c3ee3399d802b08140c8f7ddce196f781",
+      "slot": 3,
+      "box": [
+        512,
+        884,
+        189,
+        249
+      ],
+      "expected": "叶えたい夢",
+      "reference": {
+        "name": "叶えたい夢",
+        "candidate": "叶えたい夢",
+        "mode": "local",
+        "score": 0.5303592322238997,
+        "margin": 0.3094608497482563,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "叶えたい夢",
+        "candidate": "叶えたい夢",
+        "mode": "local",
+        "score": 0.5303592322238997,
+        "margin": 0.3094608497482563,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013947-919-battle.png",
+      "sha256": "ad7c16ebb5598dada2edd2d2c38c51d1df4d88f5d8cb5d7967477437ab49a47b",
+      "slot": 0,
+      "box": [
+        48,
+        884,
+        189,
+        249
+      ],
+      "expected": "オトメゴコロ",
+      "reference": {
+        "name": "オトメゴコロ",
+        "candidate": "オトメゴコロ",
+        "mode": "full",
+        "score": 0.6366105451212419,
+        "margin": 0.32486072638418095,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "オトメゴコロ",
+        "candidate": "オトメゴコロ",
+        "mode": "full",
+        "score": 0.6366105451212419,
+        "margin": 0.32486072638418095,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013947-919-battle.png",
+      "sha256": "ad7c16ebb5598dada2edd2d2c38c51d1df4d88f5d8cb5d7967477437ab49a47b",
+      "slot": 1,
+      "box": [
+        264,
+        884,
+        189,
+        249
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.5546271913434526,
+        "margin": 0.4089047424943794,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.5546271913434526,
+        "margin": 0.4089047424943794,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013947-919-battle.png",
+      "sha256": "ad7c16ebb5598dada2edd2d2c38c51d1df4d88f5d8cb5d7967477437ab49a47b",
+      "slot": 2,
+      "box": [
+        481,
+        884,
+        189,
+        249
+      ],
+      "expected": "ラブリーウインク",
+      "reference": {
+        "name": "ラブリーウインク",
+        "candidate": "ラブリーウインク",
+        "mode": "full",
+        "score": 0.4991107022417685,
+        "margin": 0.21678030670228854,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ラブリーウインク",
+        "candidate": "ラブリーウインク",
+        "mode": "full",
+        "score": 0.4991107022417685,
+        "margin": 0.21678030670228854,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013953-592-battle.png",
+      "sha256": "62792d24338da893b04db8a72e108897040ba081ba878c27aa80dce63fbba2ba",
+      "slot": 0,
+      "box": [
+        157,
+        884,
+        189,
+        249
+      ],
+      "expected": "きらきら紙吹雪",
+      "reference": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.5866125550536649,
+        "margin": 0.42932735769801766,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "きらきら紙吹雪",
+        "candidate": "きらきら紙吹雪",
+        "mode": "full",
+        "score": 0.5866125550536649,
+        "margin": 0.42932735769801766,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-013953-592-battle.png",
+      "sha256": "62792d24338da893b04db8a72e108897040ba081ba878c27aa80dce63fbba2ba",
+      "slot": 1,
+      "box": [
+        373,
+        884,
+        189,
+        249
+      ],
+      "expected": "ラブリーウインク",
+      "reference": {
+        "name": "ラブリーウインク",
+        "candidate": "ラブリーウインク",
+        "mode": "full",
+        "score": 0.5074219149724084,
+        "margin": 0.22612655037520768,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "ラブリーウインク",
+        "candidate": "ラブリーウインク",
+        "mode": "full",
+        "score": 0.5074219149724084,
+        "margin": 0.22612655037520768,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-014012-152-battle.png",
+      "sha256": "724d27f3744e83ad33a18b2946105c95f521fa91f3768b156f1e99cc456c46f5",
+      "slot": 0,
+      "box": [
+        19,
+        884,
+        189,
+        249
+      ],
+      "expected": "心が跳ねるままに",
+      "reference": {
+        "name": "心が跳ねるままに",
+        "candidate": "心が跳ねるままに",
+        "mode": "local",
+        "score": 0.5943408183272848,
+        "margin": 0.2741108609111733,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "心が跳ねるままに",
+        "candidate": "心が跳ねるままに",
+        "mode": "local",
+        "score": 0.5943408183272848,
+        "margin": 0.2741108609111733,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-014012-152-battle.png",
+      "sha256": "724d27f3744e83ad33a18b2946105c95f521fa91f3768b156f1e99cc456c46f5",
+      "slot": 1,
+      "box": [
+        184,
+        884,
+        189,
+        249
+      ],
+      "expected": "可愛い仕草",
+      "reference": {
+        "name": "可愛い仕草",
+        "candidate": "可愛い仕草",
+        "mode": "local",
+        "score": 0.6703815218198327,
+        "margin": 0.36039768915655235,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "可愛い仕草",
+        "candidate": "可愛い仕草",
+        "mode": "local",
+        "score": 0.6703815218198327,
+        "margin": 0.36039768915655235,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-014012-152-battle.png",
+      "sha256": "724d27f3744e83ad33a18b2946105c95f521fa91f3768b156f1e99cc456c46f5",
+      "slot": 2,
+      "box": [
+        348,
+        884,
+        189,
+        249
+      ],
+      "expected": "やる気は満点",
+      "reference": {
+        "name": "やる気は満点",
+        "candidate": "やる気は満点",
+        "mode": "local",
+        "score": 0.694394584298823,
+        "margin": 0.5021248184691942,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "やる気は満点",
+        "candidate": "やる気は満点",
+        "mode": "local",
+        "score": 0.694394584298823,
+        "margin": 0.5021248184691942,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-014012-152-battle.png",
+      "sha256": "724d27f3744e83ad33a18b2946105c95f521fa91f3768b156f1e99cc456c46f5",
+      "slot": 3,
+      "box": [
+        512,
+        884,
+        189,
+        249
+      ],
+      "expected": "みんな大好き",
+      "reference": {
+        "name": "みんな大好き",
+        "candidate": "みんな大好き",
+        "mode": "local",
+        "score": 0.45055809804196534,
+        "margin": 0.29080343339283965,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "みんな大好き",
+        "candidate": "みんな大好き",
+        "mode": "local",
+        "score": 0.45055809804196534,
+        "margin": 0.29080343339283965,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-015059-717-battle.png",
+      "sha256": "975b35f8a3415ee20e294624f763970d02dd242b255a64f3ddd48246bb7e025f",
+      "slot": 0,
+      "box": [
+        19,
+        884,
+        189,
+        249
+      ],
+      "expected": "キセキの魔法",
+      "reference": {
+        "name": "キセキの魔法",
+        "candidate": "キセキの魔法",
+        "mode": "local",
+        "score": 0.4358432209985564,
+        "margin": 0.32451203254740335,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "キセキの魔法",
+        "candidate": "キセキの魔法",
+        "mode": "local",
+        "score": 0.4358432209985564,
+        "margin": 0.32451203254740335,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-015059-717-battle.png",
+      "sha256": "975b35f8a3415ee20e294624f763970d02dd242b255a64f3ddd48246bb7e025f",
+      "slot": 1,
+      "box": [
+        184,
+        884,
+        189,
+        249
+      ],
+      "expected": "表現の基本",
+      "reference": {
+        "name": "表現の基本",
+        "candidate": "表現の基本",
+        "mode": "local",
+        "score": 0.6069800676026283,
+        "margin": 0.18925837952956553,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "表現の基本",
+        "candidate": "表現の基本",
+        "mode": "local",
+        "score": 0.6069800676026283,
+        "margin": 0.18925837952956553,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-015059-717-battle.png",
+      "sha256": "975b35f8a3415ee20e294624f763970d02dd242b255a64f3ddd48246bb7e025f",
+      "slot": 2,
+      "box": [
+        348,
+        884,
+        189,
+        249
+      ],
+      "expected": "心が跳ねるままに",
+      "reference": {
+        "name": "心が跳ねるままに",
+        "candidate": "心が跳ねるままに",
+        "mode": "local",
+        "score": 0.5400089092755779,
+        "margin": 0.2174195025830425,
+        "visible": 0.3935546875,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "心が跳ねるままに",
+        "candidate": "心が跳ねるままに",
+        "mode": "local",
+        "score": 0.5400089092755779,
+        "margin": 0.2174195025830425,
+        "visible": 0.3935546875,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-015059-717-battle.png",
+      "sha256": "975b35f8a3415ee20e294624f763970d02dd242b255a64f3ddd48246bb7e025f",
+      "slot": 3,
+      "box": [
+        512,
+        884,
+        189,
+        249
+      ],
+      "expected": "虹色ドリーマー",
+      "reference": {
+        "name": "虹色ドリーマー",
+        "candidate": "虹色ドリーマー",
+        "mode": "local",
+        "score": 0.530512883716303,
+        "margin": 0.3315401034931606,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "虹色ドリーマー",
+        "candidate": "虹色ドリーマー",
+        "mode": "local",
+        "score": 0.530512883716303,
+        "margin": 0.3315401034931606,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-020212-150-battle.png",
+      "sha256": "1464c331eb2a8c0b181b078c2b6536ba654240be14fc84ac036b96019838aa58",
+      "slot": 0,
+      "box": [
+        48,
+        884,
+        189,
+        249
+      ],
+      "expected": "キセキの魔法",
+      "reference": {
+        "name": "キセキの魔法",
+        "candidate": "キセキの魔法",
+        "mode": "full",
+        "score": 0.5807839861466422,
+        "margin": 0.2628540246514408,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "キセキの魔法",
+        "candidate": "キセキの魔法",
+        "mode": "full",
+        "score": 0.5807839861466422,
+        "margin": 0.2628540246514408,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-020212-150-battle.png",
+      "sha256": "1464c331eb2a8c0b181b078c2b6536ba654240be14fc84ac036b96019838aa58",
+      "slot": 1,
+      "box": [
+        264,
+        884,
+        189,
+        249
+      ],
+      "expected": "輝くキミへ",
+      "reference": {
+        "name": "輝くキミへ",
+        "candidate": "輝くキミへ",
+        "mode": "full",
+        "score": 0.8012767118757091,
+        "margin": 0.3893914384429033,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "輝くキミへ",
+        "candidate": "輝くキミへ",
+        "mode": "full",
+        "score": 0.8012767118757091,
+        "margin": 0.3893914384429033,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-020212-150-battle.png",
+      "sha256": "1464c331eb2a8c0b181b078c2b6536ba654240be14fc84ac036b96019838aa58",
+      "slot": 2,
+      "box": [
+        481,
+        884,
+        189,
+        249
+      ],
+      "expected": "虹色ドリーマー",
+      "reference": {
+        "name": "虹色ドリーマー",
+        "candidate": "虹色ドリーマー",
+        "mode": "full",
+        "score": 0.7096346512060253,
+        "margin": 0.33694684650715495,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "虹色ドリーマー",
+        "candidate": "虹色ドリーマー",
+        "mode": "full",
+        "score": 0.7096346512060253,
+        "margin": 0.33694684650715495,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-215954-231-battle.png",
+      "sha256": "38ff9e3a6e492028ebad27ed30f89ba7db13b850d9cd78c7cb23087cfc10ef19",
+      "slot": 0,
+      "box": [
+        48,
+        884,
+        189,
+        249
+      ],
+      "expected": "ポーズの基本",
+      "reference": {
+        "name": "ポーズの基本",
+        "candidate": "ポーズの基本",
+        "mode": "full",
+        "score": 0.7503481519401033,
+        "margin": 0.147367837640337,
+        "visible": 0.34375,
+        "badge_recovered": true
+      },
+      "candidate": {
+        "name": "ポーズの基本",
+        "candidate": "ポーズの基本",
+        "mode": "full",
+        "score": 0.7503481519401033,
+        "margin": 0.147367837640337,
+        "visible": 0.34375,
+        "badge_recovered": true,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-215954-231-battle.png",
+      "sha256": "38ff9e3a6e492028ebad27ed30f89ba7db13b850d9cd78c7cb23087cfc10ef19",
+      "slot": 1,
+      "box": [
+        264,
+        884,
+        189,
+        249
+      ],
+      "expected": "アピールの基本",
+      "reference": {
+        "name": "アピールの基本",
+        "candidate": "アピールの基本",
+        "mode": "full",
+        "score": 0.715744589265341,
+        "margin": 0.23120196297874873,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "アピールの基本",
+        "candidate": "アピールの基本",
+        "mode": "full",
+        "score": 0.715744589265341,
+        "margin": 0.23120196297874873,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    },
+    {
+      "group": "historical",
+      "file": "fixtures/hand/20260813-215954-231-battle.png",
+      "sha256": "38ff9e3a6e492028ebad27ed30f89ba7db13b850d9cd78c7cb23087cfc10ef19",
+      "slot": 2,
+      "box": [
+        481,
+        884,
+        189,
+        249
+      ],
+      "expected": "心が跳ねるままに",
+      "reference": {
+        "name": "心が跳ねるままに",
+        "candidate": "心が跳ねるままに",
+        "mode": "full",
+        "score": 0.6849050742878706,
+        "margin": 0.2660860900471476,
+        "visible": 0.412109375,
+        "badge_recovered": false
+      },
+      "candidate": {
+        "name": "心が跳ねるままに",
+        "candidate": "心が跳ねるままに",
+        "mode": "full",
+        "score": 0.6849050742878706,
+        "margin": 0.2660860900471476,
+        "visible": 0.412109375,
+        "badge_recovered": false,
+        "rejection_reason": null
+      }
+    }
+  ]
+}
