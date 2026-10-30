@@ -10,6 +10,7 @@ from dataclasses import asdict
 import hashlib
 import importlib.util
 import json
+import platform
 from pathlib import Path
 import random
 import subprocess
@@ -18,7 +19,10 @@ import time
 import types
 
 import numpy as np
+import PIL
 from PIL import Image, ImageDraw
+
+from badge_failure_cases import negative_frame, result_dict, save_negative_frame, write_index
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = '1b3d1f7e7b9f06624fac747775820e20a39efcc9'  # Published v2.1.3; works without fetched tag refs.
@@ -70,13 +74,16 @@ def add_badge(image, box, boxes, patch, rng):
 
 
 def one_worker(job):
-    source, lab, ref, seed, count, hard, stacked = job
+    source, lab, ref, seed, count, hard, stacked, case_dir, negative_only = job
     synth, cat, frames, patch, candidate, baseline = prepare(Path(source), Path(lab), ref)
     names, rng = sorted(cat), random.Random(seed)
     stats, changes, timings = {}, [], {'baseline': [], 'candidate': []}
+    negatives = []
+    from custom.hand_identity import visible_mask, _resize_rgb_bilinear, art_box
     def evaluate(image, boxes, truth, group):
         bgr = image[:, :, ::-1].copy()
-        for box, expected in zip(boxes, truth):
+        observations = []
+        for slot, (box, expected) in enumerate(zip(boxes, truth)):
             results = {}
             row = stats.setdefault(group, {'baseline': Counter(), 'candidate': Counter()})
             for tag, reader in [('baseline', baseline), ('candidate', candidate)]:
@@ -87,6 +94,14 @@ def one_worker(job):
                 outcome = 'unknown' if predicted is None else 'correct' if expected == synth.normalize_card_name(predicted).rstrip('+') else 'wrong'
                 row[tag].update(total=1, **{outcome: 1})
                 results[tag] = (predicted, result)
+            observation = dict(slot=slot, box=box, **{tag: result_dict(result) for tag, (_, result) in results.items()})
+            if expected is None:
+                x, y, w, h = art_box(box)
+                target = _resize_rgb_bilinear(bgr[y:y+h, x:x+w], 32)
+                evidence = visible_mask(box, boxes)
+                evidence[:, 20:] = False
+                observation['independentArtworkRange'] = float(np.ptp(target[evidence], axis=0).max()) if evidence.any() else 0.0
+            observations.append(observation)
             if results['candidate'][0] != results['baseline'][0]:
                 if len(changes) < 60:
                     changes.append({'group': group, 'expected': expected, 'box': box,
@@ -94,10 +109,13 @@ def one_worker(job):
                 row['candidate']['changed'] += 1
                 if results['candidate'][0] is not None and (expected is None or synth.normalize_card_name(results['candidate'][0]).rstrip('+') != expected):
                     row['candidate']['new_wrong'] += 1
+        return observations
     for k in range(1, 6):
+        print(f'worker {seed}: generate k={k}', flush=True)
         for _ in range(count):
             image, boxes, truth = synth.compose(frames, cat, names, rng, k, hard=hard)
-            evaluate(image, boxes, truth, f'{k}-clean')
+            if not negative_only:
+                evaluate(image, boxes, truth, f'{k}-clean')
             image = image.copy()
             for box in boxes:
                 add_badge(image, box, boxes, patch, rng)
@@ -106,22 +124,19 @@ def one_worker(job):
                     for level in range(1, rng.randint(1,3)):
                         shifted = [box[0], box[1] + round(box[3]*.865*.14*level), box[2], box[3]]
                         add_badge(image, shifted, boxes, patch, rng)
-            evaluate(image, boxes, truth, f'{k}-badge')
+            if not negative_only:
+                evaluate(image, boxes, truth, f'{k}-badge')
     # Explicit unknowns exercise accidental agreement on uninformative inputs.
+    print(f'worker {seed}: negatives', flush=True)
     for i in range(count):
-        image, boxes, _ = synth.compose(frames, cat, names, rng, 3, hard=hard)
-        for box in boxes:
-            x, y, w, h = box
-            art_h = round(h * .865)
-            noise = np.random.default_rng(seed + i + x)
-            if i % 2:
-                image[y:y+art_h, x:x+w] = noise.integers(0, 256, (art_h, w, 3), dtype=np.uint8)
-            else:
-                image[y:y+art_h, x:x+w] = noise.integers(0, 256, 3, dtype=np.uint8)
-            add_badge(image, box, boxes, patch, rng)
-        evaluate(image, boxes, [None]*len(boxes), 'negative-badge')
+        state = rng.getstate()
+        image, boxes, replacements = negative_frame(synth, frames, cat, names, rng, patch, seed, i, hard, add_badge)
+        rows = evaluate(image, boxes, [None]*len(boxes), 'negative-badge')
+        negatives.append(save_negative_frame(case_dir, f'w{seed}-n{i:04d}', image, boxes,
+            dict(workerSeed=seed, sampleIndex=i, workerCount=count, hard=hard, stacked=stacked,
+                 negativeBadgeLayers=1, rngState=state, replacements=replacements), rows))
     return {'stats': {g: {k: dict(v) for k, v in row.items()} for g, row in stats.items()},
-            'changes': changes, 'timings': timings}
+            'changes': changes, 'timings': timings, 'negativeFrames': negatives}
 
 
 def main():
@@ -134,12 +149,36 @@ def main():
     p.add_argument('--hard', action='store_true')
     p.add_argument('--stacked', action='store_true', help='Exercise 1-3 vertically stacked thumbnail badges')
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--negative-only', action='store_true', help='Skip positive scoring, preserve historical RNG consumption')
     args = p.parse_args()
+    if args.per_k < 1 or args.workers < 1:
+        p.error('--per-k and --workers must be positive')
     if args.output.exists():
         p.error('Use a new output path')
+    case_dir = args.output.with_suffix('.cases')
+    if case_dir.exists():
+        p.error('Use a new case directory')
+    case_dir.mkdir(parents=True)
+    provenance = {'environment': dict(python=sys.version, platform=platform.platform(), numpy=np.__version__, pillow=PIL.__version__),
+              'labChanges': subprocess.check_output(['git', 'status', '--porcelain'], cwd=ROOT, text=True).strip(),
+              'labCommit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
+              'scope': __doc__, 'baseline': args.baseline,
+              'sourceCommit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=args.source, text=True).strip(),
+              'sourceChanges': subprocess.check_output(['git', 'status', '--porcelain'], cwd=args.source, text=True).strip(),
+              'sourceHashes': {str(f.relative_to(args.source)): hashlib.sha256(f.read_bytes()).hexdigest()
+                               for f in [args.source/'agent/custom/hand_identity.py', args.source/'agent/custom/hand_badge.py',
+                                         args.source/'agent/custom/hand_identity_calibration.json', args.source/'agent/custom/card_visual.py',
+                                         args.source/'agent/custom/card_fingerprints.npz', args.source/'tools/evaluate_hand_synthetic.py', args.source/'tests/fixtures/hand_identity_labels.json']}}
+    provenance['gates'] = {
+        'candidate': json.loads((args.source/'agent/custom/hand_identity_calibration.json').read_text('utf-8'))['gates'],
+        'baseline': json.loads(subprocess.check_output(['git', 'show', args.baseline + ':agent/custom/hand_identity_calibration.json'], cwd=args.source))['gates']}
+    provenance['labHashes'] = {str(f.relative_to(ROOT)): hashlib.sha256(f.read_bytes()).hexdigest()
+                           for f in [Path(__file__), ROOT/'tools/badge_failure_cases.py', ROOT/'game-assets/catalog.json',
+                                     *sorted((ROOT/'fixtures/hand').glob('*.png'))]}
     jobs = [(str(args.source.resolve()), str(ROOT), args.baseline, args.seed + i*7919,
-             args.per_k // args.workers + int(i < args.per_k % args.workers), args.hard, args.stacked)
+             args.per_k // args.workers + int(i < args.per_k % args.workers), args.hard, args.stacked, str(case_dir.resolve()), args.negative_only)
             for i in range(min(args.workers, args.per_k))]
+    negative_frames = []
     total, changes, times = {}, [], {'baseline': [], 'candidate': []}
     with ProcessPoolExecutor(max_workers=args.workers) as pool:
         for report in pool.map(one_worker, jobs):
@@ -148,17 +187,15 @@ def main():
                 for tag, values in row.items():
                     dest[tag].update(values)
             changes += report['changes']
+            negative_frames += report['negativeFrames']
             for tag in times:
                 times[tag] += report['timings'][tag]
-    result = {'scope': __doc__, 'baseline': args.baseline,
-              'sourceCommit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=args.source, text=True).strip(),
-              'sourceChanges': subprocess.check_output(['git', 'status', '--porcelain'], cwd=args.source, text=True).strip(),
-              'sourceHashes': {str(f.relative_to(args.source)): hashlib.sha256(f.read_bytes()).hexdigest()
-                               for f in [args.source/'agent/custom/hand_identity.py', args.source/'agent/custom/hand_badge.py',
-                                         args.source/'agent/custom/hand_identity_calibration.json']},
+    result = {**provenance, 'schemaVersion': 2, 'negativeFrames': negative_frames,
+              'caseDirectory': case_dir.name, 'negativeOnly': args.negative_only,
               'seed': args.seed, 'perK': args.per_k, 'hard': args.hard, 'stacked': args.stacked, 'workers': args.workers,
               'stats': {g: {k: dict(v) for k, v in row.items()} for g, row in total.items()},
               'changes': changes, 'timingMs': {k: dict(zip(['median','p95'], np.percentile(v,[50,95]).tolist())) for k,v in times.items()}}
+    write_index(case_dir, negative_frames)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2), 'utf-8')
     print(json.dumps({k: v for k,v in result.items() if k in ['stats','timingMs']}, ensure_ascii=False), flush=True)
