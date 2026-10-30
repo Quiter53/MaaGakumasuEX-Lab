@@ -1,0 +1,327 @@
+{
+  "scope": "Windows release verification; archived synthetic inputs and reviewed boxes, no new live cultivation",
+  "releaseSourceCommit": "8c7e1eaef07f8f0b6a112a0e75cd63de857fd234",
+  "testedIdentityGitBlob": "7c04a169254d6557ff688435eef8bcfa7280a32b",
+  "newLiveCultivation": false,
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows 11",
+    "numpy": "2.5.4",
+    "pillow": "12.3.0"
+  },
+  "pythonTests": {
+    "passed": 1242,
+    "subtestsPassed": 1307,
+    "skipped": 0,
+    "nativePolicyVectorsProvided": true
+  },
+  "labTests": {
+    "passed": 12
+  },
+  "archivedFailures": {
+    "scope": "Archived synthetic failure frames on Windows; not a live game test",
+    "frames": [
+      {
+        "case": "w92471-n0002",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 2,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w100390-n0006",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 0,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w100390-n0016",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 0,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w108309-n0002",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 1,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w116228-n0012",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 1,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w124147-n0010",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 2,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w124147-n0012",
+        "fullFramePixelsMatch": false,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 0,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w124147-n0020",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 2,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w124147-n0022",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 2,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w132066-n0000",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 2,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w132066-n0004",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 2,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w139985-n0004",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 0,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w139985-n0006",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 0,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w147904-n0014",
+        "fullFramePixelsMatch": false,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 0,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w54077-n0002",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 0,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w77834-n0000",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 1,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w77834-n0004",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 2,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w85753-n0000",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 0,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w93672-n0002",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 2,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      },
+      {
+        "case": "w93672-n0010",
+        "fullFramePixelsMatch": true,
+        "predictionsMatch": true,
+        "failureCrops": [
+          {
+            "slot": 1,
+            "exactPixels": true
+          }
+        ],
+        "baselineAccepted": 1,
+        "candidateAccepted": 0
+      }
+    ]
+  },
+  "reviewedIdentity": {
+    "observations": 169,
+    "changed": 0,
+    "stats": {
+      "first": {
+        "reference": {
+          "total": 82,
+          "correct": 66,
+          "unknown": 16
+        },
+        "candidate": {
+          "total": 82,
+          "correct": 66,
+          "unknown": 16
+        }
+      },
+      "second": {
+        "reference": {
+          "total": 53,
+          "correct": 32,
+          "unknown": 21
+        },
+        "candidate": {
+          "total": 53,
+          "correct": 32,
+          "unknown": 21
+        }
+      },
+      "historical": {
+        "reference": {
+          "total": 34,
+          "correct": 34
+        },
+        "candidate": {
+          "total": 34,
+          "correct": 34
+        }
+      }
+    }
+  },
+  "release": "https://github.com/Quiter53/MaaGakumasuEX/releases/tag/v2.1.4"
+}

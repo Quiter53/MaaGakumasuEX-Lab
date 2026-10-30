@@ -27,7 +27,7 @@ def test_equal_false_accepts_are_uncapped_and_save_lossless_evidence(tmp_path):
         assert pixel_hash(np.asarray(saved)) == pixel_hash(image)
     assert json.loads((tmp_path / 'case-64.json').read_text())['cards'] == rows
     write_index(tmp_path, records)
-    assert 'case-64' in (tmp_path / 'index.html').read_text()
+    assert 'case-64' in (tmp_path / 'index.html').read_text('utf-8')
 
 
 @pytest.mark.parametrize('tags', [('baseline',), ('candidate',), ('baseline', 'candidate'), ()])
