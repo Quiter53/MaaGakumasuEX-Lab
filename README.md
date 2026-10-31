@@ -4,6 +4,10 @@ Quiter53 的训练、回归测试与截图回放环境。仓库当前公开，�
 
 目前固定源码提交为 `8c7e1eaef07f8f0b6a112a0e75cd63de857fd234`（v2.1.4 测试版，包含角标身份匹配与纯色卡面拒识修复；[下载测试包](https://github.com/Quiter53/MaaGakumasuEX/releases/tag/v2.1.4)）。版本号一致仍可能有不同的代码，以子模块提交为准。
 
+## 界面原型
+
+[Modern UI 交互原型](ui-prototypes/modern-preview/)：独立 HTML，包含内嵌图片，可下载后直接打开，用于新版界面的布局、出牌曲线与液态玻璃交互评审。
+
 ## 换电脑使用
 
 需要 Windows x64、Git、完整安装的 Python 3.12。原生界面测试另需 .NET 10 SDK；YOLO 训练另需适合显卡的 PyTorch。克隆公开仓库无需登录，推送修改时需登录有写入权限的 GitHub 账号。
