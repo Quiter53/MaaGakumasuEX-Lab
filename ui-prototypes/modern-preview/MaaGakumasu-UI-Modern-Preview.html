@@ -633,6 +633,9 @@
       overflow: hidden;
       width: 26px;
       height: 26px;
+      padding: 0;
+      flex: 0 0 26px;
+      line-height: 1;
       border-radius: 999px;
       border: none;
       background: var(--glass-thumb);
@@ -649,6 +652,10 @@
         background-color 0.2s ease,
         color 0.2s ease;
     }
+    .l-stepper-btn svg { display:block; width:12px; height:12px; flex:none; }
+    .rule-toggle-row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); padding-top:8px; border-top:1px solid var(--divider); }
+    .rule-toggle-group { display:flex; align-items:center; justify-content:flex-start; gap:10px; min-height:26px; }
+    .rule-toggle-group > span { display:flex; align-items:center; min-height:26px; font-size:12.5px; line-height:1; white-space:nowrap; }
     .l-stepper-btn:hover {
       color: var(--accent);
       transform: scale(1.06);
@@ -2720,9 +2727,9 @@ function renderTaskSpecificOptions(task) {
         <div style="display:flex; align-items:center; justify-content:space-between;">
           <div style="font-size:12.5px; font-weight:600;">出牌后等待时间（秒）</div>
           <div class="l-stepper delay-stepper">
-            <button class="l-stepper-btn" onclick="stepPostPlayDelay(-0.1)" aria-label="减少等待时间">−</button>
+            <button class="l-stepper-btn" onclick="stepPostPlayDelay(-0.1)" aria-label="减少等待时间"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h6"/></svg></button>
             <input id="postPlayDelay" type="text" inputmode="decimal" value="${opt.postPlayDelay}" aria-label="出牌后等待时间（秒）" title="0～5 秒，最多两位小数" onchange="commitPostPlayDelay(this)" />
-            <button class="l-stepper-btn" onclick="stepPostPlayDelay(0.1)" aria-label="增加等待时间">+</button>
+            <button class="l-stepper-btn" onclick="stepPostPlayDelay(0.1)" aria-label="增加等待时间"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h6M6 3v6"/></svg></button>
           </div>
         </div>
 
@@ -3381,7 +3388,7 @@ function renderCardRulesPage(animateStage = false) {
 
   host.innerHTML = `
     <div class="${animateStage ? 'stage-slide' : ''}" style="display:flex; flex-direction:column; flex:1; min-height:0; gap:14px; overflow:hidden;">
-      <!-- Top Liquid Bar: Preset Switcher + Reset Default -->
+      <!-- Top Liquid Bar: Preset Switcher + Save -->
       <div class="liquid-panel" style="padding:10px 18px; border-radius:20px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; flex-shrink:0;">
         <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
           <span style="font-size:14.5px; font-weight:700;">出牌规则曲线</span>
@@ -3389,8 +3396,8 @@ function renderCardRulesPage(animateStage = false) {
           <button onclick="openPresetManagerModal()" class="l-btn l-btn-sm">新建预设</button>
         </div>
         <div style="display:flex; align-items:center; gap:8px;">
-          <button onclick="resetCurrentRuleDefault()" class="l-btn l-btn-sm" title="将当前卡牌的回合权重恢复为 50">
-            ${ICONS.refresh} <span>默认权重</span>
+          <button onclick="saveCardRulePresets()" class="l-btn l-btn-primary l-btn-sm" title="将出牌规则保存到当前浏览器">
+            <span>保存</span>
           </button>
         </div>
       </div>
@@ -3508,15 +3515,15 @@ function renderSelectedRuleDetail(rule) {
             <span style="color:var(--text-sub);">倒数区间</span>
             <div style="display:flex; align-items:center; gap:8px;">
               <div class="l-stepper">
-                <button type="button" class="l-stepper-btn" onclick="stepRuleLimit('min', -1)">−</button>
+                <button type="button" class="l-stepper-btn" onclick="stepRuleLimit('min', -1)" aria-label="减少"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h6"/></svg></button>
                 <span class="l-stepper-val" id="stepper-val-min">${rule.min}</span>
-                <button type="button" class="l-stepper-btn" onclick="stepRuleLimit('min', 1)">+</button>
+                <button type="button" class="l-stepper-btn" onclick="stepRuleLimit('min', 1)" aria-label="增加"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h6M6 3v6"/></svg></button>
               </div>
               <span style="color:var(--text-muted);">至</span>
               <div class="l-stepper">
-                <button type="button" class="l-stepper-btn" onclick="stepRuleLimit('max', -1)">−</button>
+                <button type="button" class="l-stepper-btn" onclick="stepRuleLimit('max', -1)" aria-label="减少"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h6"/></svg></button>
                 <span class="l-stepper-val" id="stepper-val-max">${rule.max}</span>
-                <button type="button" class="l-stepper-btn" onclick="stepRuleLimit('max', 1)">+</button>
+                <button type="button" class="l-stepper-btn" onclick="stepRuleLimit('max', 1)" aria-label="增加"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h6M6 3v6"/></svg></button>
               </div>
               <span style="color:var(--text-sub);">回合</span>
             </div>
@@ -3530,15 +3537,15 @@ function renderSelectedRuleDetail(rule) {
           <span style="font-size:12.5px; font-weight:700;">排序档位覆盖</span>
           ${renderSegmented('rule-tier-seg', TIER_ORDER, rule.tier, 'onRuleTierSeg')}
         </div>
-        <div style="display:flex; align-items:center; justify-content:space-between; padding-top:4px; border-top:1px solid var(--divider);">
-          <div style="display:flex; align-items:center; gap:10px;">
-            <span style="font-size:12.5px;">最多保留一张</span>
+        <div class="rule-toggle-row">
+          <div class="rule-toggle-group">
+            <span>最多保留一张</span>
             <div onclick="toggleRuleField('${rule.id}', 'singleCopy', this)" class="l-switch ${rule.singleCopy ? 'on' : ''}">
               <div class="l-switch-thumb"></div>
             </div>
           </div>
-          <div style="display:flex; align-items:center; gap:10px;">
-            <span style="font-size:12.5px;">自定义再动</span>
+          <div class="rule-toggle-group">
+            <span>自定义再动</span>
             <div onclick="toggleRuleField('${rule.id}', 'customExtra', this)" class="l-switch ${rule.customExtra ? 'on' : ''}">
               <div class="l-switch-thumb"></div>
             </div>
@@ -3567,9 +3574,9 @@ function renderSelectedRuleDetail(rule) {
           <div style="display:flex; align-items:center; gap:6px; font-size:12px;">
             <span style="color:var(--text-sub);">总回合数:</span>
             <div class="l-stepper">
-              <button type="button" class="l-stepper-btn" onclick="stepRuleTotalTurns(-1)">−</button>
+              <button type="button" class="l-stepper-btn" onclick="stepRuleTotalTurns(-1)" aria-label="减少"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h6"/></svg></button>
               <span class="l-stepper-val" id="stepper-val-total">${totalTurns}</span>
-              <button type="button" class="l-stepper-btn" onclick="stepRuleTotalTurns(1)">+</button>
+              <button type="button" class="l-stepper-btn" onclick="stepRuleTotalTurns(1)" aria-label="增加"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h6M6 3v6"/></svg></button>
             </div>
           </div>
         </div>
@@ -3803,8 +3810,27 @@ function stepRuleTotalTurns(delta) {
   renderCardRulesPage(false);
 }
 
-function resetCurrentRuleDefault() {
-  applyCurveTemplate(STATE.cardRuleSelectedId, 'default');
+const CARD_RULE_STORAGE = 'maagakumasu-modern-card-rules-v1';
+function saveCardRulePresets() {
+  try {
+    localStorage.setItem(CARD_RULE_STORAGE, JSON.stringify({version:1, presets:STATE.cardRulePresets, active:STATE.cardRuleActivePreset}));
+    showToast('出牌规则已保存', '已保存全部预设，刷新后会恢复；仅用于此界面原型。');
+  } catch {
+    showToast('保存失败', '浏览器未允许本地保存，当前修改仍保留在页面中。');
+  }
+}
+function loadCardRulePresets() {
+  try {
+    const saved=JSON.parse(localStorage.getItem(CARD_RULE_STORAGE));
+    if(saved?.version!==1||!Array.isArray(saved.presets)||!saved.presets.length)return;
+    const valid=saved.presets.every(p=>typeof p.id==='string'&&typeof p.name==='string'&&typeof p.career==='string'
+      &&Array.isArray(p.hand)&&p.hand.every(c=>typeof c==='string')&&Array.isArray(p.rules)&&p.rules.every(r=>
+        typeof r.id==='string'&&typeof r.card==='string'&&TIER_ORDER.includes(r.tier)
+        &&['linear','step'].includes(r.mode)&&[r.min,r.max,r.totalTurns].every(Number.isFinite)
+        &&Array.isArray(r.points)&&r.points.length&&r.points.every(pt=>Array.isArray(pt)&&pt.length===2&&pt.every(Number.isFinite))));
+    if(!valid||!saved.presets.some(p=>p.id===saved.active))return;
+    STATE.cardRulePresets=saved.presets;STATE.cardRuleActivePreset=saved.active;
+  } catch { /* Missing or incompatible browser data leaves the example presets intact. */ }
 }
 
 function toggleRuleField(ruleId, field, swEl) {
@@ -4561,7 +4587,7 @@ function renderTargetEditorRow(target,index) {
     ${custom?`<div class="muted-detail" draggable="true" ondragstart="TARGET_EDITOR.dragIndex=${index}" ondragend="TARGET_EDITOR.dragIndex=null" style="cursor:grab;">⠿ 拖动排序</div>`:''}
     <div class="picker-heading"><span>${index+1} · ${label}</span><div class="button-row">${custom?`<button class="l-btn l-btn-sm" onclick="moveEditorTarget(${index},-1)" ${index===0?'disabled':''}>上移</button><button class="l-btn l-btn-sm" onclick="moveEditorTarget(${index},1)" ${index===TARGET_EDITOR.targets.length-1?'disabled':''}>下移</button>`:''}<button class="l-btn l-btn-sm" onclick="removeEditorTarget(${index},this)">${kind==='deck'?'清空此格':'移除目标'}</button></div></div>
     <button class="l-btn target-card-button" onclick="openCardPickerModal('target-editor-card',${index})">${card?`<img src="${card.img}" width="48" height="48" alt="" /><span>${html(card.name)}</span>`:'选择卡牌'}</button>
-    ${custom ? `<div class="custom-option-grid">${spec.options.map((option,i)=>`<label><span>选项 ${i+1} · ${html(option.label.replace(/\\\\n/g,' '))}</span><div class="l-stepper"><button class="l-stepper-btn" onclick="changeEditorCount(${index},${i},-1)" aria-label="减少选项 ${i+1}">−</button><span class="l-stepper-val">${target.counts[i]}</span><button class="l-stepper-btn" onclick="changeEditorCount(${index},${i},1)" aria-label="增加选项 ${i+1}">+</button></div><small class="muted-detail">最多 ${option.costs.length} 次 · ${option.costs.join(' / ')} P</small></label>`).join('')}</div><span class="muted-detail">目标次数 ${target.counts.reduce((a,b)=>a+b,0)} / 单卡上限 ${spec.max}</span>` : `<div class="target-condition-row"><label>强化状态${renderLiquidSelect('target-upgrade-'+index,[{value:'any',label:'不限'},{value:'base',label:'未强化'},{value:'upgraded',label:'已强化'}],target.upgrade,value=>{target.upgrade=value;},'min-width:115px;')}</label><label>绿豆至少<div class="l-stepper"><button class="l-stepper-btn" onclick="changeEditorCount(${index},null,-1)" aria-label="减少绿豆">−</button><span class="l-stepper-val">${target.customMin}</span><button class="l-stepper-btn" onclick="changeEditorCount(${index},null,1)" aria-label="增加绿豆">+</button></div></label><small class="muted-detail">0 为不限 · 上限 ${card?customLimit(card.name):0}</small></div>`}
+    ${custom ? `<div class="custom-option-grid">${spec.options.map((option,i)=>`<label><span>选项 ${i+1} · ${html(option.label.replace(/\\\\n/g,' '))}</span><div class="l-stepper"><button class="l-stepper-btn" onclick="changeEditorCount(${index},${i},-1)" aria-label="减少选项 ${i+1}"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h6"/></svg></button><span class="l-stepper-val">${target.counts[i]}</span><button class="l-stepper-btn" onclick="changeEditorCount(${index},${i},1)" aria-label="增加选项 ${i+1}"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h6M6 3v6"/></svg></button></div><small class="muted-detail">最多 ${option.costs.length} 次 · ${option.costs.join(' / ')} P</small></label>`).join('')}</div><span class="muted-detail">目标次数 ${target.counts.reduce((a,b)=>a+b,0)} / 单卡上限 ${spec.max}</span>` : `<div class="target-condition-row"><label>强化状态${renderLiquidSelect('target-upgrade-'+index,[{value:'any',label:'不限'},{value:'base',label:'未强化'},{value:'upgraded',label:'已强化'}],target.upgrade,value=>{target.upgrade=value;},'min-width:115px;')}</label><label>绿豆至少<div class="l-stepper"><button class="l-stepper-btn" onclick="changeEditorCount(${index},null,-1)" aria-label="减少绿豆"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h6"/></svg></button><span class="l-stepper-val">${target.customMin}</span><button class="l-stepper-btn" onclick="changeEditorCount(${index},null,1)" aria-label="增加绿豆"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h6M6 3v6"/></svg></button></div></label><small class="muted-detail">0 为不限 · 上限 ${card?customLimit(card.name):0}</small></div>`}
   </section>`;
 }
 function addEditorTarget() {
@@ -5684,6 +5710,7 @@ document.addEventListener('keydown', evt => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
+  loadCardRulePresets();
   renderApp();
 });
   </script>
