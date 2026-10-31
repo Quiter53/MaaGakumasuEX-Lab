@@ -1245,6 +1245,30 @@
     .target-summary { display:flex; flex-direction:column; gap:8px; }
     button:disabled { opacity:.4; cursor:default; }
     @media (max-width:760px) { .picker-filters { grid-template-columns:repeat(2,minmax(0,1fr)); } .picker-card-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    /* Panels share one layout solver; content stays mounted during rearrangement. */
+    .dashboard-workspace { flex:1; min-height:0; min-width:0; overflow:auto; position:relative; }
+    .dashboard-surface { position:relative; }
+    .dashboard-panel { position:absolute; display:flex; flex-direction:column; padding:16px; min-width:0; min-height:0; overflow:hidden; box-sizing:border-box; transition:left .24s cubic-bezier(.22,1,.36,1),top .24s cubic-bezier(.22,1,.36,1),width .24s cubic-bezier(.22,1,.36,1),height .24s cubic-bezier(.22,1,.36,1),opacity .18s ease; }
+    .dashboard-panel[hidden], [data-live-enable][hidden], .dashboard-drop-hint[hidden] { display:none !important; }
+    .dashboard-panel-header { flex-wrap:wrap; justify-content:flex-start !important; gap:8px; cursor:grab; user-select:none; touch-action:none; }
+    .dashboard-panel-header > :nth-child(2) { margin-right:auto; min-width:0; }
+    .dashboard-panel-header > :last-child { flex-shrink:0; }
+    .dashboard-drag-handle { flex-shrink:0; width:24px; height:30px; padding:0; font-size:20px; color:var(--text-muted); cursor:grab; box-shadow:none; background:transparent; }
+    .dashboard-drag-handle:hover { color:var(--accent); background:var(--glass-elevated); }
+    .dashboard-panel-header button { touch-action:none; }
+    .board-placeholder { opacity:.24; border:1px dashed var(--accent); }
+    .board-drag-ghost { position:fixed; z-index:95; pointer-events:none; opacity:.9; border-color:var(--accent); box-shadow:0 24px 70px rgba(0,0,0,.24),var(--specular-rim); transition:width .2s cubic-bezier(.22,1,.36,1),height .2s cubic-bezier(.22,1,.36,1); transform:scale(.985); }
+    .board-interacting { user-select:none; cursor:grabbing; }
+    .board-splitters { position:absolute; inset:0; pointer-events:none; }
+    .board-splitter { position:absolute; pointer-events:auto; touch-action:none; z-index:3; display:flex; align-items:center; justify-content:center; }
+    .board-splitter::after { content:''; background:var(--divider); border-radius:99px; transition:background .16s,opacity .16s; opacity:.4; }
+    .board-splitter.column { cursor:col-resize; }
+    .board-splitter.row { cursor:row-resize; }
+    .board-splitter.column::after { width:4px; height:36px; }
+    .board-splitter.row::after { width:36px; height:4px; }
+    .board-splitter:hover::after { background:var(--accent); opacity:.8; }
+    .dashboard-drop-hint { position:fixed; bottom:24px; left:50%; transform:translateX(-50%); z-index:99; padding:10px 18px; border-radius:18px; font-size:12px; pointer-events:none; color:var(--text-main); }
+    .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
   </style>
 </head>
 <body data-theme="light">
@@ -1565,14 +1589,8 @@ const STATE = {
   sideExpanded: true,
   activePage: 'tasks',
   maximizedCard: null,
-  liveViewOpen: true,
+  liveViewOpen: false,
 
-  layout: {
-    col1Width: 308,
-    col2Width: 468,
-    taskDescHeight: 108,
-    liveViewHeight: 215
-  },
 
   activeInstanceId: 'inst-2',
   instances: [
@@ -2136,6 +2154,7 @@ function toggleSidebarExpand() {
 }
 
 function handleSidebarNavClick(pageId, idx) {
+  cancelBoardGesture();boardObserver?.disconnect();
   closeLiquidSelectMenu();
   if (STATE.activePage === pageId) return;
   STATE.activePage = pageId;
@@ -2173,6 +2192,253 @@ function handleSidebarNavClick(pageId, idx) {
 // Part 2: Resizable Task Workspace, Blank Live View, 1:1 Original Produce Options
 // ============================================================================
 
+const DASHBOARD_PANELS = {
+  task_list:{dom:'colTaskQueue',name:'任务列表',minWidth:245},
+  task_desc:{dom:'cardTaskDesc',name:'任务说明',minWidth:220},
+  task_settings:{dom:'cardTaskSettings',name:'任务设置',minWidth:320},
+  log:{dom:'cardLogStream',name:'运行日志',minWidth:260},
+  live_view:{dom:'cardLiveView',name:'实时画面',minWidth:240}
+};
+const DASHBOARD_STORAGE = 'maagakumasu-modern-dashboard-v1';
+function defaultDashboardLayout() {
+  return {version:1,liveViewOpen:false,columns:[
+    {id:'left',weight:24,items:[{id:'task_list',weight:1},{id:'task_desc',weight:1}]},
+    {id:'center',weight:42,items:[{id:'task_settings',weight:1}]},
+    {id:'right',weight:34,items:[{id:'live_view',weight:0.7},{id:'log',weight:1}]}
+  ]};
+}
+function validDashboardLayout(layout) {
+  if(layout?.version!==1||typeof layout.liveViewOpen!=='boolean'||!Array.isArray(layout.columns)||!layout.columns.length||layout.columns.length>5)return false;
+  const ids=[],columns=new Set();
+  for(const column of layout.columns) {
+    if(typeof column.id!=='string'||columns.has(column.id)||!Number.isFinite(column.weight)||column.weight<=0||!Array.isArray(column.items)||!column.items.length)return false;
+    columns.add(column.id);
+    for(const item of column.items) {
+      if(!Object.hasOwn(DASHBOARD_PANELS,item.id)||!Number.isFinite(item.weight)||item.weight<=0)return false;
+      ids.push(item.id);
+    }
+  }
+  return ids.length===5&&new Set(ids).size===5;
+}
+function loadDashboardLayout() {
+  try {const saved=JSON.parse(localStorage.getItem(DASHBOARD_STORAGE));if(validDashboardLayout(saved))return saved;} catch {}
+  return defaultDashboardLayout();
+}
+let DASHBOARD_LAYOUT=loadDashboardLayout();
+STATE.liveViewOpen=DASHBOARD_LAYOUT.liveViewOpen;
+let boardGesture=null, boardObserver=null, boardFrame=0;
+const boardVisible = id => id!=='live_view'||STATE.liveViewOpen;
+function saveDashboardLayout() {
+  DASHBOARD_LAYOUT.liveViewOpen=STATE.liveViewOpen;
+  try {localStorage.setItem(DASHBOARD_STORAGE,JSON.stringify(DASHBOARD_LAYOUT));}
+  catch {showToast('布局已应用','浏览器未允许本地保存，关闭页面后不会保留。');}
+}
+
+// Allocate within a shared budget. Minimum sizes are satisfied before distributing
+// the remaining space, so there are never independently sized overlapping cards.
+function allocateBoardSpace(total,weights,minimums) {
+  const sizes=Array(weights.length).fill(0);let pending=weights.map((_,i)=>i),remaining=total;
+  while(pending.length) {
+    const sum=pending.reduce((n,i)=>n+weights[i],0);
+    const constrained=pending.filter(i=>remaining*weights[i]/sum<minimums[i]);
+    if(!constrained.length){pending.forEach(i=>sizes[i]=remaining*weights[i]/sum);break;}
+    constrained.forEach(i=>{sizes[i]=minimums[i];remaining-=minimums[i];});
+    pending=pending.filter(i=>!constrained.includes(i));
+  }
+  return sizes;
+}
+function dashboardViewport(workspace) {
+  return [workspace.clientWidth, Math.floor(workspace.getBoundingClientRect().height)-(workspace.offsetHeight-workspace.clientHeight)];
+}
+function dashboardGeometry(layout,width,height) {
+  const gap=14,minHeight=146;
+  const columns=layout.columns.map(c=>({...c,items:c.items.filter(i=>boardVisible(i.id))})).filter(c=>c.items.length);
+  const mins=columns.map(c=>Math.max(...c.items.map(i=>DASHBOARD_PANELS[i.id].minWidth)));
+  width=Math.max(width,mins.reduce((a,b)=>a+b,0)+gap*(columns.length-1));
+  height=Math.max(height,...columns.map(c=>c.items.length*minHeight+gap*(c.items.length-1)));
+  const widths=allocateBoardSpace(width-gap*(columns.length-1),columns.map(c=>c.weight),mins);
+  const rects={},cols=[];let x=0;
+  columns.forEach((col,index)=>{
+    const heights=allocateBoardSpace(height-gap*(col.items.length-1),col.items.map(i=>i.weight),col.items.map(()=>minHeight));
+    let y=0;
+    col.items.forEach((item,i)=>{rects[item.id]={x,y,width:widths[index],height:heights[i],column:col.id};y+=heights[i]+gap;});
+    cols.push({...col,x,width:widths[index],minWidth:mins[index]});x+=widths[index]+gap;
+  });
+  return {width,height,rects,columns:cols};
+}
+function mountDashboard() {
+  cancelBoardGesture();boardObserver?.disconnect();
+  const workspace=document.getElementById('dashboardWorkspace');
+  if(!workspace)return;
+  boardObserver=new ResizeObserver(()=>{
+    cancelAnimationFrame(boardFrame);
+    boardFrame=requestAnimationFrame(()=>{if(!boardGesture)applyDashboardLayout();});
+  });
+  boardObserver.observe(workspace);applyDashboardLayout();
+}
+function applyDashboardLayout(layout=DASHBOARD_LAYOUT) {
+  const workspace=document.getElementById('dashboardWorkspace'),surface=document.getElementById('dashboardSurface');
+  if(!workspace||!surface)return null;
+  const max=STATE.maximizedCard;
+  const geometry=max?{width:dashboardViewport(workspace)[0],height:dashboardViewport(workspace)[1],columns:[],rects:{[max]:{x:0,y:0,width:dashboardViewport(workspace)[0],height:dashboardViewport(workspace)[1]}}}
+    :dashboardGeometry(layout,...dashboardViewport(workspace));
+  surface.style.width=geometry.width+'px';surface.style.height=geometry.height+'px';
+  for(const [id,panel] of Object.entries(DASHBOARD_PANELS)) {
+    const element=document.getElementById(panel.dom),rect=geometry.rects[id];
+    element.hidden=!rect;
+    if(rect)Object.assign(element.style,{left:rect.x+'px',top:rect.y+'px',width:rect.width+'px',height:rect.height+'px'});
+    element.querySelector('.dashboard-drag-handle').disabled=!!max;
+  }
+  renderBoardSplitters(geometry);return geometry;
+}
+function renderBoardSplitters(geometry) {
+  const host=document.getElementById('dashboardSplitters');
+  host.innerHTML='';if(STATE.maximizedCard||boardGesture?.type==='move')return;
+  const add=(kind,a,b,x,y,width,height)=>{
+    const grip=document.createElement('div');grip.className='board-splitter '+kind;
+    grip.title=kind==='column'?'拖动调整相邻列宽度':'拖动调整同列面板高度';
+    Object.assign(grip.style,{left:x+'px',top:y+'px',width:width+'px',height:height+'px'});
+    grip.onpointerdown=event=>startBoardResize(event,kind,a,b);host.appendChild(grip);
+  };
+  geometry.columns.forEach((col,i)=>{
+    if(i<geometry.columns.length-1)add('column',col.id,geometry.columns[i+1].id,col.x+col.width,0,14,geometry.height);
+    col.items.forEach((item,j)=>{if(j<col.items.length-1){const r=geometry.rects[item.id];add('row',item.id,col.items[j+1].id,r.x,r.y+r.height,r.width,14);}});
+  });
+}
+
+function moveDashboardPanel(base,id,target,edge) {
+  if(id===target)return structuredClone(base);
+  const next=structuredClone(base),source=next.columns.find(c=>c.items.some(i=>i.id===id)),dest=next.columns.find(c=>c.items.some(i=>i.id===target));
+  const item=source.items.find(i=>i.id===id);source.items=source.items.filter(i=>i.id!==id);
+  if(edge==='left'||edge==='right') {
+    const column={id:'column-'+id,weight:dest.weight/2,items:[{id,weight:1}]};
+    // Column IDs follow the card, but may already exist after moving it away.
+    while(next.columns.some(c=>c.id===column.id))column.id+='-new';
+    dest.weight/=2;next.columns.splice(next.columns.indexOf(dest)+(edge==='right'?1:0),0,column);
+  } else {
+    const at=dest.items.findIndex(i=>i.id===target);
+    if(source!==dest){dest.items[at].weight/=2;item.weight=dest.items[at].weight;}
+    dest.items.splice(at+(edge==='bottom'?1:0),0,item);
+  }
+  next.columns=next.columns.filter(c=>c.items.length);return next;
+}
+function boardDropTarget(gesture,event) {
+  const workspace=document.getElementById('dashboardWorkspace'),bounds=workspace.getBoundingClientRect();
+  if(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)return null;
+  const x=event.clientX-bounds.left+workspace.scrollLeft,y=event.clientY-bounds.top+workspace.scrollTop;
+  // Hit-test the stable pre-drag layout: animated neighbours cannot chase the cursor.
+  let best=null,distance=Infinity;
+  for(const [id,r] of Object.entries(gesture.geometry.rects)) {
+    const dx=Math.max(r.x-x,0,x-r.x-r.width),dy=Math.max(r.y-y,0,y-r.y-r.height),d=dx*dx+dy*dy;
+    if(d<distance){best={id,r};distance=d;}
+  }
+  if(!best||best.id===gesture.id)return null;
+  const {id,r}=best,relative=(x-r.x)/r.width;
+  return {id,edge:relative<.22?'left':relative>.78?'right':y<r.y+r.height/2?'top':'bottom'};
+}
+function startBoardMove(event,id) {
+  if(event.button!==0||STATE.maximizedCard)return;
+  if(event.target.closest('button,input,select,a')&&!event.target.closest('.dashboard-drag-handle'))return;
+  event.preventDefault();closeLiquidSelectMenu();
+  const panel=document.getElementById(DASHBOARD_PANELS[id].dom),rect=panel.getBoundingClientRect();
+  beginBoardGesture(event,{type:'move',id,panel,anchor:(event.clientX-rect.left)/rect.width,offsetY:event.clientY-rect.top,
+    geometry:dashboardGeometry(DASHBOARD_LAYOUT,...dashboardViewport(document.getElementById('dashboardWorkspace')))});
+}
+function beginBoardGesture(event,details) {
+  cancelBoardGesture();
+  boardGesture={...details,startX:event.clientX,startY:event.clientY,pointerId:event.pointerId,base:structuredClone(DASHBOARD_LAYOUT),preview:null,started:false,zone:'',capture:event.currentTarget};
+  boardGesture.capture.setPointerCapture(event.pointerId);
+  document.addEventListener('pointermove',updateBoardGesture);
+  document.addEventListener('pointerup',endBoardGesture);
+  document.addEventListener('pointercancel',cancelBoardGesture);
+  boardGesture.capture.addEventListener('lostpointercapture',cancelBoardGesture);
+  window.addEventListener('blur',cancelBoardGesture);
+}
+function updateBoardGesture(event) {
+  const g=boardGesture;if(!g||event.pointerId!==g.pointerId)return;
+  if(!g.started&&Math.hypot(event.clientX-g.startX,event.clientY-g.startY)<6)return;
+  if(!g.started) {
+    g.started=true;document.body.classList.add('board-interacting');
+    if(g.type==='move') {
+      g.ghost=g.panel.cloneNode(true);g.ghost.removeAttribute('id');g.ghost.removeAttribute('data-panel-id');g.ghost.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));
+      g.ghost.classList.add('board-drag-ghost');g.ghost.setAttribute('aria-hidden','true');g.ghost.inert=true;
+      document.body.appendChild(g.ghost);g.panel.classList.add('board-placeholder');
+    }
+  }
+  if(g.type==='resize'){updateBoardResize(event,g);return;}
+  const workspace=document.getElementById('dashboardWorkspace'),b=workspace.getBoundingClientRect();
+  if(event.clientX<b.left+28)workspace.scrollLeft-=16;
+  if(event.clientX>b.right-28)workspace.scrollLeft+=16;
+  if(event.clientY<b.top+28)workspace.scrollTop-=16;
+  if(event.clientY>b.bottom-28)workspace.scrollTop+=16;
+  const target=boardDropTarget(g,event),zone=target?target.id+':'+target.edge:'';
+  if(zone!==g.zone||!g.preview) {
+    g.zone=zone;g.preview=target?moveDashboardPanel(g.base,g.id,target.id,target.edge):structuredClone(g.base);
+    g.nextGeometry=applyDashboardLayout(g.preview);
+    const hint=document.getElementById('dashboardDropHint');
+    hint.hidden=false;hint.textContent=target?`${DASHBOARD_PANELS[target.id].name}${{left:'左侧新列',right:'右侧新列',top:'上方',bottom:'下方'}[target.edge]} · 松开放置`:'拖向面板上／下方叠放，左／右侧分列 · Esc 取消';
+  }
+  const r=(g.nextGeometry||g.geometry).rects[g.id];
+  Object.assign(g.ghost.style,{left:(event.clientX-r.width*g.anchor)+'px',top:(event.clientY-Math.min(g.offsetY,40))+'px',width:r.width+'px',height:r.height+'px'});
+}
+function endBoardGesture(event) {
+  const g=boardGesture;if(!g||event.pointerId!==g.pointerId)return;
+  const commit=g.started&&g.preview&&(g.type==='resize'||!!boardDropTarget(g,event));
+  if(commit){DASHBOARD_LAYOUT=g.preview;saveDashboardLayout();}
+  cleanupBoardGesture();applyDashboardLayout();
+}
+function cleanupBoardGesture() {
+  const g=boardGesture;if(!g)return;
+  boardGesture=null;
+  document.removeEventListener('pointermove',updateBoardGesture);document.removeEventListener('pointerup',endBoardGesture);
+  document.removeEventListener('pointercancel',cancelBoardGesture);window.removeEventListener('blur',cancelBoardGesture);
+  g.capture.removeEventListener('lostpointercapture',cancelBoardGesture);
+  if(g.capture.hasPointerCapture(g.pointerId))g.capture.releasePointerCapture(g.pointerId);
+  g.panel?.classList.remove('board-placeholder');g.ghost?.remove();document.body.classList.remove('board-interacting');
+  const hint=document.getElementById('dashboardDropHint');if(hint)hint.hidden=true;
+}
+function cancelBoardGesture(){if(boardGesture){cleanupBoardGesture();applyDashboardLayout();}}
+function startBoardResize(event,kind,a,b) {
+  if(event.button!==0)return;event.preventDefault();event.stopPropagation();
+  const workspace=document.getElementById('dashboardWorkspace');
+  // Capture on the persistent surface; splitter DOM can be rebuilt during resize.
+  const geometry=dashboardGeometry(DASHBOARD_LAYOUT,...dashboardViewport(workspace));
+  beginBoardGesture(event,{type:'resize',kind,a,b,geometry});
+  const g=boardGesture;g.capture.removeEventListener('lostpointercapture',cancelBoardGesture);
+  g.capture.releasePointerCapture(event.pointerId);g.capture=document.getElementById('dashboardSurface');
+  g.capture.setPointerCapture(event.pointerId);g.capture.addEventListener('lostpointercapture',cancelBoardGesture);
+}
+function updateBoardResize(event,g) {
+  const next=structuredClone(g.base);
+  if(g.kind==='column') {
+    for(const c of g.geometry.columns)next.columns.find(col=>col.id===c.id).weight=c.width;
+    const a=g.geometry.columns.find(c=>c.id===g.a),b=g.geometry.columns.find(c=>c.id===g.b),total=a.width+b.width;
+    const width=Math.max(a.minWidth,Math.min(total-b.minWidth,a.width+event.clientX-g.startX));
+    next.columns.find(c=>c.id===g.a).weight=width;next.columns.find(c=>c.id===g.b).weight=total-width;
+  } else {
+    const a=g.geometry.rects[g.a],b=g.geometry.rects[g.b],column=next.columns.find(c=>c.id===a.column),total=a.height+b.height;
+    column.items.forEach(i=>{if(g.geometry.rects[i.id])i.weight=g.geometry.rects[i.id].height;});
+    const height=Math.max(146,Math.min(total-146,a.height+event.clientY-g.startY));
+    column.items.find(i=>i.id===g.a).weight=height;column.items.find(i=>i.id===g.b).weight=total-height;
+  }
+  g.preview=next;applyDashboardLayout(next);
+}
+function keyboardMovePanel(event,id) {
+  if(!event.key.startsWith('Arrow')||STATE.maximizedCard)return;
+  event.preventDefault();const columns=DASHBOARD_LAYOUT.columns.filter(c=>c.items.some(i=>boardVisible(i.id))),ci=columns.findIndex(c=>c.items.some(i=>i.id===id));
+  const items=columns[ci].items.filter(i=>boardVisible(i.id)),at=items.findIndex(i=>i.id===id);
+  let target,edge;
+  if(event.key==='ArrowUp'||event.key==='ArrowDown'){const delta=event.key==='ArrowUp'?-1:1;target=items[at+delta]?.id;edge=delta<0?'top':'bottom';}
+  else {const delta=event.key==='ArrowLeft'?-1:1;target=columns[ci+delta]?.items.find(i=>boardVisible(i.id))?.id;edge='bottom';}
+  if(target){DASHBOARD_LAYOUT=moveDashboardPanel(DASHBOARD_LAYOUT,id,target,edge);saveDashboardLayout();applyDashboardLayout();announceDashboardMove(id);}
+}
+function announceDashboardMove(id){const region=document.getElementById('dashboardAnnouncement');region.textContent=DASHBOARD_PANELS[id].name+'位置已更新';}
+function resetDashboardLayout() {
+  cancelBoardGesture();DASHBOARD_LAYOUT=defaultDashboardLayout();STATE.liveViewOpen=false;STATE.maximizedCard=null;
+  saveDashboardLayout();renderTaskQueuePage(false);showToast('已恢复默认布局','左侧任务列表与说明，中间任务设置，右侧日志');
+}
+
+
 function renderTaskQueuePage(animateStage = false) {
   const inst = currentInst();
   const selectedTask = inst.tasks.find(t => t.id === inst.selectedTaskId) || inst.tasks[0];
@@ -2182,7 +2448,6 @@ function renderTaskQueuePage(animateStage = false) {
     ? ['127.0.0.1:16384 (MuMu 12)', '127.0.0.1:16416 (MuMu #2)', '127.0.0.1:5555 (雷电 9)']
     : ['gakumas.exe (DMM 窗口)', 'gakumas.exe (后台句柄)'];
 
-  const max = STATE.maximizedCard;
 
   host.innerHTML = `
     <div class="${animateStage ? 'stage-slide' : ''}" style="display:flex; flex-direction:column; flex:1; min-height:0; gap:14px; overflow:hidden;">
@@ -2211,13 +2476,14 @@ function renderTaskQueuePage(animateStage = false) {
 
         <!-- Right Actions: Live View Toggle + Connection Status + Start/Stop Button -->
         <div style="display:flex; align-items:center; gap:10px;">
-          <button onclick="toggleLiveViewCard()" class="l-btn l-btn-sm"
+          <button id="dashboardLiveToggle" onclick="toggleLiveViewCard()" class="l-btn l-btn-sm"
                   style="color:${STATE.liveViewOpen ? 'var(--accent)' : 'var(--text-sub)'}; border-color:${STATE.liveViewOpen ? 'rgba(var(--accent-rgb),0.4)' : 'var(--border-outer)'};"
-                  title="开启或关闭右侧实时画面窗口">
+                  title="开启或关闭实时画面面板">
             ${STATE.liveViewOpen ? ICONS.eye : ICONS.eyeOff}
             <span>实时画面：${STATE.liveViewOpen ? '开启' : '关闭'}</span>
           </button>
 
+          <button onclick="resetDashboardLayout()" class="l-btn l-btn-sm" title="恢复默认面板位置和尺寸">恢复布局</button>
           <button onclick="reconnectDevice()" class="l-btn l-btn-sm">
             <span style="width:7px; height:7px; border-radius:999px; background:${inst.connected ? 'var(--success)' : 'var(--danger)'};"></span>
             <span>${inst.connected ? '设备已就绪' : '点击重连'}</span>
@@ -2231,20 +2497,13 @@ function renderTaskQueuePage(animateStage = false) {
         </div>
       </div>
 
-      <!-- Row 1: 3 Resizable Columns with 4-Edge Drag Handles & Splitters -->
-      <div id="dashboardWorkspace" style="display:flex; flex:1; min-height:0; overflow:hidden; position:relative;">
-        <!-- Column 1: Task Queue Card (With Live Drag & Shift Physics) -->
-        <section id="colTaskQueue"
-                 class="liquid-panel resizable-card"
-                 style="width:${max === 'task_list' ? '100%' : `${STATE.layout.col1Width}px`}; min-width:240px; display:${max && max !== 'task_list' ? 'none' : 'flex'}; flex-direction:column; min-height:0; padding:16px; flex-shrink:0;">
-          <div class="edge-grip edge-e" onmousedown="startResizeDrag(event, 'col1')"></div>
-          <div class="edge-grip edge-w" onmousedown="startResizeDrag(event, 'col1-left')"></div>
-          <div class="edge-grip edge-n" onmousedown="startResizeDrag(event, 'col1-top')"></div>
-          <div class="edge-grip edge-s" onmousedown="startResizeDrag(event, 'col1-bottom')"></div>
+      <div id="dashboardWorkspace" class="dashboard-workspace">
+        <div id="dashboardSurface" class="dashboard-surface">
+<section id="colTaskQueue" data-panel-id="task_list" class="liquid-panel dashboard-panel">
 
-          <div style="display:flex; align-items:center; justify-content:space-between; padding-bottom:12px; margin-bottom:10px; border-bottom:1px solid var(--divider); flex-shrink:0;">
+          <div class="dashboard-panel-header" onpointerdown="startBoardMove(event, 'task_list')" style="display:flex; align-items:center; justify-content:space-between; padding-bottom:12px; margin-bottom:10px; border-bottom:1px solid var(--divider); flex-shrink:0;"><button class="l-btn l-btn-icon dashboard-drag-handle" aria-label="移动任务列表" title="拖动排列；也可聚焦后用方向键移动" onkeydown="keyboardMovePanel(event, 'task_list')">⠿</button>
             <div>
-              <div style="font-weight:700; font-size:14px;">任务队列</div>
+              <div style="font-weight:700; font-size:14px;">任务列表</div>
               <div id="taskQueueCountLabel" style="font-size:11.5px; color:var(--text-sub); margin-top:2px;">
                 已启用 ${inst.tasks.filter(t => t.checked).length}/${inst.tasks.length} 项
               </div>
@@ -2260,23 +2519,19 @@ function renderTaskQueuePage(animateStage = false) {
             ${renderTaskQueueItemsHtml(inst)}
           </div>
         </section>
+<section id="cardTaskDesc" data-panel-id="task_desc" class="liquid-panel dashboard-panel">
 
-        <!-- Splitter 1 (Between Col 1 and Col 2) -->
-        <div class="col-splitter" style="display:${max ? 'none' : 'flex'};" onmousedown="startResizeDrag(event, 'col1')" title="左右拖动调整宽度"></div>
+            <div class="dashboard-panel-header" onpointerdown="startBoardMove(event, 'task_desc')" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px; flex-shrink:0;"><button class="l-btn l-btn-icon dashboard-drag-handle" aria-label="移动任务说明" title="拖动排列；也可聚焦后用方向键移动" onkeydown="keyboardMovePanel(event, 'task_desc')">⠿</button>
+              <span style="font-size:12px; font-weight:700; color:var(--text-sub);">任务说明</span>
+              <button onclick="toggleMaximizeCard('task_desc')" class="l-btn l-btn-icon l-btn-sm" style="width:24px; height:24px;" title="最大化/还原">${ICONS.expand}</button>
+            </div>
+            <div id="taskDescBody" style="flex:1; overflow-y:auto; font-size:12px; color:var(--text-sub); line-height:1.55;">
+              ${selectedTask.doc}
+            </div>
+          </section>
+<section id="cardTaskSettings" data-panel-id="task_settings" class="liquid-panel dashboard-panel">
 
-        <!-- Column 2: Task Settings Card (Top) + Task Description Card (Bottom) -->
-        <div id="colTaskCenter"
-             style="width:${max === 'task_settings' || max === 'task_desc' ? '100%' : `${STATE.layout.col2Width}px`}; min-width:340px; display:${max && max !== 'task_settings' && max !== 'task_desc' ? 'none' : 'flex'}; flex-direction:column; min-height:0; flex-shrink:0;">
-          <!-- Top: Task Settings Card -->
-          <section id="cardTaskSettings"
-                   class="liquid-panel resizable-card"
-                   style="flex:1; min-height:180px; display:${max === 'task_desc' ? 'none' : 'flex'}; flex-direction:column; padding:16px; overflow:hidden;">
-            <div class="edge-grip edge-e" onmousedown="startResizeDrag(event, 'col2')"></div>
-            <div class="edge-grip edge-w" onmousedown="startResizeDrag(event, 'col1')"></div>
-            <div class="edge-grip edge-s" onmousedown="startResizeDrag(event, 'descHeight')"></div>
-            <div class="edge-grip edge-n" onmousedown="startResizeDrag(event, 'col2-top')"></div>
-
-            <div style="display:flex; align-items:center; justify-content:space-between; padding-bottom:12px; margin-bottom:12px; border-bottom:1px solid var(--divider); flex-shrink:0;">
+            <div class="dashboard-panel-header" onpointerdown="startBoardMove(event, 'task_settings')" style="display:flex; align-items:center; justify-content:space-between; padding-bottom:12px; margin-bottom:12px; border-bottom:1px solid var(--divider); flex-shrink:0;"><button class="l-btn l-btn-icon dashboard-drag-handle" aria-label="移动任务设置" title="拖动排列；也可聚焦后用方向键移动" onkeydown="keyboardMovePanel(event, 'task_settings')">⠿</button>
               <div>
                 <div id="taskSettingsTitle" style="font-weight:700; font-size:14px;">${selectedTask.name} · 参数设置</div>
               </div>
@@ -2287,42 +2542,28 @@ function renderTaskQueuePage(animateStage = false) {
               ${renderTaskSpecificOptions(selectedTask)}
             </div>
           </section>
+<section id="cardLogStream" data-panel-id="log" class="liquid-panel dashboard-panel">
 
-          <!-- Horizontal Splitter (Between Settings and Description) -->
-          <div class="row-splitter" style="display:${max ? 'none' : 'flex'};" onmousedown="startResizeDrag(event, 'descHeight')" title="上下拖动调整说明框高度"></div>
-
-          <!-- Bottom: Task Description Card (Separate Resizable Block) -->
-          <section id="cardTaskDesc"
-                   class="liquid-panel resizable-card"
-                   style="height:${max === 'task_desc' ? '100%' : `${STATE.layout.taskDescHeight}px`}; min-height:82px; display:${max === 'task_settings' ? 'none' : 'flex'}; flex-direction:column; padding:12px 16px; flex-shrink:0; overflow:hidden;">
-            <div class="edge-grip edge-n" onmousedown="startResizeDrag(event, 'descHeight')"></div>
-            <div class="edge-grip edge-e" onmousedown="startResizeDrag(event, 'col2')"></div>
-            <div class="edge-grip edge-w" onmousedown="startResizeDrag(event, 'col1')"></div>
-
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px; flex-shrink:0;">
-              <span style="font-size:12px; font-weight:700; color:var(--text-sub);">任务说明</span>
-              <button onclick="toggleMaximizeCard('task_desc')" class="l-btn l-btn-icon l-btn-sm" style="width:24px; height:24px;" title="最大化/还原">${ICONS.expand}</button>
+            <div class="dashboard-panel-header" onpointerdown="startBoardMove(event, 'log')" style="display:flex; align-items:center; justify-content:space-between; padding-bottom:10px; margin-bottom:10px; border-bottom:1px solid var(--divider); flex-shrink:0;"><button class="l-btn l-btn-icon dashboard-drag-handle" aria-label="移动运行日志" title="拖动排列；也可聚焦后用方向键移动" onkeydown="keyboardMovePanel(event, 'log')">⠿</button>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-weight:700; font-size:13.5px;">运行日志</span>
+                <span style="font-size:11.5px; color:var(--text-sub);">${STATE.logs.length} 条记录</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:6px;">
+                <button data-live-enable onclick="toggleLiveViewCard()" class="l-btn l-btn-sm" style="color:var(--accent);" ${STATE.liveViewOpen ? 'hidden' : ''}>展开实况</button>
+                <button onclick="openExportLogModal()" class="l-btn l-btn-sm">导出日志</button>
+                <button onclick="clearLogs()" class="l-btn l-btn-icon l-btn-sm" title="清空日志">${ICONS.refresh}</button>
+                <button onclick="toggleMaximizeCard('log')" class="l-btn l-btn-icon l-btn-sm" title="最大化/还原">${ICONS.expand}</button>
+              </div>
             </div>
-            <div id="taskDescBody" style="flex:1; overflow-y:auto; font-size:12px; color:var(--text-sub); line-height:1.55;">
-              ${selectedTask.doc}
+
+            <div id="logFeedContainer" style="flex:1; min-height:0; overflow-y:auto; display:flex; flex-direction:column; gap:7px; padding-right:4px;">
+              ${renderLogItemsHtml()}
             </div>
           </section>
-        </div>
+<section id="cardLiveView" data-panel-id="live_view" class="liquid-panel dashboard-panel">
 
-        <!-- Splitter 2 (Between Col 2 and Col 3) -->
-        <div class="col-splitter" style="display:${max ? 'none' : 'flex'};" onmousedown="startResizeDrag(event, 'col2')" title="左右拖动调整宽度"></div>
-
-        <!-- Column 3: Separate Live View Card (Blank Canvas) + Separate Log Card -->
-        <div id="colRightStage"
-             style="flex:1; min-width:280px; display:${max && max !== 'live_view' && max !== 'log' ? 'none' : 'flex'}; flex-direction:column; min-height:0;">
-          <!-- Top: Separate Live View Card (Completely Blank Inside as Requested) -->
-          <section id="cardLiveView"
-                   class="liquid-panel resizable-card"
-                   style="height:${max === 'live_view' ? '100%' : `${STATE.layout.liveViewHeight}px`}; min-height:140px; display:${(!STATE.liveViewOpen || max === 'log') ? 'none' : 'flex'}; flex-direction:column; padding:14px 16px; flex-shrink:0; overflow:hidden;">
-            <div class="edge-grip edge-s" onmousedown="startResizeDrag(event, 'liveHeight')"></div>
-            <div class="edge-grip edge-w" onmousedown="startResizeDrag(event, 'col2')"></div>
-
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; flex-shrink:0;">
+            <div class="dashboard-panel-header" onpointerdown="startBoardMove(event, 'live_view')" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; flex-shrink:0;"><button class="l-btn l-btn-icon dashboard-drag-handle" aria-label="移动实时画面" title="拖动排列；也可聚焦后用方向键移动" onkeydown="keyboardMovePanel(event, 'live_view')">⠿</button>
               <div style="display:flex; align-items:center; gap:8px;">
                 <span style="width:8px; height:8px; border-radius:999px; background:${inst.running ? 'var(--success)' : 'var(--accent)'};"></span>
                 <span style="font-weight:700; font-size:13.5px;">实时画面</span>
@@ -2337,42 +2578,16 @@ function renderTaskQueuePage(animateStage = false) {
               ${renderSimulatedGameCanvas()}
             </div>
           </section>
-
-          <!-- Horizontal Splitter (Between Live View and Log Card) -->
-          <div id="liveLogSplitter" class="row-splitter"
-               style="display:${(!STATE.liveViewOpen || max) ? 'none' : 'flex'};"
-               onmousedown="startResizeDrag(event, 'liveHeight')" title="上下拖动调整实况与日志高度"></div>
-
-          <!-- Bottom: Separate Running Log Card -->
-          <section id="cardLogStream"
-                   class="liquid-panel resizable-card"
-                   style="flex:1; min-height:150px; display:${max === 'live_view' ? 'none' : 'flex'}; flex-direction:column; padding:14px 16px; overflow:hidden;">
-            <div class="edge-grip edge-n" onmousedown="startResizeDrag(event, 'liveHeight')"></div>
-            <div class="edge-grip edge-w" onmousedown="startResizeDrag(event, 'col2')"></div>
-
-            <div style="display:flex; align-items:center; justify-content:space-between; padding-bottom:10px; margin-bottom:10px; border-bottom:1px solid var(--divider); flex-shrink:0;">
-              <div style="display:flex; align-items:center; gap:8px;">
-                <span style="font-weight:700; font-size:13.5px;">运行日志</span>
-                <span style="font-size:11.5px; color:var(--text-sub);">${STATE.logs.length} 条记录</span>
-              </div>
-              <div style="display:flex; align-items:center; gap:6px;">
-                ${!STATE.liveViewOpen ? `<button onclick="toggleLiveViewCard()" class="l-btn l-btn-sm" style="color:var(--accent);">展开实况</button>` : ''}
-                <button onclick="openExportLogModal()" class="l-btn l-btn-sm">导出日志</button>
-                <button onclick="clearLogs()" class="l-btn l-btn-icon l-btn-sm" title="清空日志">${ICONS.refresh}</button>
-                <button onclick="toggleMaximizeCard('log')" class="l-btn l-btn-icon l-btn-sm" title="最大化/还原">${ICONS.expand}</button>
-              </div>
-            </div>
-
-            <div id="logFeedContainer" style="flex:1; min-height:0; overflow-y:auto; display:flex; flex-direction:column; gap:7px; padding-right:4px;">
-              ${renderLogItemsHtml()}
-            </div>
-          </section>
+          <div id="dashboardSplitters" class="board-splitters"></div>
         </div>
       </div>
+      <div id="dashboardDropHint" class="dashboard-drop-hint liquid-panel" hidden></div>
+      <span id="dashboardAnnouncement" class="sr-only" role="status" aria-live="polite"></span>
     </div>
   `;
 
   syncAllSegmentedThumbs();
+  mountDashboard();
 }
 
 function renderTaskQueueItemsHtml(inst) {
@@ -4699,48 +4914,7 @@ function openChangelogModal() {
 // ============================================================================
 // 4-Edge & Splitter Drag Resize Engine
 // ============================================================================
-function startResizeDrag(evt, mode) {
-  evt.preventDefault();
-  evt.stopPropagation();
-  const startX = evt.clientX;
-  const startY = evt.clientY;
-  const startCol1 = STATE.layout.col1Width;
-  const startCol2 = STATE.layout.col2Width;
-  const startDescH = STATE.layout.taskDescHeight;
-  const startLiveH = STATE.layout.liveViewHeight;
 
-  function onMove(e) {
-    const dx = e.clientX - startX;
-    const dy = e.clientY - startY;
-
-    if (mode === 'col1') {
-      STATE.layout.col1Width = Math.max(240, Math.min(480, startCol1 + dx));
-      const el = document.getElementById('colTaskQueue');
-      if (el) el.style.width = `${STATE.layout.col1Width}px`;
-    } else if (mode === 'col2') {
-      STATE.layout.col2Width = Math.max(340, Math.min(640, startCol2 + dx));
-      const el = document.getElementById('colTaskCenter');
-      if (el) el.style.width = `${STATE.layout.col2Width}px`;
-    } else if (mode === 'descHeight') {
-      STATE.layout.taskDescHeight = Math.max(82, Math.min(280, startDescH - dy));
-      const el = document.getElementById('cardTaskDesc');
-      if (el) el.style.height = `${STATE.layout.taskDescHeight}px`;
-    } else if (mode === 'liveHeight') {
-      STATE.layout.liveViewHeight = Math.max(140, Math.min(420, startLiveH + dy));
-      const el = document.getElementById('cardLiveView');
-      if (el) el.style.height = `${STATE.layout.liveViewHeight}px`;
-    }
-    syncAllSegmentedThumbs();
-  }
-
-  function onUp() {
-    window.removeEventListener('mousemove', onMove);
-    window.removeEventListener('mouseup', onUp);
-  }
-
-  window.addEventListener('mousemove', onMove);
-  window.addEventListener('mouseup', onUp);
-}
 
 // ============================================================================
 // Non-Destructive Interactive Handlers (No Screen Flash!)
@@ -4849,13 +5023,23 @@ function onDeviceSelectChange(val) {
 }
 
 function toggleLiveViewCard() {
-  STATE.liveViewOpen = !STATE.liveViewOpen;
-  renderTaskQueuePage(false);
+  cancelBoardGesture();STATE.liveViewOpen=!STATE.liveViewOpen;
+  if(!STATE.liveViewOpen&&STATE.maximizedCard==='live_view')STATE.maximizedCard=null;
+  saveDashboardLayout();
+  const button=document.getElementById('dashboardLiveToggle');
+  if(button) {
+    button.innerHTML=`${STATE.liveViewOpen?ICONS.eye:ICONS.eyeOff}<span>实时画面：${STATE.liveViewOpen?'开启':'关闭'}</span>`;
+    button.style.color=STATE.liveViewOpen?'var(--accent)':'var(--text-sub)';
+    button.style.borderColor=STATE.liveViewOpen?'rgba(var(--accent-rgb),0.4)':'var(--border-outer)';
+  }
+  document.querySelectorAll('[data-live-enable]').forEach(el=>el.hidden=STATE.liveViewOpen);
+  applyDashboardLayout();
 }
 
 function toggleMaximizeCard(cardKey) {
+  cancelBoardGesture();
   STATE.maximizedCard = STATE.maximizedCard === cardKey ? null : cardKey;
-  renderTaskQueuePage(false);
+  applyDashboardLayout();
 }
 
 function selectTask(taskId) {
@@ -5474,6 +5658,7 @@ document.addEventListener('pointermove', (e) => {
 });
 
 window.addEventListener('resize', () => {
+  cancelBoardGesture();
   closeLiquidSelectMenu();
   syncAllSegmentedThumbs();
 });
@@ -5491,6 +5676,7 @@ document.addEventListener('keydown', evt => {
     }
   }
   if (evt.key !== 'Escape') return;
+  if(boardGesture){evt.preventDefault();cancelBoardGesture();return;}
   if (ACTIVE_LIQUID_SELECT_ID !== null) closeLiquidSelectMenu();
   else if (document.getElementById('pickerResults')) cancelCardPicker();
   else if (document.getElementById('modalOverlay').style.display !== 'none') closeModal();
