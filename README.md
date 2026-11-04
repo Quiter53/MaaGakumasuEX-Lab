@@ -2,7 +2,7 @@
 
 Quiter53 的训练、回归测试与截图回放环境。仓库当前公开，本次游戏原图已由用户确认公开上传。主程序继续在 [MaaGakumasuEX](https://github.com/Quiter53/MaaGakumasuEX) 维护；这里通过 `source` 子模块固定对应源码，不另存一套程序逻辑。
 
-目前固定源码提交为 `0a9e4bb5e5ad834b873daf1acd3bf4fa41783e50`（v2.2.0 正式版，包含原生界面、配置保存、更新解压与发行包依赖修复；[下载正式版](https://github.com/Quiter53/MaaGakumasuEX/releases/tag/v2.2.0)）。版本号一致仍可能有不同的代码，以子模块提交为准。
+目前固定源码提交为 `e974586d1d26522952dcbbb0c117b64e7af42408`（v2.2.0 正式版，包含原生界面、配置保存、更新解压与发行包依赖修复；[下载正式版](https://github.com/Quiter53/MaaGakumasuEX/releases/tag/v2.2.0)）。版本号一致仍可能有不同的代码，以子模块提交为准。
 
 ## 界面原型
 
