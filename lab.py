@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import sys
 import time
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / "source"
@@ -16,7 +17,7 @@ SOURCE = ROOT / "source"
 def run(command, cwd=SOURCE, env=None, output=None):
     command = list(map(str, command))
     print("+", subprocess.list2cmdline(command), flush=True)
-    environment = {**os.environ, "PYTHONUTF8": "1", **(env or {})}
+    environment = {**os.environ, "PYTHONUTF8": "1", "PYTHONIOENCODING": "utf-8", **(env or {})}
     if output is None:
         subprocess.run(command, cwd=cwd, check=True, env=environment)
         return
@@ -78,17 +79,69 @@ def prepare(source=SOURCE):
     print(f"Verified/restored {len(pairs)} replay fixtures.")
 
 
-def provenance(output, source=SOURCE):
-    output.mkdir(parents=True, exist_ok=False)
+def source_identity(source):
     def git(*args):
         return subprocess.check_output(["git", *args], cwd=source).decode("utf-8").strip()
-    data = dict(sourcePath=str(source), sourceCommit=git("rev-parse", "HEAD"),
-                sourceChanges=git("status", "--porcelain"), python=sys.version,
-                command=sys.argv, fixtureManifest=digest(ROOT / "fixtures/manifest.json"))
-    data["sourceDiffSha256"] = hashlib.sha256(
-        subprocess.check_output(["git", "diff", "--binary", "HEAD"], cwd=source)).hexdigest()
+    untracked = subprocess.check_output(["git", "ls-files", "--others", "--exclude-standard", "-z"], cwd=source)
+    untracked_hashes = {name: digest(source / name) for name in untracked.decode("utf-8").split("\0") if name}
+    return {
+        "sourceCommit": git("rev-parse", "HEAD"),
+        "sourceDiffSha256": hashlib.sha256(subprocess.check_output(["git", "diff", "--binary", "HEAD"], cwd=source)).hexdigest(),
+        "sourceUntrackedSha256": hashlib.sha256(json.dumps(untracked_hashes, sort_keys=True).encode("utf-8")).hexdigest(),
+    }
+
+
+def provenance(output, source=SOURCE):
+    output.mkdir(parents=True, exist_ok=False)
+    data = dict(sourcePath=str(source), **source_identity(source),
+                sourceChanges=subprocess.check_output(["git", "status", "--porcelain"], cwd=source).decode("utf-8").strip(),
+                python=sys.version, command=sys.argv, fixtureManifest=digest(ROOT / "fixtures/manifest.json"))
     data["packages"] = subprocess.check_output([sys.executable, "-m", "pip", "freeze"]).decode("utf-8").splitlines()
     (output / "environment.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), "utf-8")
+
+
+def record_native_vectors(output, source):
+    vector_path = output / "native-policy-vectors.json"
+    data = json.loads(vector_path.read_text("utf-8"))
+    cases = data.get("cases") if isinstance(data, dict) else data
+    if not isinstance(cases, list) or not cases:
+        raise ValueError("CardRulesUi did not generate nonempty policy vectors")
+    original = json.loads((output / "environment.json").read_text("utf-8"))
+    current = source_identity(source)
+    if any(original.get(key) != value for key, value in current.items()):
+        raise ValueError("Source changed while CardRulesUi was running; generate vectors from a stable source revision")
+    evidence = {"schemaVersion": 1, **current, "sha256": digest(vector_path), "caseCount": len(cases)}
+    (output / "native-policy-provenance.json").write_text(json.dumps(evidence, indent=2), "utf-8")
+
+
+def verify_native_vectors(vector_path, source):
+    evidence_path = vector_path.with_name("native-policy-provenance.json")
+    if not evidence_path.is_file():
+        raise ValueError("Native vectors need native-policy-provenance.json from a successful Lab CardRulesUi run")
+    evidence = json.loads(evidence_path.read_text("utf-8"))
+    if evidence.get("schemaVersion") != 1 or evidence.get("sha256") != digest(vector_path):
+        raise ValueError("Native vectors checksum or provenance format differs")
+    if any(evidence.get(key) != value for key, value in source_identity(source).items()):
+        raise ValueError("Native vectors were generated from different source content; rerun Lab CardRulesUi")
+    return {"path": str(vector_path), **evidence}
+
+
+def verify_vector_execution(output, source=None):
+    report = ET.parse(output / "junit.xml")
+    cases = [case for case in report.iter("testcase") if case.get("name") in
+             ("test_native_python_policy_equivalence", "test_native_python_math_equivalence")]
+    if len(cases) != 1 or any(cases[0].find(name) is not None for name in ("skipped", "failure", "error")):
+        raise ValueError("Required native/Python policy comparison was missing, skipped, or failed")
+    oracle_path = source / "tests/fixtures/card_rule_policy_oracle.json" if source else None
+    if oracle_path and oracle_path.is_file():
+        oracle = json.loads(oracle_path.read_text("utf-8"))
+        required = {"test_native_profession_share_round_trip_reaches_python_policy"}
+        for group, test in (("policyCases", "test_fixed_policy_expectations"), ("validationCases", "test_fixed_document_validation")):
+            required.update(f"{test}[{case['id']}]" for case in oracle[group])
+        successful = {case.get("name") for case in report.iter("testcase")
+                      if all(case.find(name) is None for name in ("skipped", "failure", "error"))}
+        if not required <= successful:
+            raise ValueError("Required fixed policy expectations or profession-share checks were missing, skipped, or failed")
 
 
 def ui_fixture(source, staging, suite):
@@ -153,9 +206,14 @@ def run_ui(args, source, output):
     if args.suite == "native_archive_policy":
         command += [output / "archive-policy"]
     run(command, cwd=runtime, output=output)
+    if args.suite == "CardRulesUi" and not args.combo_only:
+        record_native_vectors(output, source)
 
 
 def main():
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, default=SOURCE,
                         help="Source checkout to test (default: pinned source submodule)")
@@ -164,6 +222,7 @@ def main():
     test = sub.add_parser("test", help="Run all existing Python regressions")
     test.add_argument("--output", type=Path, default=ROOT / "outputs/test")
     test.add_argument("--vectors", type=Path, help="native-policy-vectors.json from CardRulesUi")
+    test.add_argument("--require-vectors", action="store_true", help="Fail unless this source revision has verified native policy vectors")
     test.add_argument("pytest_args", nargs=argparse.REMAINDER)
     calibrate = sub.add_parser("calibrate", help="Synthetic metric threshold fitting, not YOLO training")
     calibrate.add_argument("--per-mode", type=int, default=400)
@@ -192,18 +251,38 @@ def main():
     if args.command == "prepare":
         prepare(source)
     elif args.command == "test":
+        if args.require_vectors and not args.vectors:
+            parser.error("--require-vectors requires --vectors from Lab CardRulesUi")
         if args.vectors and not args.vectors.is_file():
             parser.error("Native policy vectors file does not exist")
+        vector_evidence = None
+        if args.vectors:
+            try:
+                vector_evidence = verify_native_vectors(args.vectors.resolve(), source)
+            except (ValueError, OSError) as error:
+                parser.error(str(error))
         prepare(source)
         output = args.output.resolve()
         provenance(output, source)
+        if vector_evidence:
+            (output / "vector-input.json").write_text(json.dumps(vector_evidence, indent=2), "utf-8")
         extra = args.pytest_args
         if extra[:1] == ["--"]:
             extra = extra[1:]
-        env = {"CARD_RULE_VECTORS": str(args.vectors.resolve())} if args.vectors else {}
+        env = {"CARD_RULE_VECTORS": str(args.vectors.resolve()), "CARD_RULE_REQUIRE_VECTORS": "1"} if args.vectors else {}
         run([sys.executable, "-m", "pytest", "-q", "tests", f"--junitxml={output / 'junit.xml'}",
              f"--basetemp={output / 'pytest-tmp'}", "-o", f"cache_dir={output / 'pytest-cache'}", *extra],
             cwd=source, env=env, output=output)
+        if args.require_vectors:
+            try:
+                verify_vector_execution(output, source)
+                verify_native_vectors(args.vectors.resolve(), source)
+            except (ValueError, OSError, ET.ParseError) as error:
+                result_path = output / "result.json"
+                result = json.loads(result_path.read_text("utf-8"))
+                result.update(status="failed", error=str(error))
+                result_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), "utf-8")
+                raise
     elif args.command == "calibrate":
         output = args.output.resolve()
         provenance(output, source)
@@ -227,7 +306,14 @@ def main():
             parser.error(f"The selected source does not provide the {args.suite} test project")
         output = args.output.resolve()
         provenance(output, source)
-        run_ui(args, source, output)
+        try:
+            run_ui(args, source, output)
+        except BaseException as error:
+            result_path = output / "result.json"
+            result = json.loads(result_path.read_text("utf-8")) if result_path.exists() else {"commands": []}
+            result.update(status="failed", error=str(error))
+            result_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), "utf-8")
+            raise
     elif args.command == "model-check":
         extra = args.extra[1:] if args.extra[:1] == ["--"] else args.extra
         output = args.output.resolve()

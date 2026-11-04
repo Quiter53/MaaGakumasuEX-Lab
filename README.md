@@ -47,10 +47,12 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1
 .\.venv\Scripts\python.exe lab.py ui native_task_watchdog --output outputs/watchdog
 
 # 使用原生 UI 生成的对照数据，补上 Python/原生策略一致性测试。
-.\.venv\Scripts\python.exe lab.py test --vectors outputs/ui-rules/native-policy-vectors.json --output outputs/full-test
+.\.venv\Scripts\python.exe lab.py test --vectors outputs/ui-rules/native-policy-vectors.json --require-vectors --output outputs/full-test
 ```
 
 SDK 不在 PATH 时，UI 命令可加 `--dotnet 'C:\dotnet\dotnet.exe'`。首次构建会下载 NuGet 依赖。原生测试构建到各自输出目录中的 `runtime`，测试生成的配置、截图和日志保存在该次输出内。
+
+`CardRulesUi` 同时保存向量摘要和源码身份到 `native-policy-provenance.json`。Python 回归校验生成时的提交、未提交改动、未跟踪源码与当前输入一致。修改源码后重新生成向量。`--require-vectors` 还检查 JUnit 报告，向量比较被过滤或跳过时整次验证失败。所选源码包含固定预期和职业分享用例时，这些检查也必须全部执行。发布前使用该选项。
 
 ### 检查当前开发版本
 
@@ -77,6 +79,8 @@ SDK 不在 PATH 时，UI 命令可加 `--dotnet 'C:\dotnet\dotnet.exe'`。首次
 ```
 
 `NativeShots` 的 `taskopts`、`round4`、`round5`、`audit` 执行断言，`basic`、`all`、`sizes`、`small` 和 `lang:语言` 生成页面渲染证据，截图仍需查看。原生测试使用无头输入管线。`PortableLayout` 复制包内依赖、启动钩子和运行时描述文件到隔离目录，保存其摘要及构建信息。该命令按指定源码的翻译逐项验证实际发行包。旧源码缺少所选测试项目时会报错，应选择包含该项目的提交。
+
+2026-11-04 通过外部 `--source` 验证开发提交 `3aae1e3aaccabd1692f17a61145a6f51603b08df`。`CardRulesUi` 通过 806 项检查并生成 3640 条向量，随后带 `--require-vectors` 的完整 Python 回归通过 1480 项测试及 1325 个子测试，跳过项为 0。固定预期覆盖 40 个策略用例和 61 个配置验证用例，并检查 C# 职业分享导入保存后的配置能够由 Python 读取执行。依赖为 Python 3.12.14、pytest 9.1.1、MaaFramework 5.13.0 和 .NET SDK 10.0.100。原生运行与 Python 回归的来源摘要一致，已跟踪文件没有未提交改动。Lab 默认子模块继续固定上述 v2.2.0 正式版。本轮采用离线和无头测试，游戏实机全流程尚未验证。[对应源码](https://github.com/Quiter53/MaaGakumasuEX/commit/3aae1e3aaccabd1692f17a61145a6f51603b08df)
 
 原项目其他离线识别工具保留在 `source/tools` 和 `source/tests/run_*.py`。部分脚本面向实机，不要因文件名含 test 就直接执行；先查看说明和参数。这里的默认命令只运行回归测试或禁止输入的截图检测。
 

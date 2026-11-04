@@ -31,14 +31,24 @@ class LabEntrypointChecks(unittest.TestCase):
     def test_subprocess_logs_stdout_stderr_and_exact_exit_code(self):
         self.output.mkdir()
         with contextlib.redirect_stdout(io.StringIO()):
-            lab.run([sys.executable, "-c", "import sys; print('stdout'); print('stderr', file=sys.stderr)"],
+            lab.run([sys.executable, "-c", "import sys; print('stdout ♪'); print('stderr 全力', file=sys.stderr)"],
                     cwd=self.source, output=self.output)
         result = self.result()
         self.assertEqual("running", result["status"])
         self.assertEqual("passed", result["commands"][0]["status"])
         self.assertEqual(0, result["commands"][0]["exitCode"])
-        self.assertIn("stdout", (self.output / "run.log").read_text("utf-8"))
-        self.assertIn("stderr", (self.output / "run.log").read_text("utf-8"))
+        self.assertIn("stdout ♪", (self.output / "run.log").read_text("utf-8"))
+        self.assertIn("stderr 全力", (self.output / "run.log").read_text("utf-8"))
+
+    def test_main_configures_utf8_even_when_terminal_defaults_to_ascii(self):
+        stream = io.TextIOWrapper(io.BytesIO(), encoding="ascii")
+        argv = ["lab.py", "--source", str(self.root / "missing"), "prepare"]
+        with patch.object(sys, "argv", argv), contextlib.redirect_stdout(stream), contextlib.redirect_stderr(io.StringIO()), \
+                self.assertRaises(SystemExit):
+            lab.main()
+        self.assertEqual("utf-8", stream.encoding)
+        stream.write("♪ 全力")
+        stream.close()
 
     def test_failure_propagates_and_is_not_marked_passed(self):
         self.output.mkdir()
@@ -87,6 +97,90 @@ class LabEntrypointChecks(unittest.TestCase):
         prepare.assert_not_called()
         self.assertFalse(self.output.exists())
 
+    def test_required_vectors_cannot_be_omitted(self):
+        argv = ["lab.py", "--source", str(self.source), "test", "--output", str(self.output), "--require-vectors"]
+        with patch.object(sys, "argv", argv), patch.object(lab, "prepare") as prepare, \
+                contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit) as failure:
+            lab.main()
+        self.assertEqual(2, failure.exception.code)
+        prepare.assert_not_called()
+        self.assertFalse(self.output.exists())
+
+    def vector_fixture(self):
+        self.output.mkdir()
+        identity = {"sourceCommit": "selected-sha", "sourceDiffSha256": "tracked-diff", "sourceUntrackedSha256": "new-files"}
+        (self.output / "environment.json").write_text(json.dumps(identity), "utf-8")
+        vectors = self.output / "native-policy-vectors.json"
+        vectors.write_text(json.dumps({"schemaVersion": 2, "cases": [{"id": "case"}]}), "utf-8")
+        return identity, vectors
+
+    def test_vectors_require_matching_content_and_source_identity(self):
+        identity, vectors = self.vector_fixture()
+        with patch.object(lab, "source_identity", return_value=identity):
+            lab.record_native_vectors(self.output, self.source)
+            result = lab.verify_native_vectors(vectors, self.source)
+            self.assertEqual(1, result["caseCount"])
+            self.assertEqual(lab.digest(vectors), result["sha256"])
+            vectors.write_text("[]", "utf-8")
+            with self.assertRaisesRegex(ValueError, "checksum"):
+                lab.verify_native_vectors(vectors, self.source)
+
+    def test_vectors_reject_changed_or_untracked_source(self):
+        identity, vectors = self.vector_fixture()
+        with patch.object(lab, "source_identity", return_value=identity):
+            lab.record_native_vectors(self.output, self.source)
+        for key in identity:
+            changed = {**identity, key: "changed"}
+            with self.subTest(key=key), patch.object(lab, "source_identity", return_value=changed), \
+                    self.assertRaisesRegex(ValueError, "different source"):
+                lab.verify_native_vectors(vectors, self.source)
+
+    def test_vectors_cannot_be_recorded_after_source_changes_during_native_run(self):
+        identity, _ = self.vector_fixture()
+        with patch.object(lab, "source_identity", return_value={**identity, "sourceDiffSha256": "changed"}), \
+                self.assertRaisesRegex(ValueError, "Source changed"):
+            lab.record_native_vectors(self.output, self.source)
+        self.assertFalse((self.output / "native-policy-provenance.json").exists())
+
+    def test_vectors_without_source_sidecar_are_rejected(self):
+        _, vectors = self.vector_fixture()
+        with self.assertRaisesRegex(ValueError, "provenance"):
+            lab.verify_native_vectors(vectors, self.source)
+
+    def test_empty_native_vectors_cannot_be_recorded(self):
+        _, vectors = self.vector_fixture()
+        vectors.write_text("[]", "utf-8")
+        with self.assertRaisesRegex(ValueError, "nonempty"):
+            lab.record_native_vectors(self.output, self.source)
+
+    def test_required_vector_comparison_must_execute_without_skip(self):
+        self.output.mkdir()
+        report = self.output / "junit.xml"
+        for body in ("", '<testcase name="unrelated" />',
+                     '<testcase name="test_native_python_policy_equivalence"><skipped /></testcase>'):
+            with self.subTest(body=body), self.assertRaisesRegex(ValueError, "missing, skipped, or failed"):
+                report.write_text("<testsuite>" + body + "</testsuite>", "utf-8")
+                lab.verify_vector_execution(self.output)
+        report.write_text('<testsuite><testcase name="test_native_python_policy_equivalence" /></testsuite>', "utf-8")
+        lab.verify_vector_execution(self.output)
+
+    def test_required_vectors_also_require_fixed_expectations_and_share_checks(self):
+        self.output.mkdir()
+        fixtures = self.source / "tests/fixtures"
+        fixtures.mkdir(parents=True)
+        (fixtures / "card_rule_policy_oracle.json").write_text(json.dumps({
+            "policyCases": [{"id": "fixed-policy"}], "validationCases": [{"id": "fixed-validation"}]
+        }), "utf-8")
+        names = ["test_native_python_policy_equivalence"]
+        report = self.output / "junit.xml"
+        report.write_text('<testsuite><testcase name="test_native_python_policy_equivalence" /></testsuite>', "utf-8")
+        with self.assertRaisesRegex(ValueError, "fixed policy expectations"):
+            lab.verify_vector_execution(self.output, self.source)
+        names += ["test_fixed_policy_expectations[fixed-policy]", "test_fixed_document_validation[fixed-validation]",
+                  "test_native_profession_share_round_trip_reaches_python_policy"]
+        report.write_text("<testsuite>" + "".join(f'<testcase name="{name}" />' for name in names) + "</testsuite>", "utf-8")
+        lab.verify_vector_execution(self.output, self.source)
+
     def test_model_check_isolates_native_config_and_logs_from_source_checkout(self):
         commands = []
         actual_run = lab.run
@@ -124,6 +218,8 @@ class LabEntrypointChecks(unittest.TestCase):
         def check_output(command, **kwargs):
             if command[0] == "git":
                 self.assertEqual(self.source, kwargs["cwd"])
+                if command[1] == "ls-files":
+                    return b""
                 return b"selected-sha\n" if command[1] == "rev-parse" else b" M changed.py\n"
             return b"pytest==8.0\n"
 
