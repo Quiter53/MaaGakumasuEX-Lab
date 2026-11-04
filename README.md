@@ -2,7 +2,7 @@
 
 Quiter53 的训练、回归测试与截图回放环境。仓库当前公开，本次游戏原图已由用户确认公开上传。主程序继续在 [MaaGakumasuEX](https://github.com/Quiter53/MaaGakumasuEX) 维护；这里通过 `source` 子模块固定对应源码，不另存一套程序逻辑。
 
-目前固定源码提交为 `8c7e1eaef07f8f0b6a112a0e75cd63de857fd234`（v2.1.4 测试版，包含角标身份匹配与纯色卡面拒识修复；[下载测试包](https://github.com/Quiter53/MaaGakumasuEX/releases/tag/v2.1.4)）。版本号一致仍可能有不同的代码，以子模块提交为准。
+目前固定源码提交为 `0a9e4bb5e5ad834b873daf1acd3bf4fa41783e50`（v2.2.0 正式版，包含原生界面、配置保存、更新解压与发行包依赖修复；[下载正式版](https://github.com/Quiter53/MaaGakumasuEX/releases/tag/v2.2.0)）。版本号一致仍可能有不同的代码，以子模块提交为准。
 
 ## 界面原型
 
@@ -50,7 +50,33 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1
 .\.venv\Scripts\python.exe lab.py test --vectors outputs/ui-rules/native-policy-vectors.json --output outputs/full-test
 ```
 
-SDK 不在 PATH 时，UI 命令可加 `--dotnet 'C:\dotnet\dotnet.exe'`。首次构建会下载 NuGet 依赖。`PortableLayout` 涉及打包后的 depsfile、DLL 和本地化装载，需独立运行包，不属于上述普通 UI 入口。
+SDK 不在 PATH 时，UI 命令可加 `--dotnet 'C:\dotnet\dotnet.exe'`。首次构建会下载 NuGet 依赖。原生测试构建到各自输出目录中的 `runtime`，测试生成的配置、截图和日志保存在该次输出内。
+
+### 检查当前开发版本
+
+默认测试 `source` 的固定提交。检查其他工作区时，在子命令前明确传入 `--source`。`environment.json` 记录实际源码路径、提交、工作区改动、Python 与依赖版本。每次执行保留 `run.log` 和 `result.json`，只有整条命令执行成功才标记 `passed`。Python 回归另保存包含失败与跳过项的 `junit.xml`，临时目录和 pytest 缓存也归入当次输出。
+
+```powershell
+# 对当前 pre 源码执行回归，不切换固定子模块。
+.\.venv\Scripts\python.exe lab.py --source ..\MaaGakumasu-card-strategy-git test --output outputs/pre-python
+
+# 新界面布局、并发配置保存和发布渠道策略。
+.\.venv\Scripts\python.exe lab.py --source ..\MaaGakumasu-card-strategy-git ui LiquidBoardTests --output outputs/pre-layout
+.\.venv\Scripts\python.exe lab.py --source ..\MaaGakumasu-card-strategy-git ui ConfigSaveTests --output outputs/pre-config
+.\.venv\Scripts\python.exe lab.py --source ..\MaaGakumasu-card-strategy-git ui native_release_policy --output outputs/pre-channel
+.\.venv\Scripts\python.exe lab.py --source ..\MaaGakumasu-card-strategy-git ui native_archive_policy --output outputs/pre-archive
+
+# 真实 App 的 Avalonia Headless 测试，使用公共默认配置。
+.\.venv\Scripts\python.exe lab.py --source ..\MaaGakumasu-card-strategy-git ui NativeShots --script taskopts --output outputs/pre-task-options
+.\.venv\Scripts\python.exe lab.py --source ..\MaaGakumasu-card-strategy-git ui NativeShots --script round4 --output outputs/pre-scale-drag
+.\.venv\Scripts\python.exe lab.py --source ..\MaaGakumasu-card-strategy-git ui NativeShots --script round5 --output outputs/pre-options-surfaces
+.\.venv\Scripts\python.exe lab.py --source ..\MaaGakumasu-card-strategy-git ui NativeShots --script audit --output outputs/pre-ui-contracts
+
+# 独立发行包的依赖与四种语言资源装载。
+.\.venv\Scripts\python.exe lab.py --source ..\MaaGakumasu-card-strategy-git ui PortableLayout --runtime ..\MaaGakumasuEX-pre --output outputs/pre-portable
+```
+
+`NativeShots` 的 `taskopts`、`round4`、`round5`、`audit` 执行断言，`basic`、`all`、`sizes`、`small` 和 `lang:语言` 生成页面渲染证据，截图仍需查看。原生测试使用无头输入管线。`PortableLayout` 复制包内依赖、启动钩子和运行时描述文件到隔离目录，保存其摘要及构建信息。该命令按指定源码的翻译逐项验证实际发行包。旧源码缺少所选测试项目时会报错，应选择包含该项目的提交。
 
 原项目其他离线识别工具保留在 `source/tools` 和 `source/tests/run_*.py`。部分脚本面向实机，不要因文件名含 test 就直接执行；先查看说明和参数。这里的默认命令只运行回归测试或禁止输入的截图检测。
 
