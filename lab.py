@@ -224,6 +224,10 @@ def main():
     test.add_argument("--vectors", type=Path, help="native-policy-vectors.json from CardRulesUi")
     test.add_argument("--require-vectors", action="store_true", help="Fail unless this source revision has verified native policy vectors")
     test.add_argument("pytest_args", nargs=argparse.REMAINDER)
+    battle_entry = sub.add_parser("battle-entry", help="Replay real battle entry recognition and offline click targets on Lab frames")
+    battle_entry.add_argument("--output", type=Path, required=True)
+    battle_entry.add_argument("--feedback", type=Path)
+    battle_entry.add_argument("--crop", type=int, nargs=4)
     calibrate = sub.add_parser("calibrate", help="Synthetic metric threshold fitting, not YOLO training")
     calibrate.add_argument("--per-mode", type=int, default=400)
     calibrate.add_argument("--output", type=Path, default=ROOT / "outputs/calibration")
@@ -264,6 +268,10 @@ def main():
         prepare(source)
         output = args.output.resolve()
         provenance(output, source)
+        native_entry = source / "tests/run_battle_entry_recognition.py"
+        if native_entry.is_file():
+            run([sys.executable, native_entry, "--fixtures", ROOT / "fixtures", "--output", output / "battle-entry"],
+                cwd=source, output=output)
         if vector_evidence:
             (output / "vector-input.json").write_text(json.dumps(vector_evidence, indent=2), "utf-8")
         extra = args.pytest_args
@@ -283,6 +291,16 @@ def main():
                 result.update(status="failed", error=str(error))
                 result_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), "utf-8")
                 raise
+    elif args.command == "battle-entry":
+        prepare(source)
+        output = args.output.resolve()
+        provenance(output, source)
+        command = [sys.executable, source / "tests/run_battle_entry_recognition.py", "--fixtures", ROOT / "fixtures", "--output", output / "native"]
+        if args.feedback:
+            if not args.crop:
+                parser.error("--feedback requires --crop with the observed game client rectangle")
+            command.extend(["--feedback", args.feedback.resolve(), "--crop", *args.crop])
+        run(command, cwd=source, output=output)
     elif args.command == "calibrate":
         output = args.output.resolve()
         provenance(output, source)

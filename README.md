@@ -29,6 +29,8 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1
 
 ## 测试与回放
 
+所选源码包含 `run_battle_entry_recognition.py` 时，`lab.py test` 会先用 Lab 原图运行真实出牌入口识别、等待出牌调用链和离线点击定位，再运行 Python 回归。单独回放可用 `lab.py --source <源码目录> battle-entry --output <新输出目录>`；个人反馈截图通过 `--feedback <图片> --crop 左 上 右 下` 临时传入，不加入公开仓库。
+
 ```powershell
 # 按原项目测试组织运行，可追加 pytest 参数。
 .\.venv\Scripts\python.exe lab.py test --output outputs/battle -- -k battle
