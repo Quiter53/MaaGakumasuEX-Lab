@@ -272,6 +272,9 @@ def main():
         if native_entry.is_file():
             run([sys.executable, native_entry, "--fixtures", ROOT / "fixtures", "--output", output / "battle-entry"],
                 cwd=source, output=output)
+            run([sys.executable, ROOT / "tools/check_battle_label.py", "--source", source,
+                 "--image", ROOT / "fixtures/hand/20260813-012653-613-battle.png", "--output", output / "battle-label"],
+                cwd=source, output=output)
         if vector_evidence:
             (output / "vector-input.json").write_text(json.dumps(vector_evidence, indent=2), "utf-8")
         extra = args.pytest_args
