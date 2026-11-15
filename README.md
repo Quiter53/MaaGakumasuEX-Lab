@@ -31,7 +31,7 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1
 
 所选源码包含 `run_battle_entry_recognition.py` 时，`lab.py test` 会先用 Lab 原图运行真实出牌入口识别、等待出牌调用链和离线点击定位，再运行 Python 回归。单独回放可用 `lab.py --source <源码目录> battle-entry --output <新输出目录>`；个人反馈截图通过 `--feedback <图片> --crop 左 上 右 下` 临时传入，不加入公开仓库。
 
-支援卡重复与日程体力的个人反馈样本保存在 `datasets/local/support-hud-日期/`，随附 `cases.json` 记录路径、裁切及预期数值。源码包含 `run_support_hud_recognition.py` 时，`lab.py test` 自动运行这些固定样本，验证重复卡排除、取消弹窗、体力/P 点数与特别指导调用链。该目录已被 Git 忽略，图片不进入公开仓库或发行包；保留原图，不依赖微信临时路径。滚动后的页面切换由离线控制器模拟，不能替代实机连续运行。
+支援卡重复与日程体力的 8 张固定截图保存在 [`fixtures/support-hud`](fixtures/support-hud/README.md)，包含本次 4 张反馈图、重复弹窗和 3 张历史 HUD 图。租借者昵称、签名已遮盖。图片、相对路径清单及预期一起纳入 Git，换电脑 clone 后即可重跑，不依赖微信临时目录。源码包含 `run_support_hud_recognition.py` 时，`lab.py test` 自动验证重复卡排除、取消弹窗、体力/P 点数与特别指导调用链；有本机 `datasets/local/support-hud-日期/cases.json` 时还会额外回放未脱敏原图。滚动后的页面切换由离线控制器模拟，不能替代实机连续运行。
 
 ```powershell
 # 按原项目测试组织运行，可追加 pytest 参数。
@@ -105,7 +105,7 @@ YOLO11 的标注格式、GPU 环境、训练与导出命令见 [训练说明](do
 | 目录或文件 | 用途 |
 | --- | --- |
 | `source/` | 固定提交的主仓库，包含测试、脚本、资源、原生 UI 源码 |
-| `fixtures/` | 26 张本机回放与手牌评估截图及 SHA-256 清单，约 20 MB |
+| `fixtures/` | 原有 26 张回放与手牌评估截图，另含 8 张支援卡/HUD 回归截图及 SHA-256 清单 |
 | [`datasets/video-eval-20261025/`](datasets/video-eval-20261025/README.md) | 两段公开视频的 59 张目视核对截图、136 次身份及来源；去重后 58 帧、135 次身份 |
 | [`datasets/web-eval-20261030/`](datasets/web-eval-20261030/README.md) | 新网页来源的 20 张战斗图、66 次可见手牌、65 个原模型手牌框；静止 18 正确 / 4 未知 / 0 错认，两版一致 |
 | [`game-assets/`](game-assets/README.md) | 3191 张原尺寸卡图、饮料、按钮和 UI 素材，约 185 MiB，附离线预览及来源清单 |

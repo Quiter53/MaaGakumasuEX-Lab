@@ -28,6 +28,25 @@ class LabEntrypointChecks(unittest.TestCase):
     def result(self):
         return json.loads((self.output / "result.json").read_text("utf-8"))
 
+    def test_case_paths_resolve_from_manifest_not_working_directory(self):
+        folder = self.root / "fixtures"
+        folder.mkdir()
+        picture = folder / "image.png"
+        picture.write_bytes(b"fixture")
+        cases = folder / "cases.json"
+        document = {"rental": [{"path": "image.png", "crop": [1, 2, 3, 4]}],
+                    "popup": {"path": str(picture.resolve())}}
+        cases.write_text(json.dumps(document), "utf-8")
+        resolved = lab.resolve_cases(cases, self.root / "resolved.json")
+        actual = json.loads(resolved.read_text("utf-8"))
+        self.assertEqual(str(picture.resolve()), actual["rental"][0]["path"])
+        self.assertEqual(actual["popup"]["path"], actual["rental"][0]["path"])
+        self.assertEqual([1, 2, 3, 4], actual["rental"][0]["crop"])
+        self.assertEqual(document, json.loads(cases.read_text("utf-8")))
+        picture.unlink()
+        with self.assertRaises(FileNotFoundError):
+            lab.resolve_cases(cases, self.root / "missing.json")
+
     def test_subprocess_logs_stdout_stderr_and_exact_exit_code(self):
         self.output.mkdir()
         with contextlib.redirect_stdout(io.StringIO()):

@@ -14,6 +14,29 @@ ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / "source"
 
 
+def resolve_cases(cases, destination):
+    """Keep fixture paths portable in Git and explicit for the product runner."""
+    document = json.loads(cases.read_text("utf-8"))
+
+    def resolve(value):
+        if isinstance(value, dict):
+            for key, item in value.items():
+                if key == "path":
+                    path = (cases.parent / item).resolve()
+                    if not path.is_file():
+                        raise FileNotFoundError(path)
+                    value[key] = str(path)
+                else:
+                    resolve(item)
+        elif isinstance(value, list):
+            for item in value:
+                resolve(item)
+
+    resolve(document)
+    destination.write_text(json.dumps(document, ensure_ascii=False, indent=2), "utf-8")
+    return destination
+
+
 def run(command, cwd=SOURCE, env=None, output=None):
     command = list(map(str, command))
     print("+", subprocess.list2cmdline(command), flush=True)
@@ -279,8 +302,11 @@ def main():
             (output / "vector-input.json").write_text(json.dumps(vector_evidence, indent=2), "utf-8")
         support_hud = source / "tests/run_support_hud_recognition.py"
         if support_hud.is_file():
-            for cases in sorted((ROOT / "datasets/local").glob("support-hud-*/cases.json")):
-                run([sys.executable, support_hud, "--cases", cases,
+            manifests = [ROOT / "fixtures/support-hud/cases.json"]
+            manifests += sorted((ROOT / "datasets/local").glob("support-hud-*/cases.json"))
+            for cases in manifests:
+                resolved = resolve_cases(cases, output / (cases.parent.name + "-cases.json"))
+                run([sys.executable, support_hud, "--cases", resolved,
                      "--output", output / cases.parent.name], cwd=source, output=output)
         extra = args.pytest_args
         if extra[:1] == ["--"]:
