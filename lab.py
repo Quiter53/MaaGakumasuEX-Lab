@@ -277,6 +277,11 @@ def main():
                 cwd=source, output=output)
         if vector_evidence:
             (output / "vector-input.json").write_text(json.dumps(vector_evidence, indent=2), "utf-8")
+        support_hud = source / "tests/run_support_hud_recognition.py"
+        if support_hud.is_file():
+            for cases in sorted((ROOT / "datasets/local").glob("support-hud-*/cases.json")):
+                run([sys.executable, support_hud, "--cases", cases,
+                     "--output", output / cases.parent.name], cwd=source, output=output)
         extra = args.pytest_args
         if extra[:1] == ["--"]:
             extra = extra[1:]

@@ -31,6 +31,8 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1
 
 所选源码包含 `run_battle_entry_recognition.py` 时，`lab.py test` 会先用 Lab 原图运行真实出牌入口识别、等待出牌调用链和离线点击定位，再运行 Python 回归。单独回放可用 `lab.py --source <源码目录> battle-entry --output <新输出目录>`；个人反馈截图通过 `--feedback <图片> --crop 左 上 右 下` 临时传入，不加入公开仓库。
 
+支援卡重复与日程体力的个人反馈样本保存在 `datasets/local/support-hud-日期/`，随附 `cases.json` 记录路径、裁切及预期数值。源码包含 `run_support_hud_recognition.py` 时，`lab.py test` 自动运行这些固定样本，验证重复卡排除、取消弹窗、体力/P 点数与特别指导调用链。该目录已被 Git 忽略，图片不进入公开仓库或发行包；保留原图，不依赖微信临时路径。滚动后的页面切换由离线控制器模拟，不能替代实机连续运行。
+
 ```powershell
 # 按原项目测试组织运行，可追加 pytest 参数。
 .\.venv\Scripts\python.exe lab.py test --output outputs/battle -- -k battle
